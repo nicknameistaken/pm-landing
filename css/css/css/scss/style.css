@@ -1,6 +1,7 @@
 @import url(../fonts/stylesheet.css);
 /* line 6, scss/style.scss */
 /* line 3, css/scss/style.css */
+/* line 4, css/css/scss/style.css */
 body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
@@ -8,6 +9,7 @@ body {
 
 /* line 12, scss/style.scss */
 /* line 9, css/scss/style.css */
+/* line 11, css/css/scss/style.css */
 div,
 p,
 form,
@@ -19,11 +21,13 @@ button {
 
 /* line 22, scss/style.scss */
 /* line 19, css/scss/style.css */
+/* line 22, css/css/scss/style.css */
 p {
   margin: 0; }
 
 /* line 26, scss/style.scss */
 /* line 23, css/scss/style.css */
+/* line 27, css/css/scss/style.css */
 h1,
 h2,
 h3,
@@ -36,6 +40,7 @@ h6 {
 
 /* line 37, scss/style.scss */
 /* line 34, css/scss/style.css */
+/* line 39, css/css/scss/style.css */
 a,
 a:hover,
 a:active {
@@ -43,6 +48,7 @@ a:active {
 
 /* line 43, scss/style.scss */
 /* line 40, css/scss/style.css */
+/* line 46, css/css/scss/style.css */
 input,
 input:hover,
 input:focus,
@@ -56,26 +62,31 @@ button:active {
 
 /* line 55, scss/style.scss */
 /* line 52, css/scss/style.css */
+/* line 59, css/css/scss/style.css */
 button {
   cursor: pointer; }
 
 /* line 59, scss/style.scss */
 /* line 56, css/scss/style.css */
+/* line 64, css/css/scss/style.css */
 .text-white {
   color: #dfe5eb; }
 
 /* line 63, scss/style.scss */
 /* line 60, css/scss/style.css */
+/* line 69, css/css/scss/style.css */
 .text-uppercase {
   text-transform: uppercase; }
 
 /* line 67, scss/style.scss */
 /* line 64, css/scss/style.css */
+/* line 74, css/css/scss/style.css */
 .bold {
   font-weight: bold; }
 
 /* line 71, scss/style.scss */
 /* line 68, css/scss/style.css */
+/* line 79, css/css/scss/style.css */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -84,6 +95,7 @@ button {
 /* First Screen */
 /* line 78, scss/style.scss */
 /* line 75, css/scss/style.css */
+/* line 87, css/css/scss/style.css */
 .offer {
   margin: 0 auto;
   width: 1120px;
@@ -93,6 +105,7 @@ button {
 
 /* line 85, scss/style.scss */
 /* line 82, css/scss/style.css */
+/* line 96, css/css/scss/style.css */
 .offer__header {
   display: flex;
   padding: 22px 27px 0;
@@ -100,11 +113,13 @@ button {
 
 /* line 90, scss/style.scss */
 /* line 87, css/scss/style.css */
+/* line 103, css/css/scss/style.css */
 .offer__header img {
   height: 29px; }
 
 /* line 95, scss/style.scss */
 /* line 90, css/scss/style.css */
+/* line 108, css/css/scss/style.css */
 .offer__link {
   display: flex;
   align-items: center;
@@ -114,6 +129,7 @@ button {
 
 /* line 102, scss/style.scss */
 /* line 97, css/scss/style.css */
+/* line 117, css/css/scss/style.css */
 .offer__link a {
   font-weight: bold;
   font-size: 20px;
@@ -123,11 +139,13 @@ button {
 
 /* line 111, scss/style.scss */
 /* line 104, css/scss/style.css */
+/* line 126, css/css/scss/style.css */
 .offer__phone {
   margin-left: 20px; }
 
 /* line 115, scss/style.scss */
 /* line 107, css/scss/style.css */
+/* line 131, css/css/scss/style.css */
 .offer__head {
   display: flex;
   flex-direction: column;
@@ -136,6 +154,7 @@ button {
 
 /* line 122, scss/style.scss */
 /* line 113, css/scss/style.css */
+/* line 139, css/css/scss/style.css */
 .offer__title {
   margin-top: 24px;
   font-size: 36px;
@@ -146,6 +165,7 @@ button {
 
 /* line 130, scss/style.scss */
 /* line 121, css/scss/style.css */
+/* line 149, css/css/scss/style.css */
 .offer__title span {
   display: block;
   font-weight: normal;
@@ -153,12 +173,14 @@ button {
 
 /* line 136, scss/style.scss */
 /* line 126, css/scss/style.css */
+/* line 156, css/css/scss/style.css */
 .offer .arrow__block {
   display: flex;
   margin-top: 45px; }
 
 /* line 140, scss/style.scss */
 /* line 130, css/scss/style.css */
+/* line 162, css/css/scss/style.css */
 .offer .arrow__block .analyse {
   width: 346px;
   height: 90px;
@@ -167,6 +189,7 @@ button {
 
 /* line 147, scss/style.scss */
 /* line 136, css/scss/style.css */
+/* line 170, css/css/scss/style.css */
 .offer .arrow__block .based {
   width: 331px;
   height: 90px;
@@ -176,6 +199,7 @@ button {
 
 /* line 155, scss/style.scss */
 /* line 143, css/scss/style.css */
+/* line 179, css/css/scss/style.css */
 .offer .arrow__block .make {
   width: 346px;
   height: 90px;
@@ -185,6 +209,7 @@ button {
 
 /* line 163, scss/style.scss */
 /* line 150, css/scss/style.css */
+/* line 188, css/css/scss/style.css */
 .offer .arrow__block .arrow {
   width: 72px;
   height: 147px;
@@ -192,16 +217,19 @@ button {
 
 /* line 168, scss/style.scss */
 /* line 155, css/scss/style.css */
+/* line 195, css/css/scss/style.css */
 .offer .arrow__block .arrow__first {
   margin-top: 35px; }
 
 /* line 172, scss/style.scss */
 /* line 158, css/scss/style.css */
+/* line 200, css/css/scss/style.css */
 .offer .arrow__block .arrow__second {
   margin-top: 155px; }
 
 /* line 177, scss/style.scss */
 /* line 161, css/scss/style.css */
+/* line 205, css/css/scss/style.css */
 .offer .order {
   align-items: flex-start;
   flex-direction: column;
@@ -212,12 +240,14 @@ button {
 
 /* line 185, scss/style.scss */
 /* line 169, css/scss/style.css */
+/* line 215, css/css/scss/style.css */
 .offer .order span {
   display: block;
   font-weight: bold; }
 
 /* line 192, scss/style.scss */
 /* line 174, css/scss/style.css */
+/* line 221, css/css/scss/style.css */
 .how {
   margin: 0 auto;
   width: 1120px;
@@ -226,12 +256,14 @@ button {
 
 /* line 198, scss/style.scss */
 /* line 180, css/scss/style.css */
+/* line 229, css/css/scss/style.css */
 .how__arrow-block {
   padding-top: 80px;
   display: flex; }
 
 /* line 202, scss/style.scss */
 /* line 184, css/scss/style.css */
+/* line 235, css/css/scss/style.css */
 .how__arrow-block h4 {
   text-align: center;
   border-bottom: 4px solid white;
@@ -241,17 +273,20 @@ button {
 
 /* line 210, scss/style.scss */
 /* line 191, css/scss/style.css */
+/* line 244, css/css/scss/style.css */
 .how__arrow-block .arrow {
   width: 41px;
   height: 109px; }
 
 /* line 214, scss/style.scss */
 /* line 195, css/scss/style.css */
+/* line 250, css/css/scss/style.css */
 .how__arrow-block .arrow__first {
   margin-top: 50px; }
 
 /* line 219, scss/style.scss */
 /* line 198, css/scss/style.css */
+/* line 255, css/css/scss/style.css */
 .how__arrow-block__analyse {
   min-width: 376px;
   min-height: 330px;
@@ -266,17 +301,20 @@ button {
 
 /* line 231, scss/style.scss */
 /* line 210, css/scss/style.css */
+/* line 269, css/css/scss/style.css */
 .how__arrow-block__analyse h4 {
   margin-top: 18px; }
 
 /* line 235, scss/style.scss */
 /* line 213, css/scss/style.css */
+/* line 274, css/css/scss/style.css */
 .how__arrow-block__analyse p {
   font-size: 18px;
   padding: 0 90px 0 68px; }
 
 /* line 240, scss/style.scss */
 /* line 217, css/scss/style.css */
+/* line 280, css/css/scss/style.css */
 .how__arrow-block__analyse button {
   width: 283px;
   height: 84px;
@@ -287,6 +325,7 @@ button {
 
 /* line 250, scss/style.scss */
 /* line 225, css/scss/style.css */
+/* line 290, css/css/scss/style.css */
 .how__arrow-block__decide {
   min-width: 336px;
   min-height: 252px;
@@ -300,6 +339,7 @@ button {
 
 /* line 261, scss/style.scss */
 /* line 236, css/scss/style.css */
+/* line 303, css/css/scss/style.css */
 .how__arrow-block__decide h4 {
   width: 124px;
   margin-top: 35px;
@@ -307,17 +347,20 @@ button {
 
 /* line 267, scss/style.scss */
 /* line 241, css/scss/style.css */
+/* line 310, css/css/scss/style.css */
 .how__arrow-block__decide .warn {
   padding-left: 38px; }
 
 /* line 271, scss/style.scss */
 /* line 244, css/scss/style.css */
+/* line 315, css/css/scss/style.css */
 .how__arrow-block__decide > p {
   font-size: 18px;
   padding: 24px 42px 0 38px; }
 
 /* line 276, scss/style.scss */
 /* line 248, css/scss/style.css */
+/* line 321, css/css/scss/style.css */
 .how__arrow-block__decide p:last-child {
   font-size: 12px;
   margin-left: 16px;

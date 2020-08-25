@@ -1,66 +1,115 @@
 @import url(../fonts/stylesheet.css);
-/* line 3, scss/style.scss */
+/* line 6, scss/style.scss */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0; }
 
-/* line 9, scss/style.scss */
-div, p, form, input, a, span, button {
+/* line 12, scss/style.scss */
+div,
+p,
+form,
+input,
+a,
+span,
+button {
   box-sizing: border-box; }
 
-/* line 13, scss/style.scss */
+/* line 22, scss/style.scss */
 p {
   margin: 0; }
 
-/* line 17, scss/style.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 26, scss/style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
   font-weight: bold; }
 
-/* line 23, scss/style.scss */
-a, a:hover, a:active {
+/* line 37, scss/style.scss */
+a,
+a:hover,
+a:active {
   text-decoration: none; }
 
-/* line 27, scss/style.scss */
-input, input:hover, input:focus, input:active,
-button, button:hover, button:focus, button:active {
-  outline: none; }
+/* line 43, scss/style.scss */
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+  border: 0; }
 
-/* Firts Screen */
-/* line 36, scss/style.scss */
+/* line 55, scss/style.scss */
+button {
+  cursor: pointer; }
+
+/* line 59, scss/style.scss */
+.text-white {
+  color: #dfe5eb; }
+
+/* line 63, scss/style.scss */
+.text-uppercase {
+  text-transform: uppercase; }
+
+/* line 67, scss/style.scss */
+.bold {
+  font-weight: bold; }
+
+/* line 71, scss/style.scss */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* First Screen */
+/* line 78, scss/style.scss */
 .offer {
-  background: url("../../img/first-screen/bg2.png") no-repeat top/cover; }
-  /* line 39, scss/style.scss */
+  margin: 0 auto;
+  width: 1120px;
+  height: 700px;
+  background: url("../../img/first-screen/bg.png") no-repeat top/cover;
+  font-size: 14px; }
+  /* line 85, scss/style.scss */
   .offer__header {
     display: flex;
     padding: 22px 27px 0;
     justify-content: space-between; }
-  /* line 45, scss/style.scss */
+    /* line 90, scss/style.scss */
+    .offer__header img {
+      height: 29px; }
+  /* line 95, scss/style.scss */
   .offer__link {
     display: flex;
     align-items: center;
     background: #ffffff;
     border-radius: 50px;
     padding-left: 30px; }
-    /* line 52, scss/style.scss */
+    /* line 102, scss/style.scss */
     .offer__link a {
       font-weight: bold;
       font-size: 20px;
       line-height: 18px;
       letter-spacing: 0.25px;
       color: #000000; }
-  /* line 61, scss/style.scss */
+  /* line 111, scss/style.scss */
   .offer__phone {
     margin-left: 20px; }
-  /* line 65, scss/style.scss */
+  /* line 115, scss/style.scss */
   .offer__head {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 24px; }
-  /* line 72, scss/style.scss */
+  /* line 122, scss/style.scss */
   .offer__title {
     margin-top: 24px;
     font-size: 36px;
@@ -68,8 +117,135 @@ button, button:hover, button:focus, button:active {
     letter-spacing: 0.1px;
     text-transform: uppercase;
     text-align: center; }
-    /* line 80, scss/style.scss */
+    /* line 130, scss/style.scss */
     .offer__title span {
       display: block;
       font-weight: normal;
       font-size: 30px; }
+  /* line 136, scss/style.scss */
+  .offer .arrow__block {
+    display: flex;
+    margin-top: 45px; }
+    /* line 140, scss/style.scss */
+    .offer .arrow__block .analyse {
+      width: 346px;
+      height: 90px;
+      background: url("../../img/first-screen/analyse-bg.png") no-repeat center;
+      padding: 30px 25px; }
+    /* line 147, scss/style.scss */
+    .offer .arrow__block .based {
+      width: 331px;
+      height: 90px;
+      background: url("../../img/first-screen/based-bg.png") no-repeat center;
+      padding: 30px 25px;
+      margin-top: 120px; }
+    /* line 155, scss/style.scss */
+    .offer .arrow__block .make {
+      width: 346px;
+      height: 90px;
+      background: url("../../img/first-screen/make-bg.png") no-repeat center;
+      padding: 30px 25px;
+      margin-top: 240px; }
+    /* line 163, scss/style.scss */
+    .offer .arrow__block .arrow {
+      width: 72px;
+      height: 147px;
+      margin: 0 -6px 0 -8px; }
+      /* line 168, scss/style.scss */
+      .offer .arrow__block .arrow__first {
+        margin-top: 35px; }
+      /* line 172, scss/style.scss */
+      .offer .arrow__block .arrow__second {
+        margin-top: 155px; }
+  /* line 177, scss/style.scss */
+  .offer .order {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 302px;
+    height: 71px;
+    background: url("../../img/first-screen/order-bg.png") no-repeat center;
+    padding: 22px 30px; }
+    /* line 185, scss/style.scss */
+    .offer .order span {
+      display: block;
+      font-weight: bold; }
+
+/* line 192, scss/style.scss */
+.how {
+  margin: 0 auto;
+  width: 1120px;
+  height: 700px;
+  background: url("../../img/how/bg.png") no-repeat top/cover; }
+  /* line 198, scss/style.scss */
+  .how__arrow-block {
+    padding-top: 80px;
+    display: flex; }
+    /* line 202, scss/style.scss */
+    .how__arrow-block h4 {
+      text-align: center;
+      border-bottom: 4px solid white;
+      font-size: 24px;
+      line-height: 190%;
+      color: white; }
+    /* line 210, scss/style.scss */
+    .how__arrow-block .arrow {
+      width: 41px;
+      height: 109px; }
+      /* line 214, scss/style.scss */
+      .how__arrow-block .arrow__first {
+        margin-top: 50px; }
+    /* line 219, scss/style.scss */
+    .how__arrow-block__analyse {
+      min-width: 376px;
+      min-height: 330px;
+      max-width: 376px;
+      max-height: 330px;
+      background: url("../../img/how/analyse-bg.png") no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: -11px; }
+      /* line 231, scss/style.scss */
+      .how__arrow-block__analyse h4 {
+        margin-top: 18px; }
+      /* line 235, scss/style.scss */
+      .how__arrow-block__analyse p {
+        font-size: 18px;
+        padding: 0 90px 0 68px; }
+      /* line 240, scss/style.scss */
+      .how__arrow-block__analyse button {
+        width: 283px;
+        height: 84px;
+        background: url("../../img/how/analyse-button.png") no-repeat center/cover;
+        font-size: 18px;
+        font-weight: bold;
+        color: white; }
+    /* line 250, scss/style.scss */
+    .how__arrow-block__decide {
+      min-width: 336px;
+      min-height: 252px;
+      max-width: 336px;
+      max-height: 252px;
+      background: url("../../img/how/decide-bg.png") no-repeat center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      /* line 261, scss/style.scss */
+      .how__arrow-block__decide h4 {
+        width: 124px;
+        margin-top: 35px;
+        margin-bottom: 48px; }
+      /* line 267, scss/style.scss */
+      .how__arrow-block__decide .warn {
+        padding-left: 38px; }
+      /* line 271, scss/style.scss */
+      .how__arrow-block__decide > p {
+        font-size: 18px;
+        padding: 24px 42px 0 38px; }
+      /* line 276, scss/style.scss */
+      .how__arrow-block__decide p:last-child {
+        font-size: 12px;
+        margin-left: 16px;
+        padding-right: 48px; }
