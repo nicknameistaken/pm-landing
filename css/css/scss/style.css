@@ -1,0 +1,96 @@
+@import url(../fonts/stylesheet.css);
+/* line 3, scss/style.scss */
+/* line 3, css/scss/style.css */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+/* line 9, scss/style.scss */
+/* line 9, css/scss/style.css */
+div, p, form, input, a, span, button {
+  box-sizing: border-box; }
+
+/* line 13, scss/style.scss */
+/* line 13, css/scss/style.css */
+p {
+  margin: 0; }
+
+/* line 17, scss/style.scss */
+/* line 17, css/scss/style.css */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: bold; }
+
+/* line 23, scss/style.scss */
+/* line 23, css/scss/style.css */
+a, a:hover, a:active {
+  text-decoration: none; }
+
+/* line 27, scss/style.scss */
+/* line 27, css/scss/style.css */
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+  outline: none; }
+
+/* Firts Screen */
+/* line 36, scss/style.scss */
+/* line 33, css/scss/style.css */
+.offer {
+  background: url("../../img/first-screen/bg2.png") no-repeat top/cover; }
+
+/* line 39, scss/style.scss */
+/* line 36, css/scss/style.css */
+.offer__header {
+  display: flex;
+  padding: 22px 27px 0;
+  justify-content: space-between; }
+
+/* line 45, scss/style.scss */
+/* line 41, css/scss/style.css */
+.offer__link {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding-left: 30px; }
+
+/* line 52, scss/style.scss */
+/* line 48, css/scss/style.css */
+.offer__link a {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  color: #000000; }
+
+/* line 61, scss/style.scss */
+/* line 55, css/scss/style.css */
+.offer__phone {
+  margin-left: 20px; }
+
+/* line 65, scss/style.scss */
+/* line 58, css/scss/style.css */
+.offer__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px; }
+
+/* line 72, scss/style.scss */
+/* line 64, css/scss/style.css */
+.offer__title {
+  margin-top: 24px;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  text-align: center; }
+
+/* line 80, scss/style.scss */
+/* line 72, css/scss/style.css */
+.offer__title span {
+  display: block;
+  font-weight: normal;
+  font-size: 30px; }
