@@ -486,12 +486,92 @@ button {
 .pros {
   margin: 0 auto;
   width: 1140px;
-  height: 700px;
+  height: 1492px;
   background: url("../../img/pros/bg.png") no-repeat top/cover; }
   /* line 558, scss/style.scss */
   .pros h2 {
     width: 541px;
     height: 112px;
     background: url("../../img/pros/header.png") no-repeat center/cover;
-    padding-right: 32px;
-    margin-left: auto; }
+    margin: 0 32px 48px auto; }
+  /* line 565, scss/style.scss */
+  .pros h4 {
+    font-size: 24px;
+    width: 160px;
+    padding: 40px 0 0 40px;
+    flex-basis: 360px; }
+    /* line 571, scss/style.scss */
+    .pros h4 span {
+      display: block; }
+  /* line 576, scss/style.scss */
+  .pros .row {
+    width: 1091px;
+    height: 296px;
+    display: flex;
+    margin-bottom: 32px; }
+    /* line 582, scss/style.scss */
+    .pros .row__left {
+      margin-left: -8px; }
+    /* line 586, scss/style.scss */
+    .pros .row__right {
+      margin-right: -8px;
+      margin-left: auto; }
+  /* line 592, scss/style.scss */
+  .pros .content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap; }
+    /* line 597, scss/style.scss */
+    .pros .content span {
+      display: block; }
+    /* line 601, scss/style.scss */
+    .pros .content p {
+      width: 244px;
+      font-size: 18px; }
+  /* line 607, scss/style.scss */
+  .pros__analysis {
+    background: url("../../img/pros/analysis.png") no-repeat center/cover; }
+    /* line 610, scss/style.scss */
+    .pros__analysis__content {
+      padding: 60px 0 48px 0; }
+      /* line 613, scss/style.scss */
+      .pros__analysis__content p:nth-child(-n + 2) {
+        flex-basis: 85px;
+        margin-right: 90px; }
+  /* line 619, scss/style.scss */
+  .pros__system {
+    background: url("../../img/pros/system.png") no-repeat center/cover; }
+    /* line 622, scss/style.scss */
+    .pros__system h4 {
+      padding-top: 32px; }
+    /* line 626, scss/style.scss */
+    .pros__system__content {
+      padding: 80px 0 68px 0; }
+      /* line 629, scss/style.scss */
+      .pros__system__content p:nth-child(odd) {
+        flex-basis: 85px;
+        margin-right: 90px; }
+  /* line 636, scss/style.scss */
+  .pros__program {
+    background: url("../../img/pros/program.png") no-repeat center/cover; }
+    /* line 639, scss/style.scss */
+    .pros__program .content {
+      justify-content: space-around; }
+    /* line 643, scss/style.scss */
+    .pros__program__content {
+      padding: 42px 0 52px 0; }
+      /* line 646, scss/style.scss */
+      .pros__program__content p:first-child {
+        margin-right: 100px; }
+  /* line 652, scss/style.scss */
+  .pros__reports {
+    background: url("../../img/pros/reports.png") no-repeat center/cover; }
+    /* line 655, scss/style.scss */
+    .pros__reports__content {
+      padding: 80px 0 65px 0; }
+    /* line 659, scss/style.scss */
+    .pros__reports p:first-child {
+      margin-right: 90px; }
+    /* line 663, scss/style.scss */
+    .pros__reports p:nth-child(even) {
+      flex-basis: 85px; }
