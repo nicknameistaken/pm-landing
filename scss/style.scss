@@ -34,6 +34,9 @@ h6 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 36px;
+}
 a,
 a:hover,
 a:active {
@@ -77,7 +80,7 @@ button {
 
 .offer {
   margin: 0 auto;
-  width: 1120px;
+  width: 1140px;
   height: 700px;
   background: img-url("first-screen", "bg") no-repeat top / cover;
   font-size: 14px;
@@ -191,20 +194,37 @@ button {
 
 .how {
   margin: 0 auto;
-  width: 1120px;
+  width: 1140px;
   height: 700px;
   background: img-url("how", "bg") no-repeat top / cover;
+  position: relative;
+
+  h2 {
+    font-size: 36px;
+    position: absolute;
+    top: 86px;
+    right: 69px;
+  }
 
   &__arrow-block {
-    padding-top: 80px;
+    padding-top: 55px;
     display: flex;
 
     h4 {
-      text-align: center;
-      border-bottom: 4px solid white;
-      font-size: 24px;
-      line-height: 190%;
-      color: white;
+      flex-basis: 110px;
+
+      span {
+        text-align: center;
+        border-bottom: 4px solid white;
+        font-size: 24px;
+        line-height: 190%;
+        color: white;
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
     }
 
     .arrow {
@@ -212,29 +232,33 @@ button {
       height: 109px;
 
       &__first {
-        margin-top: 50px;
+        margin-top: 60px;
+        margin-left: -11px;
+        margin-right: -36px;
+      }
+
+      &__second {
+        margin-top: 220px;
+        margin-left: -14px;
+        margin-right: -39px;
       }
     }
 
     &__analyse {
-      min-width: 376px;
-      min-height: 330px;
-      max-width: 376px;
-      max-height: 330px;
+      min-width: 386px;
+      min-height: 340px;
+      max-width: 386px;
+      max-height: 340px;
       background: img-url("how", "analyse-bg") no-repeat center / cover;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       align-items: center;
       margin-left: -11px;
-
-      h4 {
-        margin-top: 18px;
-      }
 
       p {
         font-size: 18px;
         padding: 0 90px 0 68px;
+        flex-basis: 128px;
       }
 
       button {
@@ -248,29 +272,29 @@ button {
     }
 
     &__decide {
-      min-width: 336px;
-      min-height: 252px;
-      max-width: 336px;
-      max-height: 252px;
+      min-width: 366px;
+      min-height: 271px;
+      max-width: 366px;
+      max-height: 271px;
       background: img-url("how", "decide-bg") no-repeat center / cover;
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 144px;
 
       h4 {
         width: 124px;
-        margin-top: 35px;
-        margin-bottom: 48px;
       }
 
       .warn {
-        padding-left: 38px;
+        padding-left: 48px;
       }
 
       & > p {
         font-size: 18px;
-        padding: 24px 42px 0 38px;
+        padding: 0 42px 0 48px;
+        flex-basis: 94px;
       }
 
       p:last-child {
@@ -279,5 +303,263 @@ button {
         padding-right: 48px;
       }
     }
+
+    &__introduction {
+      min-width: 439px;
+      min-height: 266px;
+      max-width: 439px;
+      max-height: 266px;
+      background: img-url("how", "introduction-bg") no-repeat center / cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 306px;
+
+      p {
+        font-size: 18px;
+        padding: 0px 55px 0 75px;
+        flex-basis: 128px;
+      }
+    }
+  }
+}
+
+.result {
+  margin: 0 auto;
+  width: 1140px;
+  height: 700px;
+  background: img-url("result", "bg") no-repeat top / cover;
+
+  h2 {
+    padding-top: 36px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      font-size: 18px;
+    }
+
+    &__triangles {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 510px;
+      justify-content: flex-end;
+      font-size: 12px;
+      font-weight: bold;
+
+      &__rus {
+        width: 266px;
+        height: 96px;
+        background: img-url("result", "rus") no-repeat center / cover;
+        margin-bottom: 33px;
+        padding: 34px 0 0 54px;
+      }
+
+      &__ekg {
+        width: 190px;
+        height: 83px;
+        background: img-url("result", "ekg") no-repeat center / cover;
+        margin-left: 10px;
+        padding: 23px 0 0 45px;
+      }
+    }
+
+    &__rhombus {
+      width: 407px;
+      height: 471px;
+      margin-left: -30px;
+      margin-right: -33px;
+      background: img-url("result", "rhombus") no-repeat center / cover;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+
+      .price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 220px;
+
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+
+      p:last-child {
+        flex-basis: 110px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__description {
+      width: 400px;
+
+      p {
+        font-size: 14px;
+        color: white;
+        width: 413px;
+        padding-right: 76px;
+        margin-bottom: 16px;
+      }
+
+      .marked {
+        width: 414px;
+        padding-right: 176px;
+        padding-left: 38px;
+        position: relative;
+
+        &::before {
+          content: "";
+          background: img-url("result", "point") no-repeat center;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 14px;
+          top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.functions {
+  margin: 0 auto;
+  width: 1140px;
+  background: img-url("functions", "bg") no-repeat top / cover;
+  display: flex;
+
+  h2 {
+    font-size: 36px;
+    padding: 45px 0 0 92px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  &__problems {
+    min-width: 648px;
+    max-width: 648px;
+    min-height: 650px;
+    max-height: 650px;
+    background: img-url("functions", "problems") no-repeat center / cover;
+    margin-right: -76px;
+    margin-top: -8px;
+
+    &__category {
+      width: 282px;
+      height: 62px;
+      background: img-url("functions", "category") no-repeat center / cover;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 12px 0 0 29px;
+      margin: 39px 0 32px 60px;
+      span {
+        display: block;
+      }
+    }
+
+    &__description {
+      padding: 0 157px 0 90px;
+
+      .title {
+        padding-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      p {
+        margin-bottom: 24px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__decisions {
+    padding-top: 84px;
+
+    h5 {
+      color: #666;
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 28px;
+      padding-left: 8px;
+    }
+
+    &__choose {
+      display: flex;
+      font-size: 14px;
+      padding-right: 28px;
+      margin-bottom: 48px;
+      padding-left: 8px;
+    }
+
+    &__text {
+      min-width: 555px;
+      max-width: 555px;
+      min-height: 631px;
+      max-height: 631px;
+      background: img-url("functions", "decisions") no-repeat center / cover;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h4 {
+        margin: 32px 0 48px;
+      }
+
+      p {
+        width: 100%;
+        padding: 0 40px 24px;
+      }
+
+      &--more {
+        width: 503px;
+        height: 115px;
+        background: img-url("functions", "more-bg") no-repeat center / cover;
+
+        button {
+          width: 403px;
+          height: 84px;
+          background: img-url("functions", "more") no-repeat center / cover;
+          font-size: 14px;
+
+          span {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pros {
+  margin: 0 auto;
+  width: 1140px;
+  height: 700px;
+  background: img-url("pros", "bg") no-repeat top / cover;
+
+  h2 {
+    width: 541px;
+    height: 112px;
+    background: img-url("pros", "header") no-repeat center/ cover;
+    padding-right: 32px;
+    margin-left: auto;
   }
 }
