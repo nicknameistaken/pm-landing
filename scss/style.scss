@@ -1,4 +1,6 @@
 @import "../fonts/stylesheet.css";
+@import "./accodion.scss";
+
 @function img-url($folder, $imgName) {
   @return url("../../img/" + $folder + "/" + $imgName + ".png");
 }
@@ -652,16 +654,23 @@ button {
   &__reports {
     background: img-url("pros", "reports") no-repeat center/ cover;
 
+    .content {
+      justify-content: space-around;
+    }
+
     &__content {
       padding: 80px 0 65px 0;
     }
 
     p:first-child {
       margin-right: 90px;
-    }
-
-    p:nth-child(even) {
       flex-basis: 85px;
     }
   }
+}
+
+.scheme {
+  width: 2088px;
+  height: 700px;
+  background: img-url("scheme", "bg") no-repeat center / cover;
 }

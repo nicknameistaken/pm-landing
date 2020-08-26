@@ -1,6 +1,7 @@
 @import url(../fonts/stylesheet.css);
 /* line 1, scss/accodion.scss */
 /* line 3, css/scss/style.css */
+/* line 4, css/css/scss/style.css */
 .js-Accordion {
   margin: 0 auto;
   max-width: 30em;
@@ -8,6 +9,7 @@
 
 /* line 7, scss/accodion.scss */
 /* line 9, css/scss/style.css */
+/* line 11, css/css/scss/style.css */
 .js-Accordion-title {
   background: #f5f5f5;
   border: 1px solid #ccc;
@@ -19,11 +21,13 @@
 
 /* line 16, scss/accodion.scss */
 /* line 18, css/scss/style.css */
+/* line 22, css/css/scss/style.css */
 .js-Accordion-title:first-child {
   border-top: 1px solid #ccc; }
 
 /* line 21, scss/accodion.scss */
 /* line 22, css/scss/style.css */
+/* line 27, css/css/scss/style.css */
 .js-Accordion-content {
   border: 1px solid #ccc;
   border-top: 0;
@@ -34,6 +38,7 @@
 
 /* line 8, scss/style.scss */
 /* line 31, css/scss/style.css */
+/* line 37, css/css/scss/style.css */
 body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
@@ -41,6 +46,7 @@ body {
 
 /* line 14, scss/style.scss */
 /* line 37, css/scss/style.css */
+/* line 44, css/css/scss/style.css */
 div,
 p,
 form,
@@ -52,11 +58,13 @@ button {
 
 /* line 24, scss/style.scss */
 /* line 47, css/scss/style.css */
+/* line 55, css/css/scss/style.css */
 p {
   margin: 0; }
 
 /* line 28, scss/style.scss */
 /* line 51, css/scss/style.css */
+/* line 60, css/css/scss/style.css */
 h1,
 h2,
 h3,
@@ -69,11 +77,13 @@ h6 {
 
 /* line 39, scss/style.scss */
 /* line 62, css/scss/style.css */
+/* line 72, css/css/scss/style.css */
 h2 {
   font-size: 36px; }
 
 /* line 42, scss/style.scss */
 /* line 66, css/scss/style.css */
+/* line 77, css/css/scss/style.css */
 a,
 a:hover,
 a:active {
@@ -81,6 +91,7 @@ a:active {
 
 /* line 48, scss/style.scss */
 /* line 72, css/scss/style.css */
+/* line 84, css/css/scss/style.css */
 input,
 input:hover,
 input:focus,
@@ -94,26 +105,31 @@ button:active {
 
 /* line 60, scss/style.scss */
 /* line 84, css/scss/style.css */
+/* line 97, css/css/scss/style.css */
 button {
   cursor: pointer; }
 
 /* line 64, scss/style.scss */
 /* line 88, css/scss/style.css */
+/* line 102, css/css/scss/style.css */
 .text-white {
   color: #dfe5eb; }
 
 /* line 68, scss/style.scss */
 /* line 92, css/scss/style.css */
+/* line 107, css/css/scss/style.css */
 .text-uppercase {
   text-transform: uppercase; }
 
 /* line 72, scss/style.scss */
 /* line 96, css/scss/style.css */
+/* line 112, css/css/scss/style.css */
 .bold {
   font-weight: bold; }
 
 /* line 76, scss/style.scss */
 /* line 100, css/scss/style.css */
+/* line 117, css/css/scss/style.css */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -122,6 +138,7 @@ button {
 /* First Screen */
 /* line 83, scss/style.scss */
 /* line 107, css/scss/style.css */
+/* line 125, css/css/scss/style.css */
 .offer {
   margin: 0 auto;
   width: 1140px;
@@ -131,6 +148,7 @@ button {
 
 /* line 90, scss/style.scss */
 /* line 114, css/scss/style.css */
+/* line 134, css/css/scss/style.css */
 .offer__header {
   display: flex;
   padding: 22px 27px 0;
@@ -138,11 +156,13 @@ button {
 
 /* line 95, scss/style.scss */
 /* line 119, css/scss/style.css */
+/* line 141, css/css/scss/style.css */
 .offer__header img {
   height: 29px; }
 
 /* line 100, scss/style.scss */
 /* line 122, css/scss/style.css */
+/* line 146, css/css/scss/style.css */
 .offer__link {
   display: flex;
   align-items: center;
@@ -152,6 +172,7 @@ button {
 
 /* line 107, scss/style.scss */
 /* line 129, css/scss/style.css */
+/* line 155, css/css/scss/style.css */
 .offer__link a {
   font-weight: bold;
   font-size: 20px;
@@ -161,11 +182,13 @@ button {
 
 /* line 116, scss/style.scss */
 /* line 136, css/scss/style.css */
+/* line 164, css/css/scss/style.css */
 .offer__phone {
   margin-left: 20px; }
 
 /* line 120, scss/style.scss */
 /* line 139, css/scss/style.css */
+/* line 169, css/css/scss/style.css */
 .offer__head {
   display: flex;
   flex-direction: column;
@@ -174,6 +197,7 @@ button {
 
 /* line 127, scss/style.scss */
 /* line 145, css/scss/style.css */
+/* line 177, css/css/scss/style.css */
 .offer__title {
   margin-top: 24px;
   font-size: 36px;
@@ -184,6 +208,7 @@ button {
 
 /* line 135, scss/style.scss */
 /* line 153, css/scss/style.css */
+/* line 187, css/css/scss/style.css */
 .offer__title span {
   display: block;
   font-weight: normal;
@@ -191,12 +216,14 @@ button {
 
 /* line 141, scss/style.scss */
 /* line 158, css/scss/style.css */
+/* line 194, css/css/scss/style.css */
 .offer .arrow__block {
   display: flex;
   margin-top: 45px; }
 
 /* line 145, scss/style.scss */
 /* line 162, css/scss/style.css */
+/* line 200, css/css/scss/style.css */
 .offer .arrow__block .analyse {
   width: 346px;
   height: 90px;
@@ -205,6 +232,7 @@ button {
 
 /* line 152, scss/style.scss */
 /* line 168, css/scss/style.css */
+/* line 208, css/css/scss/style.css */
 .offer .arrow__block .based {
   width: 331px;
   height: 90px;
@@ -214,6 +242,7 @@ button {
 
 /* line 160, scss/style.scss */
 /* line 175, css/scss/style.css */
+/* line 217, css/css/scss/style.css */
 .offer .arrow__block .make {
   width: 346px;
   height: 90px;
@@ -223,6 +252,7 @@ button {
 
 /* line 168, scss/style.scss */
 /* line 182, css/scss/style.css */
+/* line 226, css/css/scss/style.css */
 .offer .arrow__block .arrow {
   width: 72px;
   height: 147px;
@@ -230,16 +260,19 @@ button {
 
 /* line 173, scss/style.scss */
 /* line 187, css/scss/style.css */
+/* line 233, css/css/scss/style.css */
 .offer .arrow__block .arrow__first {
   margin-top: 35px; }
 
 /* line 177, scss/style.scss */
 /* line 190, css/scss/style.css */
+/* line 238, css/css/scss/style.css */
 .offer .arrow__block .arrow__second {
   margin-top: 155px; }
 
 /* line 182, scss/style.scss */
 /* line 193, css/scss/style.css */
+/* line 243, css/css/scss/style.css */
 .offer .order {
   align-items: flex-start;
   flex-direction: column;
@@ -250,12 +283,14 @@ button {
 
 /* line 190, scss/style.scss */
 /* line 201, css/scss/style.css */
+/* line 253, css/css/scss/style.css */
 .offer .order span {
   display: block;
   font-weight: bold; }
 
 /* line 197, scss/style.scss */
 /* line 206, css/scss/style.css */
+/* line 259, css/css/scss/style.css */
 .how {
   margin: 0 auto;
   width: 1140px;
@@ -265,6 +300,7 @@ button {
 
 /* line 204, scss/style.scss */
 /* line 213, css/scss/style.css */
+/* line 268, css/css/scss/style.css */
 .how h2 {
   font-size: 36px;
   position: absolute;
@@ -273,17 +309,20 @@ button {
 
 /* line 211, scss/style.scss */
 /* line 219, css/scss/style.css */
+/* line 276, css/css/scss/style.css */
 .how__arrow-block {
   padding-top: 55px;
   display: flex; }
 
 /* line 215, scss/style.scss */
 /* line 223, css/scss/style.css */
+/* line 282, css/css/scss/style.css */
 .how__arrow-block h4 {
   flex-basis: 110px; }
 
 /* line 218, scss/style.scss */
 /* line 226, css/scss/style.css */
+/* line 287, css/css/scss/style.css */
 .how__arrow-block h4 span {
   text-align: center;
   border-bottom: 4px solid white;
@@ -293,18 +332,21 @@ button {
 
 /* line 227, scss/style.scss */
 /* line 233, css/scss/style.css */
+/* line 296, css/css/scss/style.css */
 .how__arrow-block p {
   display: flex;
   align-items: center; }
 
 /* line 232, scss/style.scss */
 /* line 237, css/scss/style.css */
+/* line 302, css/css/scss/style.css */
 .how__arrow-block .arrow {
   width: 41px;
   height: 109px; }
 
 /* line 236, scss/style.scss */
 /* line 241, css/scss/style.css */
+/* line 308, css/css/scss/style.css */
 .how__arrow-block .arrow__first {
   margin-top: 60px;
   margin-left: -11px;
@@ -312,6 +354,7 @@ button {
 
 /* line 242, scss/style.scss */
 /* line 246, css/scss/style.css */
+/* line 315, css/css/scss/style.css */
 .how__arrow-block .arrow__second {
   margin-top: 220px;
   margin-left: -14px;
@@ -319,6 +362,7 @@ button {
 
 /* line 249, scss/style.scss */
 /* line 251, css/scss/style.css */
+/* line 322, css/css/scss/style.css */
 .how__arrow-block__analyse {
   min-width: 386px;
   min-height: 340px;
@@ -332,6 +376,7 @@ button {
 
 /* line 260, scss/style.scss */
 /* line 262, css/scss/style.css */
+/* line 335, css/css/scss/style.css */
 .how__arrow-block__analyse p {
   font-size: 18px;
   padding: 0 90px 0 68px;
@@ -339,6 +384,7 @@ button {
 
 /* line 266, scss/style.scss */
 /* line 267, css/scss/style.css */
+/* line 342, css/css/scss/style.css */
 .how__arrow-block__analyse button {
   width: 283px;
   height: 84px;
@@ -349,6 +395,7 @@ button {
 
 /* line 276, scss/style.scss */
 /* line 275, css/scss/style.css */
+/* line 352, css/css/scss/style.css */
 .how__arrow-block__decide {
   min-width: 366px;
   min-height: 271px;
@@ -363,16 +410,19 @@ button {
 
 /* line 288, scss/style.scss */
 /* line 287, css/scss/style.css */
+/* line 366, css/css/scss/style.css */
 .how__arrow-block__decide h4 {
   width: 124px; }
 
 /* line 292, scss/style.scss */
 /* line 290, css/scss/style.css */
+/* line 371, css/css/scss/style.css */
 .how__arrow-block__decide .warn {
   padding-left: 48px; }
 
 /* line 296, scss/style.scss */
 /* line 293, css/scss/style.css */
+/* line 376, css/css/scss/style.css */
 .how__arrow-block__decide > p {
   font-size: 18px;
   padding: 0 42px 0 48px;
@@ -380,6 +430,7 @@ button {
 
 /* line 302, scss/style.scss */
 /* line 298, css/scss/style.css */
+/* line 383, css/css/scss/style.css */
 .how__arrow-block__decide p:last-child {
   font-size: 12px;
   margin-left: 16px;
@@ -387,6 +438,7 @@ button {
 
 /* line 309, scss/style.scss */
 /* line 303, css/scss/style.css */
+/* line 390, css/css/scss/style.css */
 .how__arrow-block__introduction {
   min-width: 439px;
   min-height: 266px;
@@ -401,6 +453,7 @@ button {
 
 /* line 321, scss/style.scss */
 /* line 315, css/scss/style.css */
+/* line 404, css/css/scss/style.css */
 .how__arrow-block__introduction p {
   font-size: 18px;
   padding: 0px 55px 0 75px;
@@ -408,6 +461,7 @@ button {
 
 /* line 330, scss/style.scss */
 /* line 321, css/scss/style.css */
+/* line 411, css/css/scss/style.css */
 .result {
   margin: 0 auto;
   width: 1140px;
@@ -416,23 +470,27 @@ button {
 
 /* line 336, scss/style.scss */
 /* line 327, css/scss/style.css */
+/* line 419, css/css/scss/style.css */
 .result h2 {
   padding-top: 36px;
   text-align: center; }
 
 /* line 341, scss/style.scss */
 /* line 331, css/scss/style.css */
+/* line 425, css/css/scss/style.css */
 .result__content {
   display: flex;
   justify-content: flex-end; }
 
 /* line 345, scss/style.scss */
 /* line 335, css/scss/style.css */
+/* line 431, css/css/scss/style.css */
 .result__content p {
   font-size: 18px; }
 
 /* line 349, scss/style.scss */
 /* line 338, css/scss/style.css */
+/* line 436, css/css/scss/style.css */
 .result__content__triangles {
   display: flex;
   flex-direction: column;
@@ -444,6 +502,7 @@ button {
 
 /* line 358, scss/style.scss */
 /* line 347, css/scss/style.css */
+/* line 447, css/css/scss/style.css */
 .result__content__triangles__rus {
   width: 266px;
   height: 96px;
@@ -453,6 +512,7 @@ button {
 
 /* line 366, scss/style.scss */
 /* line 354, css/scss/style.css */
+/* line 456, css/css/scss/style.css */
 .result__content__triangles__ekg {
   width: 190px;
   height: 83px;
@@ -462,6 +522,7 @@ button {
 
 /* line 375, scss/style.scss */
 /* line 361, css/scss/style.css */
+/* line 465, css/css/scss/style.css */
 .result__content__rhombus {
   width: 407px;
   height: 471px;
@@ -476,6 +537,7 @@ button {
 
 /* line 387, scss/style.scss */
 /* line 373, css/scss/style.css */
+/* line 479, css/css/scss/style.css */
 .result__content__rhombus .price {
   display: flex;
   flex-direction: column;
@@ -485,12 +547,14 @@ button {
 
 /* line 394, scss/style.scss */
 /* line 380, css/scss/style.css */
+/* line 488, css/css/scss/style.css */
 .result__content__rhombus .price span {
   font-size: 12px;
   font-weight: normal; }
 
 /* line 400, scss/style.scss */
 /* line 384, css/scss/style.css */
+/* line 494, css/css/scss/style.css */
 .result__content__rhombus p:last-child {
   flex-basis: 110px;
   display: flex;
@@ -498,11 +562,13 @@ button {
 
 /* line 407, scss/style.scss */
 /* line 389, css/scss/style.css */
+/* line 501, css/css/scss/style.css */
 .result__content__description {
   width: 400px; }
 
 /* line 410, scss/style.scss */
 /* line 392, css/scss/style.css */
+/* line 506, css/css/scss/style.css */
 .result__content__description p {
   font-size: 14px;
   color: white;
@@ -512,6 +578,7 @@ button {
 
 /* line 418, scss/style.scss */
 /* line 399, css/scss/style.css */
+/* line 515, css/css/scss/style.css */
 .result__content__description .marked {
   width: 414px;
   padding-right: 176px;
@@ -520,6 +587,7 @@ button {
 
 /* line 424, scss/style.scss */
 /* line 405, css/scss/style.css */
+/* line 523, css/css/scss/style.css */
 .result__content__description .marked::before {
   content: "";
   background: url("../../img/result/point.png") no-repeat center;
@@ -531,6 +599,7 @@ button {
 
 /* line 438, scss/style.scss */
 /* line 415, css/scss/style.css */
+/* line 534, css/css/scss/style.css */
 .functions {
   margin: 0 auto;
   width: 1140px;
@@ -539,17 +608,20 @@ button {
 
 /* line 444, scss/style.scss */
 /* line 421, css/scss/style.css */
+/* line 542, css/css/scss/style.css */
 .functions h2 {
   font-size: 36px;
   padding: 45px 0 0 92px; }
 
 /* line 449, scss/style.scss */
 /* line 425, css/scss/style.css */
+/* line 548, css/css/scss/style.css */
 .functions .title {
   font-size: 24px; }
 
 /* line 453, scss/style.scss */
 /* line 428, css/scss/style.css */
+/* line 553, css/css/scss/style.css */
 .functions__problems {
   min-width: 648px;
   max-width: 648px;
@@ -561,6 +633,7 @@ button {
 
 /* line 462, scss/style.scss */
 /* line 437, css/scss/style.css */
+/* line 564, css/css/scss/style.css */
 .functions__problems__category {
   width: 282px;
   height: 62px;
@@ -572,38 +645,45 @@ button {
 
 /* line 470, scss/style.scss */
 /* line 446, css/scss/style.css */
+/* line 575, css/css/scss/style.css */
 .functions__problems__category span {
   display: block; }
 
 /* line 475, scss/style.scss */
 /* line 449, css/scss/style.css */
+/* line 580, css/css/scss/style.css */
 .functions__problems__description {
   padding: 0 157px 0 90px; }
 
 /* line 478, scss/style.scss */
 /* line 452, css/scss/style.css */
+/* line 585, css/css/scss/style.css */
 .functions__problems__description .title {
   padding-top: 24px;
   margin-bottom: 32px; }
 
 /* line 483, scss/style.scss */
 /* line 456, css/scss/style.css */
+/* line 591, css/css/scss/style.css */
 .functions__problems__description p {
   margin-bottom: 24px; }
 
 /* line 487, scss/style.scss */
 /* line 459, css/scss/style.css */
+/* line 596, css/css/scss/style.css */
 .functions__problems__description p:last-child {
   margin-bottom: 0;
   font-weight: bold; }
 
 /* line 494, scss/style.scss */
 /* line 463, css/scss/style.css */
+/* line 602, css/css/scss/style.css */
 .functions__decisions {
   padding-top: 84px; }
 
 /* line 497, scss/style.scss */
 /* line 466, css/scss/style.css */
+/* line 607, css/css/scss/style.css */
 .functions__decisions h5 {
   color: #666;
   font-size: 18px;
@@ -613,6 +693,7 @@ button {
 
 /* line 505, scss/style.scss */
 /* line 473, css/scss/style.css */
+/* line 616, css/css/scss/style.css */
 .functions__decisions__choose {
   display: flex;
   font-size: 14px;
@@ -622,6 +703,7 @@ button {
 
 /* line 513, scss/style.scss */
 /* line 480, css/scss/style.css */
+/* line 625, css/css/scss/style.css */
 .functions__decisions__text {
   min-width: 555px;
   max-width: 555px;
@@ -634,17 +716,20 @@ button {
 
 /* line 523, scss/style.scss */
 /* line 490, css/scss/style.css */
+/* line 637, css/css/scss/style.css */
 .functions__decisions__text h4 {
   margin: 32px 0 48px; }
 
 /* line 527, scss/style.scss */
 /* line 493, css/scss/style.css */
+/* line 642, css/css/scss/style.css */
 .functions__decisions__text p {
   width: 100%;
   padding: 0 40px 24px; }
 
 /* line 532, scss/style.scss */
 /* line 497, css/scss/style.css */
+/* line 648, css/css/scss/style.css */
 .functions__decisions__text--more {
   width: 503px;
   height: 115px;
@@ -652,6 +737,7 @@ button {
 
 /* line 537, scss/style.scss */
 /* line 502, css/scss/style.css */
+/* line 655, css/css/scss/style.css */
 .functions__decisions__text--more button {
   width: 403px;
   height: 84px;
@@ -660,6 +746,7 @@ button {
 
 /* line 543, scss/style.scss */
 /* line 508, css/scss/style.css */
+/* line 663, css/css/scss/style.css */
 .functions__decisions__text--more button span {
   display: block;
   font-weight: bold;
@@ -667,6 +754,7 @@ button {
 
 /* line 554, scss/style.scss */
 /* line 514, css/scss/style.css */
+/* line 670, css/css/scss/style.css */
 .pros {
   margin: 0 auto;
   width: 1140px;
@@ -675,6 +763,7 @@ button {
 
 /* line 560, scss/style.scss */
 /* line 520, css/scss/style.css */
+/* line 678, css/css/scss/style.css */
 .pros h2 {
   width: 541px;
   height: 112px;
@@ -683,6 +772,7 @@ button {
 
 /* line 567, scss/style.scss */
 /* line 526, css/scss/style.css */
+/* line 686, css/css/scss/style.css */
 .pros h4 {
   font-size: 24px;
   width: 160px;
@@ -691,11 +781,13 @@ button {
 
 /* line 573, scss/style.scss */
 /* line 532, css/scss/style.css */
+/* line 694, css/css/scss/style.css */
 .pros h4 span {
   display: block; }
 
 /* line 578, scss/style.scss */
 /* line 535, css/scss/style.css */
+/* line 699, css/css/scss/style.css */
 .pros .row {
   width: 1091px;
   height: 296px;
@@ -704,17 +796,20 @@ button {
 
 /* line 584, scss/style.scss */
 /* line 541, css/scss/style.css */
+/* line 707, css/css/scss/style.css */
 .pros .row__left {
   margin-left: -8px; }
 
 /* line 588, scss/style.scss */
 /* line 544, css/scss/style.css */
+/* line 712, css/css/scss/style.css */
 .pros .row__right {
   margin-right: -8px;
   margin-left: auto; }
 
 /* line 594, scss/style.scss */
 /* line 548, css/scss/style.css */
+/* line 718, css/css/scss/style.css */
 .pros .content {
   display: flex;
   justify-content: space-between;
@@ -722,95 +817,113 @@ button {
 
 /* line 599, scss/style.scss */
 /* line 553, css/scss/style.css */
+/* line 725, css/css/scss/style.css */
 .pros .content span {
   display: block; }
 
 /* line 603, scss/style.scss */
 /* line 556, css/scss/style.css */
+/* line 730, css/css/scss/style.css */
 .pros .content p {
   width: 244px;
   font-size: 18px; }
 
 /* line 609, scss/style.scss */
 /* line 560, css/scss/style.css */
+/* line 736, css/css/scss/style.css */
 .pros__analysis {
   background: url("../../img/pros/analysis.png") no-repeat center/cover; }
 
 /* line 612, scss/style.scss */
 /* line 563, css/scss/style.css */
+/* line 741, css/css/scss/style.css */
 .pros__analysis__content {
   padding: 60px 0 48px 0; }
 
 /* line 615, scss/style.scss */
 /* line 566, css/scss/style.css */
+/* line 746, css/css/scss/style.css */
 .pros__analysis__content p:nth-child(-n + 2) {
   flex-basis: 85px;
   margin-right: 90px; }
 
 /* line 621, scss/style.scss */
 /* line 570, css/scss/style.css */
+/* line 752, css/css/scss/style.css */
 .pros__system {
   background: url("../../img/pros/system.png") no-repeat center/cover; }
 
 /* line 624, scss/style.scss */
 /* line 573, css/scss/style.css */
+/* line 757, css/css/scss/style.css */
 .pros__system h4 {
   padding-top: 32px; }
 
 /* line 628, scss/style.scss */
 /* line 576, css/scss/style.css */
+/* line 762, css/css/scss/style.css */
 .pros__system__content {
   padding: 80px 0 68px 0; }
 
 /* line 631, scss/style.scss */
 /* line 579, css/scss/style.css */
+/* line 767, css/css/scss/style.css */
 .pros__system__content p:nth-child(odd) {
   flex-basis: 85px;
   margin-right: 90px; }
 
 /* line 638, scss/style.scss */
 /* line 583, css/scss/style.css */
+/* line 773, css/css/scss/style.css */
 .pros__program {
   background: url("../../img/pros/program.png") no-repeat center/cover; }
 
 /* line 641, scss/style.scss */
 /* line 586, css/scss/style.css */
+/* line 778, css/css/scss/style.css */
 .pros__program .content {
   justify-content: space-around; }
 
 /* line 645, scss/style.scss */
 /* line 589, css/scss/style.css */
+/* line 783, css/css/scss/style.css */
 .pros__program__content {
   padding: 42px 0 52px 0; }
 
 /* line 648, scss/style.scss */
 /* line 592, css/scss/style.css */
+/* line 788, css/css/scss/style.css */
 .pros__program__content p:first-child {
   margin-right: 100px; }
 
 /* line 654, scss/style.scss */
 /* line 595, css/scss/style.css */
+/* line 793, css/css/scss/style.css */
 .pros__reports {
   background: url("../../img/pros/reports.png") no-repeat center/cover; }
 
 /* line 657, scss/style.scss */
 /* line 598, css/scss/style.css */
+/* line 798, css/css/scss/style.css */
 .pros__reports .content {
   justify-content: space-around; }
 
 /* line 661, scss/style.scss */
 /* line 601, css/scss/style.css */
+/* line 803, css/css/scss/style.css */
 .pros__reports__content {
   padding: 80px 0 65px 0; }
 
 /* line 665, scss/style.scss */
 /* line 604, css/scss/style.css */
+/* line 808, css/css/scss/style.css */
 .pros__reports p:first-child {
   margin-right: 90px;
   flex-basis: 85px; }
 
 /* line 672, scss/style.scss */
 /* line 609, css/scss/style.css */
+/* line 814, css/css/scss/style.css */
 .scheme {
   width: 2088px;
   height: 700px;
