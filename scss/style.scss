@@ -2,8 +2,21 @@
 @import "./accodion.scss";
 
 @function img-url($folder, $imgName) {
-  @return url("../../img/" + $folder + "/" + $imgName + ".png");
+  @return url("../../img/" + $folder + "/" + $imgName + ".png") no-repeat center /
+    cover;
 }
+@mixin section-size {
+  width: 1140px;
+  height: 700px;
+  margin: 0 20vw;
+}
+@mixin img-size($width, $height) {
+  min-width: $width + px;
+  max-width: $width + px;
+  min-height: $height + px;
+  max-height: $height + px;
+}
+
 $text-white: #dfe5eb;
 body {
   font-family: "Noto Sans", sans-serif;
@@ -81,11 +94,10 @@ button {
 /* First Screen */
 
 .offer {
-  margin: 0 auto;
-  width: 1140px;
-  height: 700px;
-  background: img-url("first-screen", "bg") no-repeat top / cover;
+  @include section-size;
+  background: img-url("first-screen", "bg");
   font-size: 14px;
+  background-position: top;
 
   &__header {
     display: flex;
@@ -142,25 +154,27 @@ button {
     display: flex;
     margin-top: 45px;
 
+    .analyse,
+    .based,
+    .make {
+      margin: 0 -8px;
+    }
     .analyse {
-      width: 346px;
-      height: 90px;
-      background: img-url("first-screen", "analyse-bg") no-repeat center;
+      @include img-size(364, 108);
+      background: img-url("first-screen", "analyse-bg");
       padding: 30px 25px;
     }
 
     .based {
-      width: 331px;
-      height: 90px;
-      background: img-url("first-screen", "based-bg") no-repeat center;
+      @include img-size(349, 108);
+      background: img-url("first-screen", "based-bg");
       padding: 30px 25px;
       margin-top: 120px;
     }
 
     .make {
-      width: 346px;
-      height: 90px;
-      background: img-url("first-screen", "make-bg") no-repeat center;
+      @include img-size(364, 108);
+      background: img-url("first-screen", "make-bg");
       padding: 30px 25px;
       margin-top: 240px;
     }
@@ -168,25 +182,24 @@ button {
     .arrow {
       width: 72px;
       height: 147px;
-      margin: 0 -6px 0 -8px;
+      margin: 0 -6px 0 -10px;
 
       &__first {
-        margin-top: 35px;
+        margin-top: 43px;
       }
 
       &__second {
-        margin-top: 155px;
+        margin-top: 163px;
       }
     }
   }
   .order {
     align-items: flex-start;
     flex-direction: column;
-    width: 302px;
-    height: 71px;
-    background: img-url("first-screen", "order-bg") no-repeat center;
+    @include img-size(321, 91);
+    background: img-url("first-screen", "order-bg");
     padding: 22px 30px;
-
+    margin: -28px 0 0 -8px;
     span {
       display: block;
       font-weight: bold;
@@ -195,11 +208,10 @@ button {
 }
 
 .how {
-  margin: 0 auto;
-  width: 1140px;
-  height: 700px;
-  background: img-url("how", "bg") no-repeat top / cover;
+  @include section-size;
+  background: img-url("how", "bg");
   position: relative;
+  background-position: top;
 
   h2 {
     font-size: 36px;
@@ -247,11 +259,8 @@ button {
     }
 
     &__analyse {
-      min-width: 386px;
-      min-height: 340px;
-      max-width: 386px;
-      max-height: 340px;
-      background: img-url("how", "analyse-bg") no-repeat center / cover;
+      @include img-size(386, 340);
+      background: img-url("how", "analyse-bg");
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -266,7 +275,7 @@ button {
       button {
         width: 283px;
         height: 84px;
-        background: img-url("how", "analyse-button") no-repeat center / cover;
+        background: img-url("how", "analyse-button");
         font-size: 18px;
         font-weight: bold;
         color: white;
@@ -274,11 +283,8 @@ button {
     }
 
     &__decide {
-      min-width: 366px;
-      min-height: 271px;
-      max-width: 366px;
-      max-height: 271px;
-      background: img-url("how", "decide-bg") no-repeat center / cover;
+      @include img-size(366, 271);
+      background: img-url("how", "decide-bg");
       color: white;
       display: flex;
       flex-direction: column;
@@ -307,11 +313,8 @@ button {
     }
 
     &__introduction {
-      min-width: 439px;
-      min-height: 266px;
-      max-width: 439px;
-      max-height: 266px;
-      background: img-url("how", "introduction-bg") no-repeat center / cover;
+      @include img-size(439, 266);
+      background: img-url("how", "introduction-bg");
       color: white;
       display: flex;
       flex-direction: column;
@@ -328,14 +331,31 @@ button {
 }
 
 .result {
-  margin: 0 auto;
-  width: 1140px;
-  height: 700px;
-  background: img-url("result", "bg") no-repeat top / cover;
+  @include section-size;
+  background: img-url("result", "bg");
+  background-position: top;
+  position: relative;
+
+  span {
+    display: block;
+  }
 
   h2 {
     padding-top: 36px;
     text-align: center;
+  }
+
+  .stage-text {
+    @include img-size(108, 46);
+    background: img-url("result", "stage");
+    background-position: top left;
+    background-size: auto;
+    position: absolute;
+    padding-left: 34px;
+    top: 108px;
+    left: 50px;
+    font-size: 12px;
+    color: #999999;
   }
 
   &__content {
@@ -358,7 +378,7 @@ button {
       &__rus {
         width: 266px;
         height: 96px;
-        background: img-url("result", "rus") no-repeat center / cover;
+        background: img-url("result", "rus");
         margin-bottom: 33px;
         padding: 34px 0 0 54px;
       }
@@ -366,7 +386,7 @@ button {
       &__ekg {
         width: 190px;
         height: 83px;
-        background: img-url("result", "ekg") no-repeat center / cover;
+        background: img-url("result", "ekg");
         margin-left: 10px;
         padding: 23px 0 0 45px;
       }
@@ -377,12 +397,41 @@ button {
       height: 471px;
       margin-left: -30px;
       margin-right: -33px;
-      background: img-url("result", "rhombus") no-repeat center / cover;
+      background: img-url("result", "rhombus");
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-weight: bold;
+      position: relative;
+
+      .reject {
+        @include img-size(188, 46);
+        background: img-url("result", "reject");
+        background-position: bottom right;
+        padding-left: 13px;
+        top: 18px;
+        left: -40px;
+        color: #999999;
+      }
+
+      .graphic {
+        @include img-size(108, 46);
+        background: img-url("result", "graphic");
+        background-position: top left;
+        padding-left: 34px;
+        bottom: 58px;
+        right: 0px;
+      }
+
+      .reject,
+      .graphic {
+        font-size: 12px;
+        font-weight: normal;
+        color: #999999;
+        background-size: auto;
+        position: absolute;
+      }
 
       .price {
         display: flex;
@@ -423,7 +472,7 @@ button {
 
         &::before {
           content: "";
-          background: img-url("result", "point") no-repeat center;
+          background: img-url("result", "point");
           width: 10px;
           height: 10px;
           position: absolute;
@@ -436,10 +485,11 @@ button {
 }
 
 .functions {
-  margin: 0 auto;
-  width: 1140px;
-  background: img-url("functions", "bg") no-repeat top / cover;
+  @include section-size;
+  height: auto;
+  background: img-url("functions", "bg");
   display: flex;
+  background-position: top;
 
   h2 {
     font-size: 36px;
@@ -451,18 +501,15 @@ button {
   }
 
   &__problems {
-    min-width: 648px;
-    max-width: 648px;
-    min-height: 650px;
-    max-height: 650px;
-    background: img-url("functions", "problems") no-repeat center / cover;
+    @include img-size(648, 650);
+    background: img-url("functions", "problems");
     margin-right: -76px;
     margin-top: -8px;
 
     &__category {
       width: 282px;
       height: 62px;
-      background: img-url("functions", "category") no-repeat center / cover;
+      background: img-url("functions", "category");
       font-size: 14px;
       font-weight: bold;
       padding: 12px 0 0 29px;
@@ -511,11 +558,8 @@ button {
     }
 
     &__text {
-      min-width: 555px;
-      max-width: 555px;
-      min-height: 631px;
-      max-height: 631px;
-      background: img-url("functions", "decisions") no-repeat center / cover;
+      @include img-size(555, 631);
+      background: img-url("functions", "decisions");
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -532,12 +576,12 @@ button {
       &--more {
         width: 503px;
         height: 115px;
-        background: img-url("functions", "more-bg") no-repeat center / cover;
+        background: img-url("functions", "more-bg");
 
         button {
           width: 403px;
           height: 84px;
-          background: img-url("functions", "more") no-repeat center / cover;
+          background: img-url("functions", "more");
           font-size: 14px;
 
           span {
@@ -552,15 +596,14 @@ button {
 }
 
 .pros {
-  margin: 0 auto;
-  width: 1140px;
+  @include section-size;
   height: 1492px;
-  background: img-url("pros", "bg") no-repeat top / cover;
+  background: img-url("pros", "bg");
 
   h2 {
     width: 541px;
     height: 112px;
-    background: img-url("pros", "header") no-repeat center/ cover;
+    background: img-url("pros", "header");
     margin: 0 32px 48px auto;
   }
 
@@ -607,7 +650,7 @@ button {
   }
 
   &__analysis {
-    background: img-url("pros", "analysis") no-repeat center/ cover;
+    background: img-url("pros", "analysis");
 
     &__content {
       padding: 60px 0 48px 0;
@@ -619,7 +662,7 @@ button {
     }
   }
   &__system {
-    background: img-url("pros", "system") no-repeat center/ cover;
+    background: img-url("pros", "system");
 
     h4 {
       padding-top: 32px;
@@ -636,7 +679,7 @@ button {
   }
 
   &__program {
-    background: img-url("pros", "program") no-repeat center/ cover;
+    background: img-url("pros", "program");
 
     .content {
       justify-content: space-around;
@@ -652,7 +695,7 @@ button {
   }
 
   &__reports {
-    background: img-url("pros", "reports") no-repeat center/ cover;
+    background: img-url("pros", "reports");
 
     .content {
       justify-content: space-around;
@@ -662,7 +705,7 @@ button {
       padding: 80px 0 65px 0;
     }
 
-    p:first-child {
+    p:nth-child(even) {
       margin-right: 90px;
       flex-basis: 85px;
     }
@@ -671,6 +714,195 @@ button {
 
 .scheme {
   width: 2088px;
-  height: 700px;
-  background: img-url("scheme", "bg") no-repeat center / cover;
+  height: 708px;
+  background: img-url("scheme", "bg");
+  margin-left: 20vw;
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+
+  span {
+    display: block;
+  }
+
+  h2 {
+    font-size: 30px;
+    @include img-size(156, 250);
+    background: img-url("scheme", "header");
+    background-position: top;
+    background-size: contain;
+    padding: 42px 0 0 30px;
+    color: white;
+  }
+
+  .short-arrow {
+    width: 47px;
+    height: 62px;
+    margin: 0 -42px 0 -26px;
+
+    &__first {
+      margin-top: 94px;
+    }
+
+    &__second {
+      margin-top: 179px;
+    }
+  }
+
+  .long-arrow {
+    width: 119px;
+    height: 62px;
+    margin: 0 -40px 0 -39px;
+    margin-top: 264px;
+  }
+
+  &__start {
+    width: 728px;
+    height: 708px;
+    background: img-url("scheme", "start");
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__request {
+      @include img-size(226, 111);
+      background: img-url("scheme", "request-bg");
+      position: relative;
+      margin-top: 40px;
+
+      &::after {
+        content: "";
+        width: 64px;
+        height: 2px;
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: -32px;
+      }
+    }
+
+    &__analysis {
+      @include img-size(277, 111);
+      background: img-url("scheme", "analysis-bg");
+      margin-top: 127px;
+    }
+
+    &__demonstration {
+      @include img-size(259, 111);
+      background: img-url("scheme", "demonstration-bg");
+      margin-top: 212px;
+      padding: 32px 0 0 38px;
+    }
+
+    &__presentation {
+      @include img-size(434, 259);
+      background: img-url("scheme", "presentation-bg");
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      margin-top: 80px;
+      p {
+        width: 345px;
+        padding: 44px 0;
+        color: white;
+      }
+
+      button {
+        @include img-size(314, 77);
+        background: img-url("scheme", "send-button");
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+
+  &__registration {
+    @include img-size(579, 708);
+    background: img-url("scheme", "registration");
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    &__header {
+      @include img-size(434, 129);
+      background: img-url("scheme", "header-blue");
+      color: white;
+      flex-direction: column;
+      margin-top: 72px;
+    }
+
+    &__arrow-block {
+      display: flex;
+      margin-left: 84px;
+
+      .short-arrow {
+        margin: 150px -20px 0 -1px;
+      }
+
+      .long-arrow {
+        margin: 242px 0 0 -5px;
+      }
+
+      .business-offer {
+        @include img-size(208, 60);
+        background: img-url("scheme", "business-offer");
+        padding: 7px 0 0 24px;
+        margin: 122px 0 0 22px;
+      }
+
+      .contract {
+        @include img-size(285, 60);
+        background: img-url("scheme", "contract");
+        margin-top: 208px;
+      }
+    }
+  }
+
+  &__cooperation {
+    @include img-size(466, 708);
+    background: img-url("scheme", "cooperation");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 32px;
+
+    &__header {
+      @include img-size(434, 129);
+      background: img-url("scheme", "header-blue");
+      color: white;
+      flex-direction: column;
+      margin-top: 72px;
+    }
+
+    &__arrow-block {
+      display: flex;
+
+      .short-arrow {
+        margin: 330px -44px 0 -27px;
+      }
+
+      .introduction {
+        @include img-size(212, 111);
+        background: img-url("scheme", "introduction");
+        margin: 274px 0 0 44px;
+      }
+
+      .support {
+        @include img-size(276, 111);
+        background: img-url("scheme", "support");
+        padding: 32px 0 0 38px;
+        margin-top: 363px;
+      }
+    }
+  }
 }
