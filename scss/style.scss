@@ -487,13 +487,18 @@ button {
 .functions {
   @include section-size;
   height: auto;
-  background: img-url("functions", "bg");
+  outline: 1px solid #f2ede7;
   display: flex;
   background-position: top;
+  flex-wrap: wrap;
 
   h2 {
     font-size: 36px;
-    padding: 45px 0 0 92px;
+    padding: 44px 0 0 89px;
+    width: 427px;
+    height: 172px;
+    background-image: linear-gradient(90deg, #003b69 0%, #000f28 100%);
+    color: white;
   }
 
   .title {
@@ -501,26 +506,19 @@ button {
   }
 
   &__problems {
-    @include img-size(648, 650);
-    background: img-url("functions", "problems");
     margin-right: -76px;
     margin-top: -8px;
-
-    &__category {
-      width: 282px;
-      height: 62px;
-      background: img-url("functions", "category");
-      font-size: 14px;
-      font-weight: bold;
-      padding: 12px 0 0 29px;
-      margin: 39px 0 32px 60px;
-      span {
-        display: block;
-      }
-    }
+    position: relative;
+    z-index: 2;
 
     &__description {
-      padding: 0 157px 0 90px;
+      width: 466px;
+      padding: 0 28px 0 42px;
+      margin-left: 50px;
+      border-radius: 0 0 10px 10px;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
+      background-color: #ffffff;
+      border: 1px solid #c6c6c6;
 
       .title {
         padding-top: 24px;
@@ -532,37 +530,79 @@ button {
       }
 
       p:last-child {
-        margin-bottom: 0;
+        margin-bottom: 50px;
         font-weight: bold;
       }
     }
   }
 
-  &__decisions {
-    padding-top: 84px;
+  &__choose {
+    display: flex;
+    align-items: center;
+    width: 1116px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    color: white;
+    font-size: 14px;
+    padding-left: 68px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 59, 105, 1) 0%,
+      rgba(0, 15, 40, 1) 45%,
+      rgba(0, 59, 105, 1) 100%
+    );
+
+    span {
+      display: block;
+    }
+
+    p {
+      padding: 12px 0 0 15px;
+      @include img-size(282, 62);
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 200px;
+      }
+    }
+
+    &--chosen {
+      color: #000;
+      font-weight: bold;
+      background: img-url("functions", "category");
+    }
+  }
+
+  &__solutions {
+    padding-top: 44px;
+    z-index: 1;
 
     h5 {
       color: #666;
       font-size: 18px;
       font-weight: normal;
-      margin-bottom: 28px;
-      padding-left: 8px;
-    }
-
-    &__choose {
-      display: flex;
-      font-size: 14px;
-      padding-right: 28px;
-      margin-bottom: 48px;
-      padding-left: 8px;
+      margin-bottom: 138px;
+      padding-left: 130px;
     }
 
     &__text {
       @include img-size(555, 631);
-      background: img-url("functions", "decisions");
+      background: img-url("functions", "solutions");
       display: flex;
       align-items: center;
       flex-direction: column;
+      position: relative;
+      margin-left: 122px;
+
+      &:before {
+        content: "";
+        @include img-size(171, 413);
+        background: img-url("functions", "solutions-figure");
+        left: -105px;
+        position: absolute;
+        z-index: -1;
+      }
 
       h4 {
         margin: 32px 0 48px;
@@ -591,6 +631,10 @@ button {
           }
         }
       }
+    }
+
+    &__list {
+      min-height: 364px;
     }
   }
 }
@@ -903,6 +947,53 @@ button {
         padding: 32px 0 0 38px;
         margin-top: 363px;
       }
+    }
+  }
+}
+
+.faq {
+  @include section-size;
+  background-color: #f2ede7;
+  border: 1px solid #f2ede7;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+    font-size: 18px;
+
+    h3 {
+      width: 150px;
+      height: 60px;
+      border-radius: 0 5px 5px 0;
+      background-image: linear-gradient(-90deg, #000f28 0%, #002142 100%);
+      color: white;
+      font-size: 30px;
+    }
+    &__tabs {
+      display: flex;
+      justify-content: space-evenly;
+      flex-basis: 600px;
+      height: 50px;
+
+      .tab {
+        &--chosen {
+          width: 182px;
+          height: 50px;
+          border-radius: 25px;
+          background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
+          color: white;
+        }
+      }
+    }
+
+    .vr {
+      width: 226px;
+      height: 50px;
+      border-radius: 25px;
+      background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
+      margin-right: 52px;
+      color: white;
     }
   }
 }

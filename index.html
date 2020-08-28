@@ -129,53 +129,65 @@
     </section>
     <section class="functions">
       <div class="functions__problems">
+        <div class="functions__choose text-uppercase">
+          <p data-role="portfolioManager" class="functions__choose--chosen">
+            <span data-role="portfolioManager">директор</span> и руководитель
+            портфеля
+          </p>
+          <p data-role="projectOffice">
+            <span data-role="projectOffice">руководитель и планировщик</span>
+            программ, проектный офис
+          </p>
+          <p data-role="projectEngineer">
+            <span data-role="projectEngineer">Руководитель, планировщик</span> и
+            инженер проекта
+          </p>
+        </div>
         <h2 class="text-white text-uppercase">функции</h2>
-        <p class="functions__problems__category">
-          <span>Директор</span> и руководитель портфеля
-        </p>
         <div class="functions__problems__description">
           <h4 class="title text-uppercase">проблемы</h4>
-          <p>
-            Качество данных о проектах не позволяет анализировать и принимать
-            решения
-          </p>
-          <p>Отчеты не дают полной картины и готовятся с опозданием</p>
-          <p>
-            Протокольные поручения долго доходят до исполнителей, отсутствует
-            обратная связь
-          </p>
-          <p>
-            Поэтому проблемы решаются по факту их возникновения, приходиться
-            управлять проектами вручную
-          </p>
+          <div class="functions__problems__list">
+            <p>
+              Качество данных о проектах не позволяет анализировать и принимать
+              решения
+            </p>
+            <p>Отчеты не дают полной картины и готовятся с опозданием</p>
+            <p>
+              Протокольные поручения долго доходят до исполнителей, отсутствует
+              обратная связь
+            </p>
+            <p>
+              Поэтому проблемы решаются по факту их возникновения, приходиться
+              управлять проектами вручную
+            </p>
+          </div>
         </div>
       </div>
-      <div class="functions__decisions">
+      <div class="functions__solutions">
         <h5 class="text-uppercase">выберите вашу компетенцию</h5>
-        <div class="functions__decisions__choose text-uppercase">
-          <p>руководитель и планировщик программ, проектный офис</p>
-          <p>Руководитель, планировщик и инженер проекта</p>
-        </div>
-        <div class="functions__decisions__text">
+        <div class="functions__solutions__text">
           <h4 class="title text-white text-uppercase">
             решения проектного ассистента
           </h4>
-          <p>
-            Достоверная информация о реализации проектов, программ и портфелей в
-            едином окне
-          </p>
-          <p>Проверка качества данных по 24 критериям</p>
-          <p>
-            Оценка не только по бюджетам и срокам, но и по контрольным точкам,
-            которые наглядно отображают ход реализации проекта
-          </p>
-          <p>
-            Контроль отклонений в показателях деятельности с помощью системы
-            e-mail-поручений
-          </p>
-          <p>Наглядные и подробные отчеты</p>
-          <p>Рейтинг сотрудников</p>
-          <div class="functions__decisions__text--more flex-center">
+          <div class="functions__solutions__list">
+            <p>
+              Достоверная информация о реализации проектов, программ и портфелей
+              в едином окне
+            </p>
+            <p>Проверка качества данных по 24 критериям</p>
+            <p>
+              Оценка не только по бюджетам и срокам, но и по контрольным точкам,
+              которые наглядно отображают ход реализации проекта
+            </p>
+            <p>
+              Контроль отклонений в показателях деятельности с помощью системы
+              e-mail-поручений
+            </p>
+            <p>Наглядные и подробные отчеты</p>
+            <p>Рейтинг сотрудников</p>
+          </div>
+
+          <div class="functions__solutions__text--more flex-center">
             <button>
               <span class="text-uppercase">узнайте больше о функциях </span
               >Проектного ассистента в FAQ
@@ -250,17 +262,13 @@
       <h2 class="text-white"><span>схема</span> работы</h2>
       <div class="scheme__start">
         <div class="scheme__start__wrapper">
-          <div class="scheme__start__request flex-center">
-            заявка
-          </div>
+          <div class="scheme__start__request flex-center">заявка</div>
           <img
             src="img/scheme/short-arrow.png"
             alt="short-arrow"
             class="short-arrow short-arrow__first"
           />
-          <div class="scheme__start__analysis flex-center">
-            анализ проблем
-          </div>
+          <div class="scheme__start__analysis flex-center">анализ проблем</div>
           <img
             src="img/scheme/short-arrow.png"
             alt="short-arrow"
@@ -295,9 +303,7 @@
             alt="short-arrow"
             class="short-arrow"
           />
-          <div class="contract flex-center">
-            Заключение договора
-          </div>
+          <div class="contract flex-center">Заключение договора</div>
           <img
             src="img/scheme/long-arrow.png"
             alt="long-arrow"
@@ -324,35 +330,47 @@
         </div>
       </div>
     </section>
-    <!-- <div class="js-Accordion" id="accordion">
-      <button>Title 1</button>
-      <div>
-        Shabby chic ennui cred godard, forage roof party scenester health goth
-        typewriter pitchfork. Stumptown whatever fap, austin heirloom
-        asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
-        meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free put
-        a bird on it migas forage trust fund.
+    <section class="faq">
+      <div class="faq__header">
+        <h3 class="flex-center">FAQ</h3>
+        <div class="faq__header__tabs">
+          <p class="tab flex-center tab--chosen">Возможности</p>
+          <p class="tab flex-center">Интерфейс</p>
+          <p class="tab flex-center">Внедрение</p>
+          <p class="tab flex-center">О проекте</p>
+        </div>
+        <div class="vr flex-center">Виртуальный тур</div>
       </div>
+      <div class="js-Accordion" id="accordion">
+        <button>Title 1</button>
+        <div>
+          Shabby chic ennui cred godard, forage roof party scenester health goth
+          typewriter pitchfork. Stumptown whatever fap, austin heirloom
+          asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
+          meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free
+          put a bird on it migas forage trust fund.
+        </div>
 
-      <button>Title 2</button>
-      <div>
-        Shabby chic ennui cred godard, forage roof party scenester health goth
-        typewriter pitchfork. Stumptown whatever fap, austin heirloom
-        asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
-        meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free put
-        a bird on it migas forage trust fund.
+        <button>Title 2</button>
+        <div>
+          Shabby chic ennui cred godard, forage roof party scenester health goth
+          typewriter pitchfork. Stumptown whatever fap, austin heirloom
+          asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
+          meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free
+          put a bird on it migas forage trust fund.
+        </div>
+
+        <button>Title 3</button>
+        <div>
+          Shabby chic ennui cred godard, forage roof party scenester health goth
+          typewriter pitchfork. Stumptown whatever fap, austin heirloom
+          asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
+          meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free
+          put a bird on it migas forage trust fund.
+        </div>
       </div>
+    </section>
 
-      <button>Title 3</button>
-      <div>
-        Shabby chic ennui cred godard, forage roof party scenester health goth
-        typewriter pitchfork. Stumptown whatever fap, austin heirloom
-        asymmetrical lo-fi ethical seitan. Post-ironic hella listicle brunch
-        meggings artisan. YOLO tattooed blue bottle, fanny pack gluten-free put
-        a bird on it migas forage trust fund.
-      </div>
-    </div> -->
-
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js" type="text/javascript"></script>
   </body>
 </html>
