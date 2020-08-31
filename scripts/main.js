@@ -101,6 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
     oneOpen: false,
   });
 
+  skrollr.init({
+    forceHeight: true,
+  });
+  window.onscroll = () => console.log(window.scrollY);
+
   const getByClass = (className) => document.querySelector(`.${className}`);
 
   // functions block start

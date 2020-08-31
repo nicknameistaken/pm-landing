@@ -8,8 +8,14 @@
 @mixin section-size {
   width: 1140px;
   height: 700px;
-  margin: 0 20vw;
 }
+
+@mixin section-pos($top, $left) {
+  position: fixed;
+  top: $top;
+  left: $left;
+}
+
 @mixin img-size($width, $height) {
   min-width: $width + px;
   max-width: $width + px;
@@ -22,6 +28,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
+  height: 7474px;
 }
 
 div,
@@ -95,6 +102,7 @@ button {
 
 .offer {
   @include section-size;
+  @include section-pos(0%, 20%);
   background: img-url("first-screen", "bg");
   font-size: 14px;
   background-position: top;
@@ -209,10 +217,11 @@ button {
 
 .how {
   @include section-size;
+  @include section-pos(48.7%, 79.9%);
   background: img-url("how", "bg");
-  position: relative;
   background-position: top;
 
+  //TODO make header
   h2 {
     font-size: 36px;
     position: absolute;
@@ -332,9 +341,9 @@ button {
 
 .result {
   @include section-size;
+  @include section-pos(89.4%, 139.9%);
   background: img-url("result", "bg");
   background-position: top;
-  position: relative;
 
   span {
     display: block;
@@ -345,6 +354,7 @@ button {
     text-align: center;
   }
 
+  //TODO new pos-rel
   .stage-text {
     @include img-size(108, 46);
     background: img-url("result", "stage");
@@ -486,6 +496,7 @@ button {
 
 .functions {
   @include section-size;
+  @include section-pos(141%, 199.5%);
   height: auto;
   outline: 1px solid #f2ede7;
   display: flex;
@@ -641,6 +652,7 @@ button {
 
 .pros {
   @include section-size;
+  @include section-pos(100%, 20%);
   height: 1492px;
   background: img-url("pros", "bg");
 
@@ -757,10 +769,10 @@ button {
 }
 
 .scheme {
+  @include section-pos(350%, 259.5%);
   width: 2088px;
   height: 708px;
   background: img-url("scheme", "bg");
-  margin-left: 20vw;
   display: flex;
   font-weight: bold;
   font-size: 18px;
@@ -953,8 +965,8 @@ button {
 
 .faq {
   @include section-size;
+  @include section-pos(407.5%, 369.2%);
   background-color: #f2ede7;
-  border: 1px solid #f2ede7;
 
   &__header {
     display: flex;
@@ -999,11 +1011,9 @@ button {
 }
 
 .form {
-  width: 1140px;
-  height: 700px;
-  margin: 0 auto;
-
-  background: img-url("form", "bg") no-repeat center/ cover;
+  @include section-size;
+  @include section-pos(100%, 20%);
+  background: img-url("form", "bg");
   font-size: 18px;
   letter-spacing: 0.1px;
   color: #000000;
