@@ -29,6 +29,7 @@ body {
   margin: 0;
   padding: 0;
   height: 7474px;
+  overflow-x: hidden;
 }
 
 div,
@@ -97,6 +98,18 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.global-bg {
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 8376px;
+  max-height: 8376px;
+  // background: img-url("common", "global-bg");
+  background: gray;
+  background-repeat: repeat;
+  filter: blur(10px);
 }
 /* First Screen */
 
@@ -267,15 +280,15 @@ button {
       height: 109px;
 
       &__first {
-        margin-top: 60px;
-        margin-left: -11px;
-        margin-right: -36px;
+        margin-top: 42px;
+        margin-left: -5px;
+        margin-right: -19px;
       }
 
       &__second {
-        margin-top: 220px;
-        margin-left: -14px;
-        margin-right: -39px;
+        margin-top: 192px;
+        margin-left: -2px;
+        margin-right: -19px;
       }
     }
 
@@ -307,6 +320,7 @@ button {
         font-size: 18px;
         padding: 0 55px 0 32px;
         flex-basis: 128px;
+        margin-top: -10px;
       }
 
       button {
@@ -320,48 +334,65 @@ button {
     }
 
     &__decide {
-      @include img-size(366, 271);
-      background: img-url("how", "decide-bg");
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 144px;
+      margin-top: 148px;
 
       h4 {
-        width: 124px;
+        width: 336px;
+        height: 90px;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 10.5px rgba(0, 0, 0, 0.35));
+        background-image: linear-gradient(270deg, #000f28 0%, #003b69 100%);
       }
 
-      .warn {
-        padding-left: 48px;
+      &__content {
+        width: 324px;
+        height: 193px;
+        border-radius: 0 0 10px 10px;
+        background-image: linear-gradient(270deg, #000f28 0%, #003b69 100%);
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 16px 32px 0 32px;
+        margin-top: -12px;
       }
 
-      & > p {
+      p {
         font-size: 18px;
-        padding: 0 42px 0 48px;
-        flex-basis: 94px;
       }
 
       p:last-child {
         font-size: 12px;
         margin-left: 16px;
-        padding-right: 48px;
       }
     }
 
     &__introduction {
-      @include img-size(439, 266);
-      background: img-url("how", "introduction-bg");
+      // @include img-size(439, 266);
+      // background: img-url("how", "introduction-bg");
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 306px;
+      margin-top: 298px;
+
+      h4 {
+        width: 394px;
+        height: 95px;
+        border-radius: 10px 0 0 10px;
+        filter: drop-shadow(0 0 10.5px rgba(0, 0, 0, 0.35));
+        background-image: linear-gradient(270deg, #000f28 0%, #003b69 100%);
+      }
 
       p {
         font-size: 18px;
-        padding: 0px 55px 0 75px;
-        flex-basis: 128px;
+        padding: 0px 22px;
+        width: 324px;
+        height: 169px;
+        border-radius: 0 0 10px 10px;
+        background-image: linear-gradient(270deg, #000f28 0%, #003b69 100%);
       }
     }
   }
@@ -526,18 +557,18 @@ button {
   @include section-size;
   @include section-pos(141%, 199.5%);
   height: auto;
-  outline: 1px solid #f2ede7;
   display: flex;
   background-position: top;
   flex-wrap: wrap;
+  background-color: #ffffff;
 
   h2 {
     font-size: 36px;
     padding: 44px 0 0 89px;
-    width: 427px;
-    height: 172px;
-    background-image: linear-gradient(90deg, #003b69 0%, #000f28 100%);
     color: white;
+    width: 424px;
+    height: 179px;
+    background-image: linear-gradient(270deg, #000f28 0%, #003b69 100%);
   }
 
   .title {
@@ -546,7 +577,6 @@ button {
 
   &__problems {
     margin-right: -76px;
-    margin-top: -8px;
     position: relative;
     z-index: 2;
 
@@ -623,29 +653,38 @@ button {
       font-weight: normal;
       margin-bottom: 138px;
       padding-left: 130px;
-    }
-
-    &__text {
-      @include img-size(555, 631);
-      background: img-url("functions", "solutions");
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
-      margin-left: 122px;
 
       &:before {
         content: "";
         @include img-size(171, 413);
         background: img-url("functions", "solutions-figure");
-        left: -105px;
+        left: 475px;
+        top: 220px;
         position: absolute;
         z-index: -1;
       }
+    }
 
-      h4 {
-        margin: 32px 0 48px;
-      }
+    &__title {
+      width: 539px;
+      height: 79px;
+      border-radius: 10px 10px 0 0;
+      background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      width: 539px;
+      height: 615px;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
+      background-color: #f2ede7;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      margin-left: 122px;
 
       p {
         width: 100%;
