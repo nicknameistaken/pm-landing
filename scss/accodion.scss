@@ -1,28 +1,41 @@
 .js-Accordion {
-    margin: 0 auto;
-    max-width: 30em;
-    width: 80%;
-}
+  margin: 0 auto;
+  width: 60%;
 
-.js-Accordion-title {
-    background: #f5f5f5;
-    border: 1px solid #ccc;
+  &-title {
+    background: transparent;
+    // border-bottom: 1px solid #ccc;
     border-top: 0;
     cursor: pointer;
     display: block;
-    padding: 1em .5em;
+    padding: 34px 0 22px 0;
     width: 100%;
-    
-    &:first-child {
-        border-top: 1px solid #ccc;
-    }
-}
+    font-size: 24px;
+    line-height: 30px;
 
-.js-Accordion-content {
-    border: 1px solid #ccc;
+    // &:first-child {
+    //     border-top: 1px solid #ccc;
+    // }
+  }
+
+  &-content {
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    line-height: 24px;
+    //    padding-bottom: 22px;
     border-top: 0;
     height: 0;
     line-height: 1.5;
     overflow: hidden;
-    transition: all .25s linear;
+    transition: all 0.25s linear;
+  }
+
+  button {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      padding-top: 15px;
+    }
+  }
 }

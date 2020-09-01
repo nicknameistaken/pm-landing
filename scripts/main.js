@@ -1,5 +1,21 @@
 // window.onload = function () {
 document.addEventListener("DOMContentLoaded", function () {
+  const getByClass = (className) => document.querySelector(`.${className}`);
+
+  const initFaqSection = getByClass("faq");
+  let initLatest = 0;
+  for (let point in initFaqSection.dataset) {
+    initLatest = parseFloat(point);
+  }
+  const resetHeight = () => {
+    const faqSection = getByClass("faq");
+    for (let point in faqSection.dataset) {
+      if (point > initLatest) {
+        faqSection.removeAttribute(`data-${point}`);
+      }
+    }
+    skrollr.get().refresh();
+  };
   var Accordion = function (options) {
     var element =
         typeof options.element === "string"
@@ -55,12 +71,35 @@ document.addEventListener("DOMContentLoaded", function () {
       // getting the height every time in case
       // the content was updated dynamically
       var height = el.scrollHeight;
-
+      const faqSection = getByClass("faq");
+      let isOpening;
       if (el.style.height === "0px" || el.style.height === "") {
-        el.style.height = height + "px";
+        el.style.height = height + 20 + "px";
+        isOpening = true;
       } else {
         el.style.height = 0;
+        isOpening = false;
       }
+      refreshDatasetForScroll(faqSection, height, isOpening);
+    }
+
+    function refreshDatasetForScroll(faqSection, elHeight, isOpening) {
+      const RATIO = 0.12;
+      let latest = 0;
+      for (let point in faqSection.dataset) {
+        latest = parseFloat(point);
+      }
+      const currentTop = faqSection.dataset[latest].split(":")[1].slice(0, -1);
+      console.log(currentTop);
+      const newHeight = isOpening ? latest + parseFloat(elHeight) : latest;
+      console.log(newHeight);
+      if (!faqSection.dataset[newHeight]) {
+        faqSection.dataset[newHeight] =
+          "top: " + (currentTop - elHeight * RATIO) + "%";
+      } else {
+        faqSection.removeAttribute(`data-${newHeight}`);
+      }
+      skrollr.get().refresh();
     }
 
     function getTarget(n) {
@@ -97,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const accordion = new Accordion({
     element: "accordion",
-    openTab: 1,
     oneOpen: false,
   });
 
@@ -105,8 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     forceHeight: true,
   });
   window.onscroll = () => console.log(window.scrollY);
-
-  const getByClass = (className) => document.querySelector(`.${className}`);
 
   // functions block start
 
@@ -177,9 +213,11 @@ document.addEventListener("DOMContentLoaded", function () {
   chooseBlock.addEventListener("click", (e) => {
     const chosen = getByClass("functions__choose--chosen");
     const newRole = e.target.dataset.role;
-    if (!e.target.dataset || newRole === chosen.dataset.role) {
+
+    if (!newRole || newRole === chosen.dataset.role) {
       return;
     }
+
     chosen.classList.remove("functions__choose--chosen");
     const newChosen = document.querySelector(`[data-role=${newRole}]`);
     newChosen.classList.add("functions__choose--chosen");
@@ -187,5 +225,101 @@ document.addEventListener("DOMContentLoaded", function () {
     updateContent(newRole, "problems");
     updateContent(newRole, "solutions");
   });
+  // functions block end
+
+  //faq block start
+
+  const CATEGORIES = {
+    possibilities: {
+      title: "возможности",
+      qa: [
+        {
+          question: "Чем проектный ассистент может помочь моей компании?",
+          answer: "testAnswer",
+        },
+        {
+          question: "В чем преимущества системы?",
+          answer:
+            "Проектный ассистент расширяет функционал MS Project и дополняет стандартную методологию управления проектами. Система встраивается в деятельность компании и ее ИТ-архитектуру, объединяет ключевых партнеров. Продукт постоянно развивается, пользователи получают техническую и методическую поддержку.",
+        },
+        {
+          question: "Как система поможет обычному проектировщику?",
+          answer: "testAnswer3",
+        },
+        { question: "Какая схема работы?", answer: "testAnswer4" },
+      ],
+    },
+    interface: {
+      title: "Интерфейс",
+      qa: [
+        { question: "testQuestion11", answer: "testAnswer11" },
+        { question: "testQuestion21", answer: "testAnswer21" },
+        { question: "testQuestion31", answer: "testAnswer31" },
+        { question: "testQuestion41", answer: "testAnswer41" },
+        { question: "testQuestion51", answer: "testAnswer51" },
+      ],
+    },
+    introduction: {
+      title: "Внедрение",
+      qa: [
+        { question: "testQuestion111", answer: "testAnswer111" },
+        { question: "testQuestion211", answer: "testAnswer211" },
+        { question: "testQuestion311", answer: "testAnswer311" },
+        { question: "testQuestion411", answer: "testAnswer411" },
+        { question: "testQuestion511", answer: "testAnswer511" },
+      ],
+    },
+    about: {
+      title: "О проекте",
+      qa: [
+        { question: "testQuestion1111", answer: "testAnswer1112" },
+        { question: "testQuestion2111", answer: "testAnswer21123" },
+        { question: "testQuestion3111", answer: "testAnswer31123" },
+        { question: "testQuestion4111", answer: "testAnswer41123" },
+        { question: "testQuestion5111", answer: "testAnswer51123" },
+      ],
+    },
+  };
+  const faqTabs = getByClass("faq__header__tabs");
+  faqTabs.addEventListener("click", (e) => {
+    resetHeight();
+    const chosen = getByClass("tab--chosen");
+    const newCategory = e.target.dataset.category;
+
+    if (!newCategory || newCategory === chosen.dataset.category) {
+      return;
+    }
+
+    chosen.classList.remove("tab--chosen");
+    const newChosen = document.querySelector(`[data-category=${newCategory}]`);
+    newChosen.classList.add("tab--chosen");
+
+    updateAccordion(newCategory);
+  });
+
+  const updateAccordion = (category) => {
+    const wrapper = getByClass("js-Accordion");
+
+    wrapper.innerHTML = "";
+    CATEGORIES[category].qa.forEach(
+      (qa) =>
+        (wrapper.innerHTML += `
+      <button class="js-Accordion-title">${qa.question}
+        <img src="./img/faq/arrow-down.png" alt="arrow-down">
+      </button>
+      <div class="js-Accordion-content">${qa.answer}</div>
+      `)
+    );
+  };
+  //faq block end
+
+  //menu start
+  const burger = getByClass("menu__icon");
+  const menuClose = getByClass("menu__close");
+  const toggleMenu = () => {
+    const menu = getByClass("menu");
+    menu.classList.toggle("menu--open");
+  };
+  burger.addEventListener("click", toggleMenu);
+  menuClose.addEventListener("click", toggleMenu);
 });
-// functions block end

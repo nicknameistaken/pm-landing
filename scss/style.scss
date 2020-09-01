@@ -28,7 +28,6 @@ body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
-  height: 7474px;
   overflow-x: hidden;
 }
 
@@ -119,6 +118,76 @@ button {
   background: img-url("first-screen", "bg");
   font-size: 14px;
   background-position: top;
+
+  .menu {
+    position: absolute;
+    width: 479px;
+    height: 587px;
+    filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.35));
+    background-color: #ffffff;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+
+    &__icon {
+      cursor: pointer;
+    }
+
+    &--open {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    a {
+      color: #000;
+    }
+
+    &__close {
+      @include img-size(26, 26);
+      position: absolute;
+      display: block;
+      background: img-url("common", "close-icon");
+      top: 26px;
+      right: 26px;
+      cursor: pointer;
+    }
+
+    &__sections {
+      padding: 52px 0 0 34px;
+      p {
+        margin-bottom: 28px;
+      }
+    }
+    &__info {
+      min-height: 218px;
+      max-height: 218px;
+      background-color: #ebeaea;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 34px;
+
+      a {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__mail {
+      line-height: 18px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
 
   &__header {
     display: flex;
@@ -213,15 +282,13 @@ button {
     .arrow {
       width: 72px;
       height: 147px;
-      margin: 0 -5px 0 -10px;
 
       &__first {
-        margin-top: 43px;
+        margin: 43px -5px 0 -10px;
       }
 
       &__second {
-        margin-top: 163px;
-        margin-left: -8px;
+        margin: 163px -4px 0 -8px;
       }
     }
   }
@@ -231,7 +298,7 @@ button {
     @include img-size(321, 91);
     background: img-url("first-screen", "order-bg");
     padding: 22px 30px;
-    margin: -14px 0 0 -8px;
+    margin: -13px 0 0 -10px;
 
     span {
       display: block;
@@ -583,7 +650,7 @@ button {
     &__description {
       width: 466px;
       padding: 0 28px 0 42px;
-      margin-left: 50px;
+      margin-left: 47px;
       border-radius: 0 0 10px 10px;
       filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
       background-color: #ffffff;
@@ -658,7 +725,7 @@ button {
         content: "";
         @include img-size(171, 413);
         background: img-url("functions", "solutions-figure");
-        left: 475px;
+        left: 472px;
         top: 220px;
         position: absolute;
         z-index: -1;
@@ -850,39 +917,46 @@ button {
 
   h2 {
     font-size: 30px;
-    @include img-size(156, 250);
-    background: img-url("scheme", "header");
-    background-position: top;
-    background-size: contain;
+    width: 168px;
+    height: 238px;
+    background-image: linear-gradient(180deg, #836733 0%, #c29b5d 100%);
+    border-radius: 0 0 10px 0;
     padding: 42px 0 0 30px;
     color: white;
+  }
+
+  .text {
+    border-radius: 5px;
+    filter: drop-shadow(0 0 12px rgba(102, 102, 102, 0.35));
+    background-color: #ffffff;
   }
 
   .short-arrow {
     width: 47px;
     height: 62px;
-    margin: 0 -42px 0 -26px;
+    // margin: 0 -42px 0 -26px;
+    margin-left: -1px;
+    margin-right: -14px;
 
     &__first {
-      margin-top: 94px;
+      margin-top: 88px;
     }
 
     &__second {
-      margin-top: 179px;
+      margin-top: 177px;
     }
   }
 
   .long-arrow {
     width: 119px;
     height: 62px;
-    margin: 0 -40px 0 -39px;
+    margin-left: -25px;
     margin-top: 264px;
   }
 
   &__start {
-    width: 728px;
-    height: 708px;
-    background: img-url("scheme", "start");
+    @include img-size(728, 708);
+    background-color: rgba(0, 59, 105, 0.53);
     margin-left: 32px;
     display: flex;
     flex-direction: column;
@@ -893,10 +967,9 @@ button {
     }
 
     &__request {
-      @include img-size(226, 111);
-      background: img-url("scheme", "request-bg");
+      @include img-size(175, 60);
       position: relative;
-      margin-top: 40px;
+      margin: 60px 0 0 32px;
 
       &::after {
         content: "";
@@ -905,26 +978,27 @@ button {
         background: white;
         position: absolute;
         top: 50%;
-        left: -32px;
+        left: -64px;
       }
     }
 
     &__analysis {
-      @include img-size(277, 111);
-      background: img-url("scheme", "analysis-bg");
-      margin-top: 127px;
+      @include img-size(226, 60);
+      margin-top: 148px;
     }
 
     &__demonstration {
-      @include img-size(259, 111);
-      background: img-url("scheme", "demonstration-bg");
-      margin-top: 212px;
-      padding: 32px 0 0 38px;
+      @include img-size(208, 60);
+      margin-top: 235px;
+      padding: 7px 0 0 20px;
     }
 
     &__presentation {
       @include img-size(434, 259);
-      background: img-url("scheme", "presentation-bg");
+      width: 433px;
+      height: 259px;
+      border-radius: 10px;
+      background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -938,8 +1012,10 @@ button {
       }
 
       button {
-        @include img-size(314, 77);
-        background: img-url("scheme", "send-button");
+        @include img-size(294, 57);
+        border-radius: 28px;
+        filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.32));
+        background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
         font-size: 18px;
         font-weight: bold;
         color: white;
@@ -949,7 +1025,7 @@ button {
 
   &__registration {
     @include img-size(579, 708);
-    background: img-url("scheme", "registration");
+    background-color: rgba(0, 59, 105, 0.73);
     margin-left: 32px;
     display: flex;
     flex-direction: column;
@@ -957,8 +1033,9 @@ button {
     z-index: 1;
 
     &__header {
-      @include img-size(434, 129);
-      background: img-url("scheme", "header-blue");
+      @include img-size(433, 129);
+      border-radius: 10px;
+      background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       color: white;
       flex-direction: column;
       margin-top: 72px;
@@ -969,23 +1046,27 @@ button {
       margin-left: 84px;
 
       .short-arrow {
-        margin: 150px -20px 0 -1px;
+        margin: 150px -13px 0 -1px;
       }
 
       .long-arrow {
         margin: 242px 0 0 -5px;
       }
 
+      .text {
+        border-radius: 5px;
+        background-color: #ffffff;
+        filter: none;
+      }
+
       .business-offer {
-        @include img-size(208, 60);
-        background: img-url("scheme", "business-offer");
+        @include img-size(207, 60);
         padding: 7px 0 0 24px;
-        margin: 122px 0 0 22px;
+        margin: 122px 0 0 28px;
       }
 
       .contract {
         @include img-size(285, 60);
-        background: img-url("scheme", "contract");
         margin-top: 208px;
       }
     }
@@ -993,15 +1074,20 @@ button {
 
   &__cooperation {
     @include img-size(466, 708);
-    background: img-url("scheme", "cooperation");
+    background-image: linear-gradient(
+      180deg,
+      rgba(131, 103, 51, 0.82) 0%,
+      rgba(194, 155, 93, 0.82) 100%
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 32px;
 
     &__header {
-      @include img-size(434, 129);
-      background: img-url("scheme", "header-blue");
+      @include img-size(406, 129);
+      border-radius: 10px;
+      background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       color: white;
       flex-direction: column;
       margin-top: 72px;
@@ -1011,27 +1097,26 @@ button {
       display: flex;
 
       .short-arrow {
-        margin: 330px -44px 0 -27px;
+        margin: 330px -14px 0 -27px;
       }
 
       .introduction {
-        @include img-size(212, 111);
-        background: img-url("scheme", "introduction");
-        margin: 274px 0 0 44px;
+        @include img-size(161, 60);
+        margin: 300px 0 0 62px;
       }
 
       .support {
-        @include img-size(276, 111);
-        background: img-url("scheme", "support");
-        padding: 32px 0 0 38px;
-        margin-top: 363px;
+        @include img-size(276, 60);
+        padding: 7px 0 0 20px;
+        margin-top: 390px;
+        border-radius: 5px 0 0 5px;
       }
     }
   }
 }
 
 .faq {
-  @include section-size;
+  width: 1140px;
   @include section-pos(407.5%, 369.2%);
   background-color: #f2ede7;
 
@@ -1075,24 +1160,46 @@ button {
       color: white;
     }
   }
+
+  &__show-more {
+    display: flex;
+    align-items: center;
+    width: 262px;
+    height: 50px;
+    border-radius: 25px;
+    background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
+    color: white;
+    margin: 30px auto;
+    font-size: 18px;
+
+    &__icon {
+      @include img-size(34, 34);
+      background: img-url("faq", "show-more-icon");
+      margin: 0 20px 0 6px;
+    }
+  }
 }
 
 .form {
-  @include section-size;
-  @include section-pos(100%, 20%);
-  background: img-url("form", "bg");
-  font-size: 18px;
-  letter-spacing: 0.1px;
-  color: #000000;
-
   &__wrap {
+    @include img-size(1140, 737);
     display: flex;
     padding-top: 103px;
     padding-left: 146px;
+    background: img-url("form", "bg");
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    color: #000000;
+
+    a {
+      color: #000000;
+      line-height: 36px;
+    }
   }
 
   &__content {
     width: 402px;
+    height: 486px;
     padding: 46px 42px 42px;
     border-radius: 5px;
     background: #ffffff;
@@ -1104,11 +1211,6 @@ button {
 
   &__point {
     padding-top: 54px;
-  }
-
-  a {
-    color: #000000;
-    line-height: 36px;
   }
 
   &__title {
