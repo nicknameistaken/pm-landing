@@ -106,7 +106,7 @@ button {
 }
 
 .global-bg {
-  position: absolute;
+  position: fixed;
   @include img-size(1920, 1080);
   background: img-url("common", "bg");
 }
@@ -1806,73 +1806,73 @@ button {
   }
 }
 
-@media (max-width: 640px) {
-  .offer,
-  .how,
-  .result,
-  .functions,
-  .pros,
-  .scheme,
-  .faq {
-    position: relative;
-    left: 0;
-    width: 100%;
-  }
+// @media (max-width: 640px) {
+//   .offer,
+//   .how,
+//   .result,
+//   .functions,
+//   .pros,
+//   .scheme,
+//   .faq {
+//     position: relative;
+//     left: 0;
+//     width: 100%;
+//   }
 
-  .faq {
-    padding-top: 40px;
+//   .faq {
+//     padding-top: 40px;
 
-    &__header {
-      margin-top: 0;
-      flex-wrap: wrap;
+//     &__header {
+//       margin-top: 0;
+//       flex-wrap: wrap;
 
-      & .vr {
-        margin-right: 30px;
-      }
+//       & .vr {
+//         margin-right: 30px;
+//       }
 
-      &__tabs {
-        margin-top: 40px;
-      }
-    }
+//       &__tabs {
+//         margin-top: 40px;
+//       }
+//     }
 
-    &__show-more {
-      margin: 48px auto;
-    }
-  }
+//     &__show-more {
+//       margin: 48px auto;
+//     }
+//   }
 
-  .form {
-    &__wrap {
-      padding: 54px 0 0 0;
-      flex-direction: column;
-      background-position: top;
-      min-width: auto;
-      max-height: 958px;
-      min-height: 958px;
-      align-items: center;
-      background: img-url("form", "bgmobile");
+//   .form {
+//     &__wrap {
+//       padding: 54px 0 0 0;
+//       flex-direction: column;
+//       background-position: top;
+//       min-width: auto;
+//       max-height: 958px;
+//       min-height: 958px;
+//       align-items: center;
+//       background: img-url("form", "bgmobile");
 
-      &__title {
-        display: block;
-        font-size: 30px;
-        color: #fff;
-        line-height: 36px;
-        letter-spacing: 0.25px;
-        margin: 0 auto;
-        margin-bottom: 84px;
-      }
-    }
+//       &__title {
+//         display: block;
+//         font-size: 30px;
+//         color: #fff;
+//         line-height: 36px;
+//         letter-spacing: 0.25px;
+//         margin: 0 auto;
+//         margin-bottom: 84px;
+//       }
+//     }
 
-    &__point {
-      display: none;
+//     &__point {
+//       display: none;
 
-      &_mobile {
-        display: block;
-        margin-right: 83px;
-        margin-bottom: -36px;
-      }
-    }
-  }
-}
+//       &_mobile {
+//         display: block;
+//         margin-right: 83px;
+//         margin-bottom: -36px;
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 500px) {
   .faq {
