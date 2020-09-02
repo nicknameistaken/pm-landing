@@ -1202,6 +1202,10 @@ button {
       color: #000000;
       line-height: 36px;
     }
+
+    &__title {
+      display: none;
+    }
   }
 
   &__content {
@@ -1214,10 +1218,15 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: drop-shadow(0 0 12px rgba(102,102,102,0.35));
   }
 
   &__point {
     padding-top: 54px;
+
+    &_mobile {
+      display: none;
+    }
   }
 
   &__title {
@@ -1324,6 +1333,81 @@ button {
       .make {
         @include mobile-img(59, 70);
         border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+ .form {
+
+  &__content {
+    padding:20px 5px;
+    font-size: 16px;
+    width: 96%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__mail {
+    margin-top: 18px;
+  }
+
+  &__text {
+    margin: 18px 0;
+  }
+
+  &__btn {
+    font-size: 16px;
+  }
+ }
+}
+
+@media (max-width: 640px) {
+
+  .offer,
+  .how,
+  .result,
+  .functions,
+  .pros,
+  .scheme,
+  .faq {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .form {
+
+    &__wrap {
+      padding: 54px 0 0 0;
+      flex-direction: column;
+      background-position: top;
+      min-width: auto;
+      max-height: 958px;
+      min-height: 958px;
+      align-items: center;
+      background: img-url("form","bgmobile" );
+      
+      &__title {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        line-height: 36px;
+        letter-spacing: 0.25px;
+        margin: 0 auto;
+        margin-bottom: 84px;
+      }
+    }
+
+    &__point {
+      display: none;
+
+      &_mobile {
+        display: block;
+        margin-right: 83px;
+        margin-bottom: -36px;
       }
     }
   }

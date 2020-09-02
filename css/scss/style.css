@@ -1132,8 +1132,11 @@ button {
   .form__wrap a {
     color: #000000;
     line-height: 36px; }
+  /* line 1206, scss/style.scss */
+  .form__wrap__title {
+    display: none; }
 
-/* line 1207, scss/style.scss */
+/* line 1211, scss/style.scss */
 .form__content {
   width: 402px;
   height: 486px;
@@ -1143,33 +1146,37 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  filter: drop-shadow(0 0 12px rgba(102, 102, 102, 0.35)); }
 
-/* line 1219, scss/style.scss */
+/* line 1224, scss/style.scss */
 .form__point {
   padding-top: 54px; }
+  /* line 1227, scss/style.scss */
+  .form__point_mobile {
+    display: none; }
 
-/* line 1223, scss/style.scss */
+/* line 1232, scss/style.scss */
 .form__title {
   margin-top: 28px;
   font-size: 24px; }
 
-/* line 1228, scss/style.scss */
+/* line 1237, scss/style.scss */
 .form__mail {
   margin-top: 28px;
   border-bottom: 1px dashed #666666;
   line-height: 18px; }
 
-/* line 1234, scss/style.scss */
+/* line 1243, scss/style.scss */
 .form__text {
   line-height: 24px;
   margin-top: 28px;
   margin-bottom: 33px; }
-  /* line 1239, scss/style.scss */
+  /* line 1248, scss/style.scss */
   .form__text span {
     display: block; }
 
-/* line 1244, scss/style.scss */
+/* line 1253, scss/style.scss */
 .form__btn {
   padding: 16px 74px;
   font-size: 18px;
@@ -1180,7 +1187,7 @@ button {
   box-shadow: 0px 0px 10px 7px rgba(218, 218, 218, 0.32); }
 
 @media (max-width: 320px) {
-  /* line 1260, scss/style.scss */
+  /* line 1269, scss/style.scss */
   .offer,
   .how,
   .result,
@@ -1191,49 +1198,49 @@ button {
     position: relative;
     left: 0;
     width: 100%; }
-  /* line 1272, scss/style.scss */
+  /* line 1281, scss/style.scss */
   .offer {
     height: auto; }
-    /* line 1276, scss/style.scss */
+    /* line 1285, scss/style.scss */
     .offer .menu__icon {
       height: 16px; }
-    /* line 1281, scss/style.scss */
+    /* line 1290, scss/style.scss */
     .offer__header {
       align-items: center;
       padding: 3% 4% 0 4%; }
-    /* line 1286, scss/style.scss */
+    /* line 1295, scss/style.scss */
     .offer__title,
     .offer__title span {
       font-size: 18px; }
-    /* line 1292, scss/style.scss */
+    /* line 1301, scss/style.scss */
     .offer__head img {
       min-width: 60%;
       max-width: 60%;
       min-height: 40px;
       max-height: 40px; }
-    /* line 1296, scss/style.scss */
+    /* line 1305, scss/style.scss */
     .offer .arrow__block {
       font-size: 12px;
       flex-direction: column;
       justify-content: space-around;
       height: 370px; }
-      /* line 1302, scss/style.scss */
+      /* line 1311, scss/style.scss */
       .offer .arrow__block .arrow {
         display: none; }
-      /* line 1306, scss/style.scss */
+      /* line 1315, scss/style.scss */
       .offer .arrow__block .analyse,
       .offer .arrow__block .based,
       .offer .arrow__block .make {
         padding: 8px;
         margin-top: 0; }
-      /* line 1313, scss/style.scss */
+      /* line 1322, scss/style.scss */
       .offer .arrow__block .analyse {
         min-width: 75%;
         max-width: 75%;
         min-height: 70px;
         max-height: 70px;
         border-radius: 0 10px 10px 0; }
-      /* line 1318, scss/style.scss */
+      /* line 1327, scss/style.scss */
       .offer .arrow__block .based {
         min-width: 57%;
         max-width: 57%;
@@ -1241,10 +1248,68 @@ button {
         max-height: 70px;
         margin-left: auto;
         border-radius: 10px 0 0 10px; }
-      /* line 1324, scss/style.scss */
+      /* line 1333, scss/style.scss */
       .offer .arrow__block .make {
         min-width: 59%;
         max-width: 59%;
         min-height: 70px;
         max-height: 70px;
-        border-radius: 0 10px 10px 0; } }
+        border-radius: 0 10px 10px 0; }
+  /* line 1342, scss/style.scss */
+  .form__content {
+    padding: 20px 5px;
+    font-size: 16px;
+    width: 96%;
+    height: auto; }
+  /* line 1349, scss/style.scss */
+  .form__title {
+    font-size: 18px; }
+  /* line 1353, scss/style.scss */
+  .form__mail {
+    margin-top: 18px; }
+  /* line 1357, scss/style.scss */
+  .form__text {
+    margin: 18px 0; }
+  /* line 1361, scss/style.scss */
+  .form__btn {
+    font-size: 16px; } }
+
+@media (max-width: 640px) {
+  /* line 1369, scss/style.scss */
+  .offer,
+  .how,
+  .result,
+  .functions,
+  .pros,
+  .scheme,
+  .faq {
+    position: relative;
+    left: 0;
+    width: 100%; }
+  /* line 1383, scss/style.scss */
+  .form__wrap {
+    padding: 54px 0 0 0;
+    flex-direction: column;
+    background-position: top;
+    min-width: auto;
+    max-height: 958px;
+    min-height: 958px;
+    align-items: center;
+    background: url("../../img/form/bgmobile.png") no-repeat center/cover; }
+    /* line 1393, scss/style.scss */
+    .form__wrap__title {
+      display: block;
+      font-size: 30px;
+      color: #fff;
+      line-height: 36px;
+      letter-spacing: 0.25px;
+      margin: 0 auto;
+      margin-bottom: 84px; }
+  /* line 1404, scss/style.scss */
+  .form__point {
+    display: none; }
+    /* line 1407, scss/style.scss */
+    .form__point_mobile {
+      display: block;
+      margin-right: 83px;
+      margin-bottom: -36px; } }
