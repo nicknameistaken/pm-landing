@@ -20,16 +20,40 @@
     line-height: 24px;
     border-top: 0;
     height: 0;
-    line-height: 1.5;
+    color: #363636;
     overflow: hidden;
     transition: all 0.25s linear; }
-  /* line 33, scss/accodion.scss */
+  /* line 32, scss/accodion.scss */
   .js-Accordion button {
     display: flex;
     justify-content: space-between; }
-    /* line 37, scss/accodion.scss */
+    /* line 36, scss/accodion.scss */
     .js-Accordion button img {
-      padding-top: 15px; }
+      padding-top: 15px;
+      padding-left: 5px; }
+
+@media (max-width: 640px) {
+  /* line 45, scss/accodion.scss */
+  .js-Accordion {
+    width: 90%; }
+    /* line 48, scss/accodion.scss */
+    .js-Accordion-title {
+      text-align: left;
+      padding-left: 25px; }
+    /* line 53, scss/accodion.scss */
+    .js-Accordion-content {
+      padding-left: 45px; }
+      /* line 56, scss/accodion.scss */
+      .js-Accordion-content p {
+        margin-bottom: 16px; } }
+
+@media (max-width: 500px) {
+  /* line 66, scss/accodion.scss */
+  .js-Accordion-title {
+    font-size: 18px; }
+  /* line 70, scss/accodion.scss */
+  .js-Accordion-content {
+    font-size: 16px; } }
 
 /* line 33, scss/style.scss */
 body {
@@ -1255,27 +1279,27 @@ button {
         min-height: 70px;
         max-height: 70px;
         border-radius: 0 10px 10px 0; }
-  /* line 1342, scss/style.scss */
+  /* line 1344, scss/style.scss */
   .form__content {
     padding: 20px 5px;
     font-size: 16px;
     width: 96%;
     height: auto; }
-  /* line 1349, scss/style.scss */
+  /* line 1351, scss/style.scss */
   .form__title {
     font-size: 18px; }
-  /* line 1353, scss/style.scss */
+  /* line 1355, scss/style.scss */
   .form__mail {
     margin-top: 18px; }
-  /* line 1357, scss/style.scss */
+  /* line 1359, scss/style.scss */
   .form__text {
     margin: 18px 0; }
-  /* line 1361, scss/style.scss */
+  /* line 1363, scss/style.scss */
   .form__btn {
     font-size: 16px; } }
 
 @media (max-width: 640px) {
-  /* line 1369, scss/style.scss */
+  /* line 1371, scss/style.scss */
   .offer,
   .how,
   .result,
@@ -1287,6 +1311,22 @@ button {
     left: 0;
     width: 100%; }
   /* line 1383, scss/style.scss */
+  .faq {
+    padding-top: 40px; }
+    /* line 1386, scss/style.scss */
+    .faq__header {
+      margin-top: 0;
+      flex-wrap: wrap; }
+      /* line 1390, scss/style.scss */
+      .faq__header .vr {
+        margin-right: 30px; }
+      /* line 1394, scss/style.scss */
+      .faq__header__tabs {
+        margin-top: 40px; }
+    /* line 1399, scss/style.scss */
+    .faq__show-more {
+      margin: 48px auto; }
+  /* line 1406, scss/style.scss */
   .form__wrap {
     padding: 54px 0 0 0;
     flex-direction: column;
@@ -1296,7 +1336,7 @@ button {
     min-height: 958px;
     align-items: center;
     background: url("../../img/form/bgmobile.png") no-repeat center/cover; }
-    /* line 1393, scss/style.scss */
+    /* line 1416, scss/style.scss */
     .form__wrap__title {
       display: block;
       font-size: 30px;
@@ -1305,11 +1345,38 @@ button {
       letter-spacing: 0.25px;
       margin: 0 auto;
       margin-bottom: 84px; }
-  /* line 1404, scss/style.scss */
+  /* line 1427, scss/style.scss */
   .form__point {
     display: none; }
-    /* line 1407, scss/style.scss */
+    /* line 1430, scss/style.scss */
     .form__point_mobile {
       display: block;
       margin-right: 83px;
       margin-bottom: -36px; } }
+
+@media (max-width: 500px) {
+  /* line 1445, scss/style.scss */
+  .faq__header h3 {
+    margin-bottom: 40px; }
+  /* line 1448, scss/style.scss */
+  .faq__header__tabs {
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin-bottom: 40px; }
+    /* line 1454, scss/style.scss */
+    .faq__header__tabs .tab {
+      margin-top: 10px;
+      width: 30%; }
+    /* line 1459, scss/style.scss */
+    .faq__header__tabs .tab--chosen {
+      width: 150px;
+      font-size: 16px; }
+  /* line 1465, scss/style.scss */
+  .faq__header .vr {
+    font-size: 16px;
+    margin-right: 0;
+    margin-left: 5px; }
+  /* line 1472, scss/style.scss */
+  .faq__show-more {
+    font-size: 16px;
+    width: 230px; } }
