@@ -1222,7 +1222,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    filter: drop-shadow(0 0 12px rgba(102,102,102,0.35));
+    filter: drop-shadow(0 0 12px rgba(102, 102, 102, 0.35));
   }
 
   &__point {
@@ -1659,37 +1659,33 @@ button {
     }
   }
 
-  
+  .form {
+    &__content {
+      padding: 20px 5px;
+      font-size: 16px;
+      width: 96%;
+      height: auto;
+    }
 
- .form {
+    &__title {
+      font-size: 18px;
+    }
 
-  &__content {
-    padding:20px 5px;
-    font-size: 16px;
-    width: 96%;
-    height: auto;
+    &__mail {
+      margin-top: 18px;
+    }
+
+    &__text {
+      margin: 18px 0;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
   }
-
-  &__title {
-    font-size: 18px;
-  }
-
-  &__mail {
-    margin-top: 18px;
-  }
-
-  &__text {
-    margin: 18px 0;
-  }
-
-  &__btn {
-    font-size: 16px;
-  }
- }
 }
 
 @media (max-width: 640px) {
-
   .offer,
   .how,
   .result,
@@ -1724,7 +1720,6 @@ button {
   }
 
   .form {
-
     &__wrap {
       padding: 54px 0 0 0;
       flex-direction: column;
@@ -1733,8 +1728,8 @@ button {
       max-height: 958px;
       min-height: 958px;
       align-items: center;
-      background: img-url("form","bgmobile" );
-      
+      background: img-url("form", "bgmobile");
+
       &__title {
         display: block;
         font-size: 30px;
@@ -1759,11 +1754,8 @@ button {
 }
 
 @media (max-width: 500px) {
-
   .faq {
-
     &__header {
-
       h3 {
         margin-bottom: 40px;
       }
