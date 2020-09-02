@@ -206,9 +206,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const wrapper = getByClass(`functions__${category}__list`);
 
     wrapper.innerHTML = "";
-    ROLES[role][category].forEach(
-      (text) => (wrapper.innerHTML += `<p>${text}</p>`)
-    );
+    const commonWrapper = document.createElement("div");
+    commonWrapper.classList.add(`functions__${category}__list__common`);
+    const lastIndex = ROLES[role][category].length - 1;
+    const appendToWrapper = (text) => {
+      wrapper.appendChild(commonWrapper);
+      wrapper.innerHTML += `<p>${text}</p>`;
+    };
+    ROLES[role][category].forEach((text, index) => {
+      console.log(wrapper.innerHTML);
+      return index < lastIndex
+        ? (commonWrapper.innerHTML += `<p>${text}</p>`)
+        : appendToWrapper(text);
+    });
   };
 
   const chooseBlock = getByClass("functions__choose");

@@ -2,8 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no"
+    />
     <title>Document</title>
+    <link rel="stylesheet" href="scss/tiny-slider.css" />
     <link rel="stylesheet" href="css/scss/style.css" />
   </head>
   <body>
@@ -56,8 +60,7 @@
       </div>
       <div class="arrow__block">
         <div class="analyse text-white">
-          Проанализируем процессы,<br />
-          предложим решения на базе MS Project
+          Проанализируем процессы, предложим решения на базе MS Project
         </div>
         <img
           src="img/first-screen/arrow.png"
@@ -128,8 +131,8 @@
             <span>внедрение</span>
           </h4>
           <p>
-            После этого внедрим систему «Проектный ассистент», которая реализует
-            найденные решения
+            После этого внедрим систему <span>«Проектный ассистент»</span>,
+            которая реализует найденные решения
           </p>
         </div>
       </div>
@@ -169,11 +172,17 @@
         </div>
         <div class="result__content__description">
           <p>
-            В результате внедрения Проектного ассистента в компании N за 1 год
-            удалось:
+            В результате внедрения <span>Проектного ассистента</span> в компании
+            N за 1 год удалось:
           </p>
-          <p class="marked">Снизить число отклонений по проектам на 17%</p>
-          <p class="marked">Спасти 250 млн. у стоимости всех отклонений</p>
+          <div class="marked-wrapper">
+            <p class="marked">
+              Снизить число отклонений по проектам на <span>17%</span>
+            </p>
+            <p class="marked">
+              Спасти <span>250 млн.</span> ₽ у стоимости всех отклонений
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -192,28 +201,32 @@
             <span data-role="portfolioManager">директор</span> и руководитель
             портфеля
           </p>
-          <p data-role="projectOffice">
-            <span data-role="projectOffice">руководитель и планировщик</span>
-            программ, проектный офис
-          </p>
-          <p data-role="projectEngineer">
-            <span data-role="projectEngineer">Руководитель, планировщик</span> и
-            инженер проекта
-          </p>
+          <div>
+            <p data-role="projectOffice">
+              <span data-role="projectOffice">руководитель и планировщик</span>
+              программ, проектный офис
+            </p>
+            <p data-role="projectEngineer">
+              <span data-role="projectEngineer">Руководитель, планировщик</span>
+              и инженер проекта
+            </p>
+          </div>
         </div>
         <h2 class="text-white text-uppercase">функции</h2>
         <div class="functions__problems__description">
           <h4 class="title text-uppercase">проблемы</h4>
           <div class="functions__problems__list">
-            <p>
-              Качество данных о проектах не позволяет анализировать и принимать
-              решения
-            </p>
-            <p>Отчеты не дают полной картины и готовятся с опозданием</p>
-            <p>
-              Протокольные поручения долго доходят до исполнителей, отсутствует
-              обратная связь
-            </p>
+            <div class="functions__problems__list__common">
+              <p>
+                Качество данных о проектах не позволяет анализировать и
+                принимать решения
+              </p>
+              <p>Отчеты не дают полной картины и готовятся с опозданием</p>
+              <p>
+                Протокольные поручения долго доходят до исполнителей,
+                отсутствует обратная связь
+              </p>
+            </div>
             <p>
               Поэтому проблемы решаются по факту их возникновения, приходиться
               управлять проектами вручную
