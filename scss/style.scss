@@ -107,14 +107,8 @@ button {
 
 .global-bg {
   position: absolute;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 8376px;
-  max-height: 8376px;
-  // background: img-url("common", "global-bg");
-  background: gray;
-  background-repeat: repeat;
-  filter: blur(10px);
+  @include img-size(1920, 1080);
+  background: img-url("common", "bg1920");
 }
 /* First Screen */
 
