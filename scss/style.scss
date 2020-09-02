@@ -706,16 +706,18 @@ button {
       padding: 12px 0 0 15px;
       @include img-size(282, 62);
       cursor: pointer;
-
-      &:first-child {
-        margin-right: 200px;
-      }
+    }
+    & > p:first-child {
+      margin-right: 200px;
     }
 
     &--chosen {
       color: #000;
       font-weight: bold;
       background: img-url("functions", "category");
+    }
+    & > div {
+      display: flex;
     }
   }
 
@@ -1599,6 +1601,10 @@ button {
 
     &__choose {
       background: none;
+
+      & > div {
+        display: block;
+      }
 
       p {
         padding-left: 20px;

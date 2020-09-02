@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         faqSection.removeAttribute(`data-${point}`);
       }
     }
-    skrollr.get().refresh();
+    if (window.outerWidth > 1140) {
+      skrollr.get().refresh();
+    }
   };
   var Accordion = function (options) {
     var element =
