@@ -1269,6 +1269,104 @@ button {
   }
 }
 
+@media (max-width: 320px) {
+  .offer,
+  .how,
+  .result,
+  .functions,
+  .pros,
+  .scheme,
+  .faq {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .offer {
+    height: auto;
+
+    .menu {
+      &__icon {
+        height: 16px;
+      }
+    }
+
+    &__header {
+      align-items: center;
+      padding: 3% 4% 0 4%;
+    }
+
+    &__title,
+    &__title span {
+      font-size: 18px;
+    }
+
+    &__head {
+      img {
+        @include mobile-img(60, 40);
+      }
+    }
+    .arrow__block {
+      font-size: 12px;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 370px;
+
+      .arrow {
+        display: none;
+      }
+
+      .analyse,
+      .based,
+      .make {
+        padding: 8px;
+        margin-top: 0;
+      }
+
+      .analyse {
+        @include mobile-img(75, 70);
+        border-radius: 0 10px 10px 0;
+      }
+
+      .based {
+        @include mobile-img(57, 70);
+        margin-left: auto;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .make {
+        @include mobile-img(59, 70);
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+  .form {
+    &__content {
+      padding: 20px 5px;
+      font-size: 16px;
+      width: 96%;
+      height: auto;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__mail {
+      margin-top: 18px;
+    }
+
+    &__text {
+      margin: 18px 0;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+  }
+}
+
 @media (max-width: 640px) {
   .offer,
   .how,
