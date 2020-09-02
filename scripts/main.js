@@ -139,9 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
     oneOpen: false,
   });
 
-  skrollr.init({
-    forceHeight: true,
-  });
+  if (window.outerWidth > 1140) {
+    skrollr.init({
+      forceHeight: true,
+    });
+  }
   window.onscroll = () => console.log(window.scrollY);
 
   // functions block start
@@ -322,4 +324,56 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   burger.addEventListener("click", toggleMenu);
   menuClose.addEventListener("click", toggleMenu);
+  //menu end
+
+  //scrollTo start
+  const sectionsHeight = {
+    how: 990,
+    result: 1870,
+    functions: 2765,
+    pros: 3600,
+    scheme: 5200,
+    faq: 7230,
+    form: 7600,
+  };
+
+  const scrollTo = (top) => {
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
+
+  const menuSections = getByClass("menu__sections");
+  menuSections.addEventListener("click", (e) => {
+    const chosenSection = e.target.dataset.section;
+    if (!chosenSection) return;
+    scrollTo(sectionsHeight[chosenSection]);
+    toggleMenu();
+  });
+
+  const interactiveButtons = [
+    {
+      querySelector: "order",
+      where: "form",
+    },
+    {
+      querySelector: "how__arrow-block__analyse__content > button",
+      where: "form",
+    },
+    {
+      querySelector: "functions__solutions__text--more > button",
+      where: "faq",
+    },
+    {
+      querySelector: "scheme__start__presentation > button",
+      where: "form",
+    },
+  ];
+  interactiveButtons.forEach(({ querySelector, where }) => {
+    const btn = getByClass(querySelector);
+    btn.addEventListener("click", () => scrollTo(sectionsHeight[where]));
+  });
+
+  //scrollTo end
 });
