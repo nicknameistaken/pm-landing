@@ -1751,28 +1751,57 @@ button {
     }
   }
 
+  .faq {
+    padding-top: 40px;
+
+    &__header {
+      margin-top: 0;
+      flex-wrap: wrap;
+
+      & .vr {
+        margin-right: 30px;
+      }
+
+      &__tabs {
+        margin-top: 40px;
+      }
+    }
+
+    &__show-more {
+      margin: 48px auto;
+    }
+  }
+
   .form {
-    &__content {
-      padding: 20px 5px;
-      font-size: 16px;
-      width: 96%;
-      height: auto;
+    &__wrap {
+      padding: 54px 0 0 0;
+      flex-direction: column;
+      background-position: top;
+      min-width: auto;
+      max-height: 958px;
+      min-height: 958px;
+      align-items: center;
+      background: img-url("form", "bgmobile");
+
+      &__title {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        line-height: 36px;
+        letter-spacing: 0.25px;
+        margin: 0 auto;
+        margin-bottom: 84px;
+      }
     }
 
-    &__title {
-      font-size: 18px;
-    }
+    &__point {
+      display: none;
 
-    &__mail {
-      margin-top: 18px;
-    }
-
-    &__text {
-      margin: 18px 0;
-    }
-
-    &__btn {
-      font-size: 16px;
+      &_mobile {
+        display: block;
+        margin-right: 83px;
+        margin-bottom: -36px;
+      }
     }
   }
 }
