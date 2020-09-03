@@ -611,9 +611,10 @@ button {
 
         &::before {
           content: "";
-          background: img-url("result", "point");
           width: 10px;
           height: 10px;
+          border-radius: 5px;
+          background-color: #345c88;
           position: absolute;
           left: 14px;
           top: 5px;
@@ -723,8 +724,8 @@ button {
       content: "";
       @include img-size(171, 413);
       background: img-url("functions", "solutions-figure");
-      left: 472px;
-      top: 220px;
+      left: 452px;
+      top: 200px;
       position: absolute;
       z-index: -1;
     }
@@ -833,6 +834,7 @@ button {
     display: flex;
     justify-content: space-between;
     flex-flow: column wrap;
+    flex-basis: 60%;
 
     span {
       display: block;
@@ -841,6 +843,17 @@ button {
     p {
       width: 244px;
       font-size: 18px;
+    }
+  }
+
+  &__slider {
+    &__analysis,
+    &__system,
+    &__program,
+    &__reports {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -1163,6 +1176,7 @@ button {
       background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       margin-right: 52px;
       color: white;
+      order: 3;
     }
   }
 
@@ -1264,6 +1278,28 @@ button {
 }
 
 @media (max-width: 640px) {
+  .tns-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 132px;
+    top: 888px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 18px;
+      height: 18px;
+      border-radius: 9px;
+      background: #fff;
+
+      &.tns-nav-active {
+        background-image: linear-gradient(-90deg, #7b6739 0%, #b69a61 100%);
+      }
+    }
+  }
+
   .offer,
   .how,
   .result,
@@ -1713,27 +1749,7 @@ button {
         }
       }
     }
-    .tns-nav {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 132px;
-      top: 888px;
-      z-index: 1;
-      display: flex;
-      justify-content: space-between;
 
-      button {
-        width: 18px;
-        height: 18px;
-        border-radius: 9px;
-        background: #fff;
-
-        &.tns-nav-active {
-          background-image: linear-gradient(-90deg, #7b6739 0%, #b69a61 100%);
-        }
-      }
-    }
     .tns-ovh {
       overflow: visible;
     }
@@ -1750,6 +1766,7 @@ button {
         background: #fff;
         padding: 0;
         border-radius: 10px;
+        display: block;
       }
     }
 
@@ -1798,6 +1815,165 @@ button {
     }
   }
 
+  .scheme {
+    height: auto;
+    display: block;
+
+    #tns2-ow {
+      margin-top: -10px;
+    }
+
+    h2 {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      height: 140px;
+      font-size: 36px;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      z-index: 1;
+
+      span {
+        display: inline-block;
+        padding-top: 43px;
+      }
+    }
+
+    &__start,
+    &__registration,
+    &__cooperation,
+    &__registration__header {
+      margin: 0;
+      min-width: auto;
+      max-width: none;
+      min-height: auto;
+      max-height: none;
+    }
+
+    .short-arrow {
+      margin-right: -65px;
+    }
+
+    .tns-controls {
+      width: 86px;
+      height: 85px;
+      position: absolute;
+      bottom: 194px;
+      right: 60px;
+      button {
+        width: 86px;
+        height: 85px;
+        background: img-url("scheme", "scheme-slider-nav");
+        &:first-child {
+          display: none;
+        }
+
+        &:disabled {
+          display: none;
+        }
+      }
+    }
+    .tns-nav {
+      top: auto;
+      bottom: 40px;
+    }
+
+    &__start {
+      &__wrapper {
+        overflow: hidden;
+      }
+
+      &__request {
+        &::after {
+          display: none;
+        }
+      }
+      &__presentation {
+        margin-bottom: 108px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+
+    &__registration {
+      height: 773px;
+
+      &__header {
+        width: 379px;
+        height: 129px;
+        border-radius: 0 10px 10px 0;
+        position: absolute;
+        bottom: 168px;
+      }
+
+      &__arrow-block {
+        margin-left: 0;
+        overflow: hidden;
+
+        .short-arrow {
+          margin-right: -13px;
+        }
+
+        .business-offer {
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 64px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: -64px;
+          }
+        }
+      }
+    }
+
+    &__cooperation {
+      height: 783px;
+      margin-top: -10px;
+      background: rgba(35, 61, 103, 0.88);
+      position: relative;
+
+      &__header {
+        width: 406px;
+        height: 129px;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, #7b6739 0%, #b69a61 100%);
+        position: absolute;
+        bottom: 168px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &__arrow-block {
+        .introduction {
+          margin-top: 144px;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 64px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: -64px;
+          }
+        }
+
+        .short-arrow {
+          margin: 174px -16px 0 -3px;
+        }
+
+        .support {
+          margin-top: 234px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
   .faq {
     padding-top: 40px;
 
@@ -1807,6 +1983,7 @@ button {
 
       & .vr {
         margin-right: 30px;
+        order: unset;
       }
 
       &__tabs {
@@ -1976,6 +2153,8 @@ button {
   }
 
   .pros {
+    height: 729px;
+
     h2 {
       font-size: 24px;
     }

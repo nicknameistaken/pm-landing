@@ -390,6 +390,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //scrollTo end
 
   //slider start
-  const navButtons = document.querySelectorAll(".tns-controls > button");
-  navButtons.forEach((btn) => (btn.innerHTML = ""));
+  //   const navButtons = document.querySelectorAll(".tns-controls > button");
+  //   navButtons.forEach((btn) => (btn.innerHTML = ""));
 });

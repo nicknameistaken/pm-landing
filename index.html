@@ -369,74 +369,76 @@
       data-7400="top: -73%"
     >
       <h2 class="text-white"><span>схема</span> работы</h2>
-      <div class="scheme__start">
-        <div class="scheme__start__wrapper">
-          <div class="scheme__start__request text flex-center">заявка</div>
-          <img
-            src="img/scheme/short-arrow.png"
-            alt="short-arrow"
-            class="short-arrow short-arrow__first"
-          />
-          <div class="scheme__start__analysis text flex-center">
-            анализ проблем
+      <div class="scheme__slider__wrapper">
+        <div class="scheme__start">
+          <div class="scheme__start__wrapper">
+            <div class="scheme__start__request text flex-center">заявка</div>
+            <img
+              src="img/scheme/short-arrow.png"
+              alt="short-arrow"
+              class="short-arrow short-arrow__first"
+            />
+            <div class="scheme__start__analysis text flex-center">
+              анализ проблем
+            </div>
+            <img
+              src="img/scheme/short-arrow.png"
+              alt="short-arrow"
+              class="short-arrow short-arrow__second"
+            />
+            <div class="scheme__start__demonstration text">
+              <span>демонстрация</span> решения
+            </div>
+            <img
+              src="img/scheme/long-arrow.png"
+              alt="long-arrow"
+              class="long-arrow"
+            />
           </div>
-          <img
-            src="img/scheme/short-arrow.png"
-            alt="short-arrow"
-            class="short-arrow short-arrow__second"
-          />
-          <div class="scheme__start__demonstration text">
-            <span>демонстрация</span> решения
+          <div class="scheme__start__presentation text-white">
+            <p>
+              презентация возможностей системы для актуальных задач вашего
+              проектного управления
+            </p>
+            <button class="text-uppercase">отправить заявку</button>
           </div>
-          <img
-            src="img/scheme/long-arrow.png"
-            alt="long-arrow"
-            class="long-arrow"
-          />
         </div>
-        <div class="scheme__start__presentation text-white">
-          <p>
-            презентация возможностей системы для актуальных задач вашего
-            проектного управления
-          </p>
-          <button class="text-uppercase">отправить заявку</button>
+        <div class="scheme__registration">
+          <div class="scheme__registration__header flex-center">
+            <span>оформление</span>
+            документов
+          </div>
+          <div class="scheme__registration__arrow-block">
+            <div class="business-offer text">Коммерческое предложение</div>
+            <img
+              src="img/scheme/short-arrow.png"
+              alt="short-arrow"
+              class="short-arrow"
+            />
+            <div class="contract flex-center text">Заключение договора</div>
+            <img
+              src="img/scheme/long-arrow.png"
+              alt="long-arrow"
+              class="long-arrow"
+            />
+          </div>
         </div>
-      </div>
-      <div class="scheme__registration">
-        <div class="scheme__registration__header flex-center">
-          <span>оформление</span>
-          документов
-        </div>
-        <div class="scheme__registration__arrow-block">
-          <div class="business-offer text">Коммерческое предложение</div>
-          <img
-            src="img/scheme/short-arrow.png"
-            alt="short-arrow"
-            class="short-arrow"
-          />
-          <div class="contract flex-center text">Заключение договора</div>
-          <img
-            src="img/scheme/long-arrow.png"
-            alt="long-arrow"
-            class="long-arrow"
-          />
-        </div>
-      </div>
-      <div class="scheme__cooperation">
-        <div class="scheme__cooperation__header flex-center">
-          <span>долгосрочное</span>
-          сотрудничество
-        </div>
-        <div class="scheme__cooperation__arrow-block">
-          <div class="introduction flex-center text">Внедрение</div>
-          <img
-            src="img/scheme/short-arrow.png"
-            alt="short-arrow"
-            class="short-arrow"
-          />
-          <div class="support text">
-            <span>Поддержка</span>
-            и сопровождение
+        <div class="scheme__cooperation">
+          <div class="scheme__cooperation__header flex-center">
+            <span>долгосрочное</span>
+            сотрудничество
+          </div>
+          <div class="scheme__cooperation__arrow-block">
+            <div class="introduction flex-center text">Внедрение</div>
+            <img
+              src="img/scheme/short-arrow.png"
+              alt="short-arrow"
+              class="short-arrow"
+            />
+            <div class="support text">
+              <span>Поддержка</span>
+              и сопровождение
+            </div>
           </div>
         </div>
       </div>
@@ -529,11 +531,23 @@
     <script type="module">
       import { tns } from "./scripts/tiny-slider.js";
       if (window.outerWidth <= 640) {
-        var slider = tns({
+        var prosSlider = tns({
           container: ".pros__slider__wrapper",
           items: 1,
           slideBy: "page",
           autoplay: false,
+          controlsText: ["", ""],
+        });
+
+        var prosSlider = tns({
+          container: ".scheme__slider__wrapper",
+          items: 1,
+          slideBy: "page",
+          autoplay: false,
+          navPosition: "bottom",
+          controlsPosition: "bottom",
+          controlsText: ["", ""],
+          loop: false,
         });
       }
     </script>
