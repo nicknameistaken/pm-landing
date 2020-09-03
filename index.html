@@ -278,63 +278,84 @@
       data-5600="left: -90%"
     >
       <h2 class="text-white text-uppercase flex-center">преимущества</h2>
-      <div class="pros__analysis row row__left">
-        <h4 class="text-white text-uppercase"><span>анализ</span>проекта</h4>
-        <div class="pros__analysis__content content">
-          <p>
-            Подготовка контрактации, <span>взаиморасчетов</span> и
-            бюджетирования
-          </p>
-          <p>
-            <span>Улучшенный паспорт</span> и контрольные точки
-            <span>по проекту</span>
-          </p>
-          <p><span>Контроль</span> целостности задач</p>
-          <p>Автоматический анализ графика план-факт</p>
-          <p><span>Быстрый доступ</span> из вкладки в MS Project</p>
+      <div class="pros__slider__wrapper">
+        <div class="pros__analysis row row__left">
+          <div class="pros__slider__analysis">
+            <h4 class="text-white text-uppercase">
+              <span>анализ</span>проекта
+            </h4>
+            <div class="pros__analysis__content content">
+              <p>
+                Подготовка контрактации, <span>взаиморасчетов</span> и
+                бюджетирования
+              </p>
+              <p>
+                <span>Улучшенный паспорт</span> и контрольные точки
+                <span>по проекту</span>
+              </p>
+              <p><span>Контроль</span> целостности задач</p>
+              <p>Автоматический анализ графика план-факт</p>
+              <p><span>Быстрый доступ</span> из вкладки в MS Project</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="pros__system row row__right">
-        <h4 class="text-white text-uppercase"><span>система</span>поручений</h4>
-        <div class="pros__system__content content">
-          <p>
-            Отправка списка задач ответственному на e-mail прямо из MS Project
-          </p>
-          <p><span>Обратная связь с отчетами</span> и описанием проблем</p>
-          <p>
-            Автоматическая перестройка графиков
-            <span>по присланным отчетам</span>
-          </p>
-          <p>Отслеживание прогресса выполнения поручений</p>
+        <div class="pros__system row row__right">
+          <div class="pros__slider__system">
+            <h4 class="text-white text-uppercase">
+              <span>система</span>поручений
+            </h4>
+            <div class="pros__system__content content">
+              <p>
+                Отправка списка задач ответственному на e-mail прямо из MS
+                Project
+              </p>
+              <p><span>Обратная связь с отчетами</span> и описанием проблем</p>
+              <p>
+                Автоматическая перестройка графиков
+                <span>по присланным отчетам</span>
+              </p>
+              <p>Отслеживание прогресса выполнения поручений</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="pros__program row row__left">
-        <h4 class="text-white text-uppercase"><span>программа</span>проекта</h4>
-        <div class="pros__program__content content">
-          <p>
-            <span>Наглядный интерфейс,</span> с данными по всем
-            <span>проектам</span>
-          </p>
-          <p>Оценка доверия к данным по 25 критериям</p>
-          <p><span>Настройка доступа</span> к проекту</p>
-          <p>
-            Уровень и прогноз исполнения бюджета <span>в удобной таблице</span>
-          </p>
-          <p>
-            Несколько планов выполнения проекта <span>с историей отправки</span>
-          </p>
+        <div class="pros__program row row__left">
+          <div class="pros__slider__program">
+            <h4 class="text-white text-uppercase">
+              <span>программа</span>проекта
+            </h4>
+            <div class="pros__program__content content">
+              <p>
+                <span>Наглядный интерфейс,</span> с данными по всем
+                <span>проектам</span>
+              </p>
+              <p>Оценка доверия к данным по 25 критериям</p>
+              <p><span>Настройка доступа</span> к проекту</p>
+              <p>
+                Уровень и прогноз исполнения бюджета
+                <span>в удобной таблице</span>
+              </p>
+              <p>
+                Несколько планов выполнения проекта
+                <span>с историей отправки</span>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="pros__reports row row__right">
-        <h4 class="text-white text-uppercase"><span>программа</span>проекта</h4>
-        <div class="pros__reports__content content">
-          <p>Подробный отчет со всеми данными в Excel</p>
-          <p>Нагрядный вариант <span>с диаграммами</span> и графиками в pdf</p>
-          <p>Формирование в 1 клик</p>
-          <p>
-            Оценка эффективности <span>работы сотрудников,</span> команд и
-            портфелей
-          </p>
+        <div class="pros__reports row row__right">
+          <div class="pros__slider__reports">
+            <h4 class="text-white text-uppercase"><span>точные</span>отчеты</h4>
+            <div class="pros__reports__content content">
+              <p>Подробный отчет со всеми данными в Excel</p>
+              <p>
+                Нагрядный вариант <span>с диаграммами</span> и графиками в pdf
+              </p>
+              <p>Формирование в 1 клик</p>
+              <p>
+                Оценка эффективности <span>работы сотрудников,</span> команд и
+                портфелей
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -505,6 +526,17 @@
         </div>
       </div>
     </section>
+    <script type="module">
+      import { tns } from "./scripts/tiny-slider.js";
+      if (window.outerWidth <= 640) {
+        var slider = tns({
+          container: ".pros__slider__wrapper",
+          items: 1,
+          slideBy: "page",
+          autoplay: false,
+        });
+      }
+    </script>
     <script src="./scripts/skrollr.min.js" type="text/javascript"></script>
     <script src="./scripts/main.js" type="text/javascript"></script>
   </body>
