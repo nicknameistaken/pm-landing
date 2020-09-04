@@ -1,7 +1,7 @@
 // window.onload = function () {
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
-
+  const isDesktop = window.outerWidth > 1140;
   const initFaqSection = getByClass("faq");
   let initLatest = 0;
   for (let point in initFaqSection.dataset) {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         faqSection.removeAttribute(`data-${point}`);
       }
     }
-    if (window.outerWidth > 1140) {
+    if (isDesktop) {
       skrollr.get().refresh();
     }
   };
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeAll();
       }
 
-      toggle(e.target.nextElementSibling);
+      toggle(e.target, e.target.nextElementSibling);
     }
 
     function closeAll() {
@@ -69,18 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    function toggle(el) {
+    function toggle(title, section) {
       // getting the height every time in case
       // the content was updated dynamically
-      var height = el.scrollHeight;
+      var height = section.scrollHeight;
       const faqSection = getByClass("faq");
       let isOpening;
-      if (el.style.height === "0px" || el.style.height === "") {
-        el.style.height = height + 20 + "px";
+
+      if (section.style.height === "0px" || section.style.height === "") {
+        section.style.height = height + 20 + "px";
         isOpening = true;
+        title.classList.add("active");
       } else {
-        el.style.height = 0;
+        section.style.height = 0;
         isOpening = false;
+        title.classList.remove("active");
       }
       refreshDatasetForScroll(faqSection, height, isOpening);
     }
@@ -101,7 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         faqSection.removeAttribute(`data-${newHeight}`);
       }
-      skrollr.get().refresh();
+      if (isDesktop) {
+        skrollr.get().refresh();
+      }
     }
 
     function getTarget(n) {
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     oneOpen: false,
   });
 
-  if (window.outerWidth > 1140) {
+  if (isDesktop) {
     skrollr.init({
       forceHeight: true,
     });
@@ -339,31 +344,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //menu end
 
   //scrollTo start
-  const sectionsHeight = {
-    how: 990,
-    result: 1870,
-    functions: 2765,
-    pros: 3600,
-    scheme: 5200,
-    faq: 7230,
-    form: 7600,
-  };
-
-  const scrollTo = (top) => {
-    window.scrollTo({
-      top,
-      behavior: "smooth",
-    });
-  };
-
-  const menuSections = getByClass("menu__sections");
-  menuSections.addEventListener("click", (e) => {
-    const chosenSection = e.target.dataset.section;
-    if (!chosenSection) return;
-    scrollTo(sectionsHeight[chosenSection]);
-    toggleMenu();
-  });
-
   const interactiveButtons = [
     {
       querySelector: "order",
@@ -387,9 +367,45 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => scrollTo(sectionsHeight[where]));
   });
 
-  //scrollTo end
+  const sections = document.querySelectorAll(
+    ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
+  );
+  const sectionsHeight = isDesktop
+    ? {
+        how: 990,
+        result: 1870,
+        functions: 2765,
+        pros: 3600,
+        scheme: 5200,
+        faq: 7230,
+        form__wrap: 7600,
+      }
+    : [...sections].reduce(
+        (acc, section) => ({
+          ...acc,
+          [section.classList[0]]: Math.ceil(
+            window.pageYOffset + section.getBoundingClientRect().top
+          ),
+        }),
+        {}
+      );
+  console.log(sectionsHeight);
+  const scrollTo = (top) => {
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
 
-  //slider start
-  //   const navButtons = document.querySelectorAll(".tns-controls > button");
-  //   navButtons.forEach((btn) => (btn.innerHTML = ""));
+  const menuSections = document.querySelector(".menu__sections");
+  menuSections.addEventListener("click", (e) => {
+    const chosenSection = e.target.dataset.section;
+    if (!chosenSection) return;
+    scrollTo(sectionsHeight[chosenSection]);
+    toggleMenu();
+  });
+
+  const phone = getByClass("phone-big");
+  phone.addEventListener("click", () => scrollTo(sectionsHeight["form__wrap"]));
+  //scrollTo end
 });

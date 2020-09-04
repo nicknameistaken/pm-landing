@@ -28,6 +28,12 @@
   min-height: $height + px;
   max-height: $height + px;
 }
+@mixin resetMinMax {
+  min-width: auto;
+  max-width: none;
+  min-height: auto;
+  max-height: none;
+}
 
 $text-white: #fff;
 body {
@@ -109,6 +115,14 @@ button {
   position: fixed;
   @include img-size(1920, 1080);
   background: img-url("common", "bg");
+}
+.phone-big {
+  position: fixed;
+  @include img-size(144, 143);
+  background: img-url("common", "phone-big");
+  right: 50px;
+  bottom: 50px;
+  z-index: 10;
 }
 /* First Screen */
 
@@ -929,6 +943,10 @@ button {
   font-weight: bold;
   font-size: 18px;
 
+  &__slider__wrapper {
+    display: flex;
+  }
+
   span {
     display: block;
   }
@@ -1021,11 +1039,12 @@ button {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       align-self: center;
       margin-top: 80px;
       p {
         width: 345px;
-        padding: 44px 0;
+        margin-bottom: 44px;
         color: white;
       }
 
@@ -1101,6 +1120,7 @@ button {
     flex-direction: column;
     align-items: center;
     margin-left: 32px;
+    overflow: hidden;
 
     &__header {
       @include img-size(406, 129);
@@ -1316,6 +1336,23 @@ button {
     height: auto;
 
     .menu {
+      font-size: 14px;
+      height: auto;
+
+      &__sections {
+        padding-left: 3.2vw;
+        padding-top: 22px;
+
+        p {
+          margin-bottom: 2.8vw;
+        }
+      }
+
+      &__info {
+        min-height: 178px;
+        padding-left: 3.2vw;
+      }
+
       &__icon {
         height: 16px;
       }
@@ -1343,7 +1380,8 @@ button {
       flex-direction: column;
       justify-content: space-around;
       height: 370px;
-      margin-bottom: 80px;
+      margin-bottom: 40px;
+      margin-top: 15px;
 
       .arrow {
         display: none;
@@ -1383,9 +1421,17 @@ button {
     }
     .order {
       background: img-url("first-screen", "order-bg-mobile");
-      @include mobile-img(103, 102);
-      font-size: 24px;
-      padding-left: 50px;
+      //   @include mobile-img(103, 102);
+      //   font-size: 24px;
+      //   padding-left: 50px;
+      font-size: 16px;
+      padding: 0;
+      margin: -13px 0 0 -1.6vw;
+      width: 103vw;
+      height: 16vw;
+      padding-left: 4.7vw;
+      @include resetMinMax();
+      max-height: 102px;
     }
   }
 
@@ -1408,7 +1454,6 @@ button {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 66px;
 
       .arrow {
         display: none;
@@ -1657,13 +1702,14 @@ button {
     &__solutions {
       min-height: auto;
       font-size: 18px;
-
+      position: relative;
       &:before {
         content: "";
         @include img-size(413, 165);
         background: img-url("functions", "solutions-figure-mobile");
-        left: 92px;
-        top: 490px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        top: -60px;
         position: absolute;
         z-index: -1;
       }
@@ -1683,7 +1729,13 @@ button {
         margin-left: 0;
 
         &--more {
-          width: 78%;
+          width: 78vw;
+          height: 18vw;
+
+          button {
+            width: 80%;
+            height: 13vw;
+          }
         }
       }
     }
@@ -1839,15 +1891,15 @@ button {
       }
     }
 
+    &__slider__wrapper {
+      display: block;
+    }
     &__start,
     &__registration,
     &__cooperation,
     &__registration__header {
       margin: 0;
-      min-width: auto;
-      max-width: none;
-      min-height: auto;
-      max-height: none;
+      @include resetMinMax();
     }
 
     .short-arrow {
@@ -1859,7 +1911,8 @@ button {
       height: 85px;
       position: absolute;
       bottom: 194px;
-      right: 60px;
+      right: 2vw;
+
       button {
         width: 86px;
         height: 85px;
@@ -1884,6 +1937,8 @@ button {
       }
 
       &__request {
+        margin-left: 5vw;
+
         &::after {
           display: none;
         }
@@ -1930,8 +1985,7 @@ button {
     }
 
     &__cooperation {
-      height: 783px;
-      margin-top: -10px;
+      height: 773px;
       background: rgba(35, 61, 103, 0.88);
       position: relative;
 
@@ -1987,6 +2041,7 @@ button {
       }
 
       &__tabs {
+        flex-basis: 100%;
         margin-top: 40px;
       }
     }
@@ -2030,7 +2085,217 @@ button {
   }
 }
 
+@media (max-width: 600px) {
+  .how {
+    &__arrow-block {
+      justify-content: center;
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+
+      &__analyse,
+      &__decide,
+      &__introduction {
+        min-height: auto;
+        max-height: none;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          position: relative;
+          top: 0;
+          border-radius: 10px;
+          justify-content: center;
+          min-width: auto;
+          transform: none;
+
+          span {
+            margin-left: 0;
+            margin-right: 0;
+            width: auto;
+          }
+        }
+
+        &__content {
+          margin-right: 0;
+          margin-left: 0;
+          height: 100%;
+          border-radius: 0 0 10px 10px;
+          min-width: 260px;
+          width: 50%;
+
+          p {
+            font-size: 14px;
+            flex-basis: 92px;
+            margin: 0;
+          }
+        }
+      }
+
+      &__analyse {
+        h4 {
+          width: 63%;
+          min-width: 300px;
+        }
+        &__content {
+          p {
+            padding: 0;
+            font-size: 14px;
+          }
+        }
+
+        button {
+          width: 90%;
+          height: 14vw;
+        }
+      }
+      &__decide,
+      &__introduction {
+        margin-top: 6.5%;
+
+        h4 {
+          width: 56%;
+          min-width: 280px;
+        }
+
+        p {
+          margin-right: 0;
+          padding: 0 5vw;
+        }
+      }
+      &__decide__content,
+      &__introduction p {
+        width: 50%;
+        margin-top: -10px;
+        font-size: 14px;
+        min-width: 260px;
+      }
+
+      .warn {
+        margin-left: 16px;
+        p {
+          padding: 0;
+          flex-basis: auto;
+        }
+      }
+
+      &__introduction {
+        p {
+          padding: 14px 5vw;
+        }
+      }
+    }
+  }
+
+  .functions {
+    h2 {
+      text-align: center;
+      padding: 44px 0 0 0;
+      height: 250px;
+      font-size: 28px;
+    }
+    &__choose {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0;
+    }
+    &__problems {
+      &__description {
+        width: 100%;
+        padding: 0 4%;
+      }
+
+      &__list {
+        flex-direction: column;
+        font-size: 14px;
+
+        & > p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__solutions {
+      &__list {
+        font-size: 14px;
+      }
+
+      &__text--more {
+        button {
+          width: 94%;
+          height: 15vw;
+
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .scheme {
+    .short-arrow {
+      margin-right: -130px;
+    }
+    .long-arrow {
+      display: none;
+    }
+    &__start {
+      &__demonstration {
+        &:after {
+          content: "";
+          position: absolute;
+          width: 150px;
+          height: 2px;
+          background: white;
+          left: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &__presentation {
+        @include resetMinMax();
+        width: 80vw;
+      }
+    }
+
+    &__registration,
+    &__cooperation {
+      &__header {
+        @include resetMinMax();
+        width: 80vw;
+      }
+    }
+  }
+}
+
 @media (max-width: 500px) {
+  .offer {
+    .menu {
+      width: 90%;
+      left: 5%;
+
+      &__info {
+        min-height: 138px;
+
+        a {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .arrow__block {
+      .make {
+        span {
+          width: auto;
+        }
+      }
+    }
+  }
+
   .pros {
     h4 {
       background-position: top;
@@ -2040,6 +2305,118 @@ button {
     .content {
       p {
         font-size: 18px;
+      }
+    }
+  }
+
+  .scheme {
+    h2 {
+      height: 80px;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding: 0 8px 0 0;
+      }
+    }
+    .tns-controls {
+      right: 5vw;
+      width: 13vw;
+      height: 13vw;
+
+      button {
+        width: 13vw;
+        height: 13vw;
+      }
+    }
+
+    .short-arrow,
+    .long-arrow {
+      margin: -2px 0 0 -28px;
+    }
+
+    &__start,
+    &__registration,
+    &__cooperation {
+      height: 718px;
+    }
+    &__start {
+      &__wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      &__request,
+      &__analysis,
+      &__demonstration {
+        margin: 0;
+      }
+
+      &__presentation {
+        font-size: 16px;
+        height: 200px;
+
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &__registration {
+      &__arrow-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+
+        .text {
+          margin: 0;
+        }
+
+        .business-offer {
+          &::after {
+            width: 150px;
+            left: -150px;
+          }
+        }
+
+        .contract {
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 144px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            right: -144px;
+          }
+        }
+      }
+    }
+
+    &__cooperation {
+      &__arrow-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+      }
+
+      .text {
+        margin: 0;
+      }
+
+      .introduction {
+        &::after {
+          width: 164px;
+          left: -164px;
+        }
       }
     }
   }
@@ -2054,15 +2431,17 @@ button {
         flex-wrap: wrap;
         flex-basis: 100%;
         margin-bottom: 40px;
+        height: auto;
 
         .tab {
           margin-top: 10px;
-          width: 30%;
+          flex-basis: 50%;
+          height: 50px;
+          font-size: 14px;
         }
 
         .tab--chosen {
           width: 150px;
-          font-size: 16px;
         }
       }
 
@@ -2076,6 +2455,64 @@ button {
     &__show-more {
       font-size: 16px;
       width: 230px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .result {
+    &__content {
+      &__rhombus {
+        width: 100%;
+      }
+
+      .reject {
+        left: 16px;
+        padding-bottom: 60px;
+        background-position-x: 80px;
+      }
+      .graphic {
+        right: 13%;
+      }
+
+      &__description {
+        p {
+          flex-basis: auto;
+          font-size: 14px;
+        }
+        .marked-wrapper {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .functions {
+    &__solutions__text--more {
+      font-size: 12px;
+      button {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .scheme {
+    &__start {
+      &__presentation {
+        p {
+          width: auto;
+          padding: 0 4%;
+          font-size: 14px;
+        }
+
+        button {
+          @include resetMinMax();
+          height: 57px;
+          width: 85%;
+        }
+      }
     }
   }
 }
@@ -2121,7 +2558,7 @@ button {
       font-size: 12px;
       flex-direction: column;
       justify-content: space-around;
-      height: 370px;
+      height: 290px;
 
       .arrow {
         display: none;
@@ -2148,10 +2585,46 @@ button {
       .make {
         @include mobile-img(59, 70);
         border-radius: 0 10px 10px 0;
+
+        span {
+          width: auto;
+        }
+      }
+    }
+
+    .order {
+      font-size: 16px;
+      padding: 0;
+      margin: 0 0 -10px 0;
+      width: 100%;
+      height: 61px;
+      padding-left: 10px;
+      @include resetMinMax();
+    }
+  }
+
+  .how {
+    &__arrow-block {
+      &__analyse {
+        &__content {
+          button {
+            height: 17vw;
+          }
+        }
       }
     }
   }
 
+  .functions {
+    &__solutions__text--more {
+      font-size: 11px;
+      button {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
   .pros {
     height: 729px;
 

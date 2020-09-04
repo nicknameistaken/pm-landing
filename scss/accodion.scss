@@ -12,10 +12,23 @@
     width: 100%;
     font-size: 24px;
     line-height: 30px;
+    text-align: left;
+    position: relative;
 
-    // &:first-child {
-    //     border-top: 1px solid #ccc;
-    // }
+    &.active {
+      font-weight: bold;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -3%;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
+      }
+    }
   }
 
   &-content {
@@ -41,18 +54,21 @@
 }
 
 @media (max-width: 640px) {
-
-  .js-Accordion { 
+  .js-Accordion {
     width: 90%;
 
     &-title {
       text-align: left;
       padding-left: 25px;
+
+      &.active:before {
+        left: 0;
+      }
     }
 
     &-content {
       padding-left: 45px;
-      
+
       p {
         margin-bottom: 16px;
       }
@@ -60,9 +76,16 @@
   }
 }
 
-@media (max-width: 500px) {
-  .js-Accordion { 
+@media (max-width: 600px) {
+  .js-Accordion {
+    &-title {
+      font-size: 18px;
+    }
+  }
+}
 
+@media (max-width: 500px) {
+  .js-Accordion {
     &-title {
       font-size: 18px;
     }
