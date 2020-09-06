@@ -389,7 +389,6 @@ window.addEventListener("load", () => {
         }),
         {}
       );
-  console.log(sectionsHeight);
   const scrollTo = (top) => {
     window.scrollTo({
       top,
