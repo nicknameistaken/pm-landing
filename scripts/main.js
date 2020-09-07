@@ -1,7 +1,8 @@
 // window.onload = function () {
 window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
-  const isDesktop = window.outerWidth > 1140;
+  const currentWidth = window.innerWidth;
+  const isDesktop = currentWidth >= 1140;
   const initFaqSection = getByClass("faq");
   let initLatest = 0;
   for (let point in initFaqSection.dataset) {
@@ -367,7 +368,7 @@ window.addEventListener("load", () => {
     btn.addEventListener("click", () => scrollTo(sectionsHeight[where]));
   });
 
-  const sections = document.querySelectorAll(
+  const sectionsToScroll = document.querySelectorAll(
     ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
   );
   const sectionsHeight = isDesktop
@@ -380,7 +381,7 @@ window.addEventListener("load", () => {
         faq: 7230,
         form__wrap: 7600,
       }
-    : [...sections].reduce(
+    : [...sectionsToScroll].reduce(
         (acc, section) => ({
           ...acc,
           [section.classList[0]]: Math.ceil(
@@ -475,4 +476,54 @@ window.addEventListener("load", () => {
       .then((res) => console.log(res))
       .catch((err) => console.error(err));
   });
+
+  //recalculate left for adaptive width from 1140 to 1920
+
+  if (isDesktop && currentWidth < 1920) {
+    const allSections = [getByClass("offer"), ...sectionsToScroll];
+    const MIN_WIDTH = 1140;
+    const MAX_WIDTH = 1920;
+    const DIFF = MAX_WIDTH - MIN_WIDTH;
+    const LEFT = 20;
+    const leftForCurrentWidth = LEFT * ((currentWidth - MIN_WIDTH) / DIFF);
+    console.log(currentWidth);
+    const leftToChange = leftForCurrentWidth - LEFT;
+
+    allSections.forEach((section) => {
+      const leftToChangeRatio = section.clientWidth / MIN_WIDTH;
+
+      const breakpoints = [].filter
+        .call(section.attributes, function (at) {
+          return /^data-/.test(at.name);
+        })
+        .map((at) => ({ name: at.name.split("-")[1], value: at.value }));
+
+      breakpoints.forEach((bp) => {
+        const rebindLeft = (sectionClass, breakpoint) =>
+          section.classList.contains(sectionClass) &&
+          Number(bp.name) === breakpoint;
+        if (bp.value.includes("left: ")) {
+          const values = bp.value.split("left: ");
+          const left = parseFloat(values[1]);
+          const newLeft = left + leftToChange * leftToChangeRatio;
+
+          if (
+            rebindLeft("how", 300) ||
+            rebindLeft("result", 1100) ||
+            rebindLeft("functions", 2000 || rebindLeft("scheme", 4600))
+          ) {
+            section.dataset[bp.name] = `${values[0]} left: 100%`;
+            return;
+          }
+
+          const newBpValue = `${values[0]} left: ${
+            left > 100 && newLeft < 100 ? 100 : newLeft
+          }%`;
+          section.dataset[bp.name] = newBpValue;
+        }
+      });
+    });
+
+    skrollr.get().refresh();
+  }
 });

@@ -6,6 +6,7 @@
 // ini_set('display_startup_errors', 1);
 
   use PHPMailer\PHPMailer\PHPMailer;
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     require_once($_SERVER['DOCUMENT_ROOT'] . '/phpmailer.php');
