@@ -404,7 +404,75 @@ window.addEventListener("load", () => {
     toggleMenu();
   });
 
-  const phone = getByClass("phone-big");
-  phone.addEventListener("click", () => scrollTo(sectionsHeight["form__wrap"]));
+  const phoneIcon = getByClass("phone-big");
+  phoneIcon.addEventListener("click", () =>
+    scrollTo(sectionsHeight["form__wrap"])
+  );
   //scrollTo end
+
+  //form start
+  const formOverlay = getByClass("form__modal__overlay");
+  const formModal = getByClass("form__modal");
+  const formButtons = document.querySelectorAll(
+    ".form__btn, .form__modal__close"
+  );
+  const toggleForm = () => {
+    formOverlay.classList.toggle("active");
+    formModal.classList.toggle("active");
+  };
+  [...formButtons, formOverlay].forEach((el) =>
+    el.addEventListener("click", toggleForm)
+  );
+
+  var phoneMask = [
+    "+",
+    "7",
+    "(",
+    /[1-9]/,
+    /\d/,
+    /\d/,
+    ")",
+    " ",
+    /\d/,
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/,
+  ];
+
+  const phone = getByClass("form__phone");
+
+  var maskedInputController = vanillaTextMask.maskInput({
+    inputElement: phone,
+    mask: phoneMask,
+  });
+
+  const formSubmitBtn = getByClass("form__submit__btn");
+  formSubmitBtn.addEventListener("click", (e) => {
+    const inputs = document.querySelectorAll(".form__modal input");
+    console.log(inputs);
+    const body = [...inputs].reduce(
+      (res, inp) => ({
+        ...res,
+        [inp.name]:
+          inp.type === "checkbox"
+            ? inp.checked === true
+              ? "Да"
+              : "Нет"
+            : inp.value,
+      }),
+      {}
+    );
+    fetch("/mail/mail.php", {
+      method: "POST",
+      body: JSON.stringify(body),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+  });
 });

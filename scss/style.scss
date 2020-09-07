@@ -1309,13 +1309,34 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+
+    &__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 59, 105, 0.73);
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &.active,
+    &__overlay.active {
+      z-index: 1;
+      opacity: 1;
+    }
 
     &__title {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding-top: 8%;
+      padding-top: 40px;
       margin-bottom: 7%;
 
       h4 {
@@ -1342,7 +1363,9 @@ button {
         }
       }
     }
-    input[type="text"] {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
       width: 75%;
       height: 50px;
       border-radius: 5px;
@@ -1431,6 +1454,16 @@ button {
       font-weight: bold;
       border-radius: 10px;
       background-image: linear-gradient(-90deg, #000f28 0%, #003b69 100%);
+    }
+
+    &__close {
+      @include img-size(16, 16);
+      position: absolute;
+      display: block;
+      background: img-url("common", "close-icon");
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
     }
   }
 }
@@ -2220,6 +2253,11 @@ button {
         margin-bottom: -36px;
       }
     }
+
+    &__modal {
+      width: 90%;
+      height: 60%;
+    }
   }
 }
 
@@ -2650,6 +2688,24 @@ button {
           height: 57px;
           width: 85%;
         }
+      }
+    }
+  }
+
+  .form {
+    &__modal {
+      &__title {
+        flex-direction: column;
+
+        p {
+          width: 100%;
+          margin-top: 16px;
+          text-align: center;
+        }
+      }
+
+      .checkbox {
+        font-size: 12px;
       }
     }
   }
