@@ -453,10 +453,29 @@ window.addEventListener("load", () => {
   });
 
   const formSubmitBtn = getByClass("form__submit__btn");
+  const requiredInputs = document.querySelectorAll(".form__modal > input");
+  let isValid = {
+    name: false,
+    tel: false,
+    email: false,
+  };
+  const checkSubmitButton = () => {
+    console.log(Object.values(isValid));
+    if (Object.values(isValid).filter(Boolean).length === 3) {
+      formSubmitBtn.removeAttribute("disabled");
+    } else {
+      formSubmitBtn.setAttribute("disabled", true);
+    }
+  };
+  requiredInputs.forEach((inp) => {
+    inp.addEventListener("input", (e) => {
+      isValid[inp.name] = e.target.value ? true : false;
+      checkSubmitButton();
+    });
+  });
   formSubmitBtn.addEventListener("click", (e) => {
-    const inputs = document.querySelectorAll(".form__modal input");
-    console.log(inputs);
-    const body = [...inputs].reduce(
+    const allInputs = document.querySelectorAll(".form__modal  input");
+    const body = [...allInputs].reduce(
       (res, inp) => ({
         ...res,
         [inp.name]:
