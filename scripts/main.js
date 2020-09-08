@@ -96,9 +96,7 @@ window.addEventListener("load", () => {
         latest = parseFloat(point);
       }
       const currentTop = faqSection.dataset[latest].split(":")[1].slice(0, -1);
-      console.log(currentTop);
       const newHeight = isOpening ? latest + parseFloat(elHeight) : latest;
-      console.log(newHeight);
       if (!faqSection.dataset[newHeight]) {
         faqSection.dataset[newHeight] =
           "top: " + (currentTop - elHeight * RATIO) + "%";
@@ -152,7 +150,6 @@ window.addEventListener("load", () => {
       forceHeight: true,
     });
   }
-  window.onscroll = () => console.log(window.scrollY);
 
   // functions block start
 
@@ -222,7 +219,6 @@ window.addEventListener("load", () => {
       wrapper.innerHTML += `<p>${text}</p>`;
     };
     ROLES[role][category].forEach((text, index) => {
-      console.log(wrapper.innerHTML);
       return index < lastIndex
         ? (commonWrapper.innerHTML += `<p>${text}</p>`)
         : appendToWrapper(text);
@@ -482,6 +478,7 @@ window.addEventListener("load", () => {
       checkSubmitButton();
     });
   });
+
   formSubmitBtn.addEventListener("click", (e) => {
     const allInputs = document.querySelectorAll(".form__modal  input");
     const body = [...allInputs].reduce(
@@ -500,13 +497,14 @@ window.addEventListener("load", () => {
     for (const val in body) {
       fd.append(val, body[val]);
     }
-    fetch("scripts/mail/mail.php", {
-      method: "POST",
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
+
+    //fetch for sending mail
+    // fetch("scripts/mail.php", {
+    //   method: "POST",
+    //   body: JSON.stringify(body),
+    // })
+    //   .then((res) => console.log(JSON.stringify(res)))
+    //   .catch((err) => console.error(err));
   });
 
   //recalculate left for adaptive width from 1140 to 1920
@@ -518,7 +516,6 @@ window.addEventListener("load", () => {
     const DIFF = MAX_WIDTH - MIN_WIDTH;
     const LEFT = 20;
     const leftForCurrentWidth = LEFT * ((currentWidth - MIN_WIDTH) / DIFF);
-    console.log(currentWidth);
     const leftToChange = leftForCurrentWidth - LEFT;
 
     allSections.forEach((section) => {
