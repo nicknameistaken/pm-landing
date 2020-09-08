@@ -37,7 +37,7 @@ $msgs = [];
 
     if (isset($_POST['messenger']) ) {
         if (!empty($_POST['messenger'])) {
-            $tel = "<b>Ответить в whatsapp/telegram: </b> " . trim(strip_tags($_POST['messenger'])) . "<br>";
+            $messenger = "<b>Ответить в whatsapp/telegram: </b> " . trim(strip_tags($_POST['messenger'])) . "<br>";
         }
     }
 

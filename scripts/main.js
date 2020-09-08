@@ -460,16 +460,25 @@ window.addEventListener("load", () => {
     email: false,
   };
   const checkSubmitButton = () => {
-    console.log(Object.values(isValid));
     if (Object.values(isValid).filter(Boolean).length === 3) {
       formSubmitBtn.removeAttribute("disabled");
     } else {
       formSubmitBtn.setAttribute("disabled", true);
     }
   };
+  const checkField = (el) => {
+    const isPhone = el.name === "tel";
+    const trimmedPhone = isPhone ? el.value.replace(/[_]/gi, "") : null;
+
+    return isPhone && trimmedPhone.length === 17
+      ? true
+      : !isPhone && el.value
+      ? true
+      : false;
+  };
   requiredInputs.forEach((inp) => {
     inp.addEventListener("input", (e) => {
-      isValid[inp.name] = e.target.value ? true : false;
+      isValid[inp.name] = checkField(e.target);
       checkSubmitButton();
     });
   });
@@ -487,7 +496,11 @@ window.addEventListener("load", () => {
       }),
       {}
     );
-    fetch("/mail/mail.php", {
+    const fd = new FormData();
+    for (const val in body) {
+      fd.append(val, body[val]);
+    }
+    fetch("scripts/mail/mail.php", {
       method: "POST",
       body: JSON.stringify(body),
     })
