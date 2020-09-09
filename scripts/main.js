@@ -618,7 +618,7 @@ window.addEventListener("load", () => {
 
   //remove bg
   const sectionsWoBg = document.querySelectorAll(
-    ".how, .functions, .pros, .scheme, .faq"
+    ".offer, .how, .functions, .pros, .scheme, .faq"
   );
   if (!isMobile) {
     sectionsWoBg.forEach((section) => (section.style.background = "#fff"));
