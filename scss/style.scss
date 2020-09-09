@@ -34,6 +34,29 @@
   min-height: auto;
   max-height: none;
 }
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
 
 $text-white: #fff;
 body {
@@ -122,7 +145,18 @@ button {
   background: img-url("common", "phone-big");
   right: 50px;
   bottom: 50px;
-  z-index: 10;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.1s ease-in-out;
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  &.visible {
+    opacity: 1;
+    z-index: 10;
+  }
 }
 /* First Screen */
 
@@ -497,7 +531,6 @@ button {
     text-align: center;
   }
 
-  //TODO new pos-rel
   .stage-text {
     @include img-size(108, 46);
     background: img-url("result", "stage");
@@ -611,7 +644,7 @@ button {
 
       p {
         font-size: 14px;
-        color: white;
+        color: black;
         width: 413px;
         padding-right: 76px;
         margin-bottom: 16px;
@@ -1179,6 +1212,8 @@ button {
       height: 50px;
 
       .tab {
+        cursor: pointer;
+
         &--chosen {
           width: 182px;
           height: 50px;
@@ -1210,6 +1245,12 @@ button {
     color: white;
     margin: 30px auto;
     font-size: 18px;
+
+    visibility: hidden;
+
+    &.visible {
+      visibility: visible;
+    }
 
     &__icon {
       @include img-size(34, 34);
@@ -1472,6 +1513,15 @@ button {
 }
 
 @media (max-width: 640px) {
+  .phone-big {
+    min-width: 10vw;
+    max-width: 10vw;
+    min-height: 10vw;
+    max-height: 10vw;
+    right: 5vw;
+    bottom: 5vw;
+  }
+
   .tns-nav {
     position: absolute;
     left: 50%;
@@ -2353,8 +2403,11 @@ button {
 
       .warn {
         margin-left: 16px;
+        margin-bottom: 24px;
         p {
           padding: 0;
+          padding-right: 16px;
+          margin-bottom: 0;
           flex-basis: auto;
         }
       }
@@ -2414,7 +2467,36 @@ button {
       }
     }
   }
+  .pros {
+    .tns-controls {
+      top: 733px;
+    }
+    .tns-nav {
+      top: 771px;
+    }
+    &__slider {
+      &__analysis,
+      &__system,
+      &__program,
+      &__reports {
+        height: 85%;
+      }
+    }
+    &__analysis,
+    &__system,
+    &__program,
+    &__reports {
+      h4 {
+        margin-bottom: -20px;
+      }
+    }
 
+    .content {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
   .scheme {
     .short-arrow {
       margin-right: -130px;
@@ -2479,7 +2561,7 @@ button {
   .pros {
     h4 {
       background-position: top;
-      background-size: contain;
+      height: 180px;
     }
 
     .content {
@@ -2640,6 +2722,29 @@ button {
 }
 
 @media (max-width: 460px) {
+  .phone-big {
+    min-width: 15vw;
+    max-width: 15vw;
+    min-height: 15vw;
+    max-height: 15vw;
+  }
+
+  .how {
+    &__arrow-block {
+      &__decide__content {
+        padding-top: 12px;
+
+        p {
+          flex-basis: 70px;
+        }
+      }
+      &__introduction {
+        p {
+          padding: 24px 5vw;
+        }
+      }
+    }
+  }
   .result {
     &__content {
       &__rhombus {
@@ -2677,7 +2782,33 @@ button {
       }
     }
   }
-
+  .pros {
+    &__slider {
+      &__analysis,
+      &__system,
+      &__program,
+      &__reports {
+        height: 73%;
+      }
+      &__analysis {
+        h4 {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .content {
+      p {
+        font-size: 14px;
+        flex-basis: auto;
+      }
+    }
+    .tns-controls {
+      top: 638px;
+    }
+    .tns-nav {
+      top: 677px;
+    }
+  }
   .scheme {
     &__start {
       &__presentation {
@@ -2715,6 +2846,21 @@ button {
   }
 }
 
+@media (max-width: 400px) {
+  .pros {
+    &__slider {
+      &__analysis,
+      &__system,
+      &__program,
+      &__reports {
+        h4 {
+          padding: 5vw 0 0 5vw;
+          width: calc(100% - 4.9vw);
+        }
+      }
+    }
+  }
+}
 @media (max-width: 320px) {
   .offer,
   .how,

@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
   const currentWidth = window.innerWidth;
   const isDesktop = currentWidth >= 1140;
+  const isMobile = currentWidth <= 640;
   const initFaqSection = getByClass("faq");
   let initLatest = 0;
   for (let point in initFaqSection.dataset) {
@@ -19,6 +20,27 @@ window.addEventListener("load", () => {
       skrollr.get().refresh();
     }
   };
+
+  function refreshDatasetForScroll(elHeight, isOpening) {
+    const faqSection = getByClass("faq");
+    const RATIO = 0.12;
+    let latest = 0;
+    for (let point in faqSection.dataset) {
+      latest = parseFloat(point);
+    }
+    const currentTop = faqSection.dataset[latest].split(":")[1].slice(0, -1);
+    const newHeight = isOpening ? latest + parseFloat(elHeight) : latest;
+    if (!faqSection.dataset[newHeight]) {
+      faqSection.dataset[newHeight] =
+        "top: " + (currentTop - elHeight * RATIO) + "%";
+    } else {
+      faqSection.removeAttribute(`data-${newHeight}`);
+    }
+    if (isDesktop) {
+      skrollr.get().refresh();
+    }
+  }
+
   var Accordion = function (options) {
     var element =
         typeof options.element === "string"
@@ -74,7 +96,7 @@ window.addEventListener("load", () => {
       // getting the height every time in case
       // the content was updated dynamically
       var height = section.scrollHeight;
-      const faqSection = getByClass("faq");
+
       let isOpening;
 
       if (section.style.height === "0px" || section.style.height === "") {
@@ -86,26 +108,7 @@ window.addEventListener("load", () => {
         isOpening = false;
         title.classList.remove("active");
       }
-      refreshDatasetForScroll(faqSection, height, isOpening);
-    }
-
-    function refreshDatasetForScroll(faqSection, elHeight, isOpening) {
-      const RATIO = 0.12;
-      let latest = 0;
-      for (let point in faqSection.dataset) {
-        latest = parseFloat(point);
-      }
-      const currentTop = faqSection.dataset[latest].split(":")[1].slice(0, -1);
-      const newHeight = isOpening ? latest + parseFloat(elHeight) : latest;
-      if (!faqSection.dataset[newHeight]) {
-        faqSection.dataset[newHeight] =
-          "top: " + (currentTop - elHeight * RATIO) + "%";
-      } else {
-        faqSection.removeAttribute(`data-${newHeight}`);
-      }
-      if (isDesktop) {
-        skrollr.get().refresh();
-      }
+      refreshDatasetForScroll(height, isOpening);
     }
 
     function getTarget(n) {
@@ -227,16 +230,23 @@ window.addEventListener("load", () => {
 
   const chooseBlock = getByClass("functions__choose");
   chooseBlock.addEventListener("click", (e) => {
-    const chosen = getByClass("functions__choose--chosen");
+    const chosenCategories = chooseBlock.getElementsByTagName("p");
+    const chosen = chosenCategories[0];
     const newRole = e.target.dataset.role;
-
+    const newChosen = document.querySelector(`[data-role=${newRole}]`);
+    console.log(chosen, newChosen);
     if (!newRole || newRole === chosen.dataset.role) {
       return;
     }
+    const chosenIndex = [...chosenCategories].indexOf(chosen);
+    const newChosenIndex = [...chosenCategories].indexOf(newChosen);
 
-    chosen.classList.remove("functions__choose--chosen");
-    const newChosen = document.querySelector(`[data-role=${newRole}]`);
-    newChosen.classList.add("functions__choose--chosen");
+    const tempInnerHtml = chosen.innerHTML;
+    const tempRole = chosen.dataset.role;
+    chosenCategories[chosenIndex].innerHTML = newChosen.innerHTML;
+    chosenCategories[chosenIndex].dataset.role = newChosen.dataset.role;
+    chosenCategories[newChosenIndex].innerHTML = tempInnerHtml;
+    chosenCategories[newChosenIndex].dataset.role = tempRole;
 
     updateContent(newRole, "problems");
     updateContent(newRole, "solutions");
@@ -283,6 +293,7 @@ window.addEventListener("load", () => {
         { question: "testQuestion311", answer: "testAnswer311" },
         { question: "testQuestion411", answer: "testAnswer411" },
         { question: "testQuestion511", answer: "testAnswer511" },
+        { question: "testQuestion611", answer: "testAnswer611" },
       ],
     },
     about: {
@@ -296,9 +307,32 @@ window.addEventListener("load", () => {
       ],
     },
   };
+  const accordionState = {
+    FULL: "full",
+    SHORT: "short",
+  };
+  const checkShowMoreBtn = (category) => {
+    const faqMoreBtn = getByClass("faq__show-more");
+    const questionsAmount = CATEGORIES[category].qa.length;
+    if (questionsAmount > 5) {
+      faqMoreBtn.classList.add("visible");
+    } else {
+      faqMoreBtn.classList.remove("visible");
+    }
+    faqMoreBtn.addEventListener("click", () => {
+      const oneSectionHeight = 86;
+      updateAccordion(category, accordionState.FULL);
+      faqMoreBtn.classList.remove("visible");
+
+      questionsAmount > 5 &&
+        refreshDatasetForScroll((questionsAmount - 5) * oneSectionHeight, true);
+    });
+  };
   const faqTabs = getByClass("faq__header__tabs");
+
   faqTabs.addEventListener("click", (e) => {
     resetHeight();
+
     const chosen = getByClass("tab--chosen");
     const newCategory = e.target.dataset.category;
 
@@ -309,15 +343,18 @@ window.addEventListener("load", () => {
     chosen.classList.remove("tab--chosen");
     const newChosen = document.querySelector(`[data-category=${newCategory}]`);
     newChosen.classList.add("tab--chosen");
-
-    updateAccordion(newCategory);
+    checkShowMoreBtn(newCategory);
+    updateAccordion(newCategory, accordionState.SHORT);
   });
 
-  const updateAccordion = (category) => {
+  const updateAccordion = (category, state) => {
     const wrapper = getByClass("js-Accordion");
-
+    const content =
+      state === accordionState.SHORT
+        ? CATEGORIES[category].qa.slice(0, 5)
+        : CATEGORIES[category].qa;
     wrapper.innerHTML = "";
-    CATEGORIES[category].qa.forEach(
+    content.forEach(
       (qa) =>
         (wrapper.innerHTML += `
       <button class="js-Accordion-title">${qa.question}
@@ -327,6 +364,10 @@ window.addEventListener("load", () => {
       `)
     );
   };
+
+  const initCat = getByClass("tab--chosen").dataset.category;
+  checkShowMoreBtn(initCat);
+  updateAccordion(initCat, accordionState.SHORT);
   //faq block end
 
   //menu start
@@ -344,11 +385,11 @@ window.addEventListener("load", () => {
   const interactiveButtons = [
     {
       querySelector: "order",
-      where: "form",
+      where: "form__wrap",
     },
     {
       querySelector: "how__arrow-block__analyse__content > button",
-      where: "form",
+      where: "form__wrap",
     },
     {
       querySelector: "functions__solutions__text--more > button",
@@ -356,12 +397,15 @@ window.addEventListener("load", () => {
     },
     {
       querySelector: "scheme__start__presentation > button",
-      where: "form",
+      where: "form__wrap",
     },
   ];
   interactiveButtons.forEach(({ querySelector, where }) => {
     const btn = getByClass(querySelector);
-    btn.addEventListener("click", () => scrollTo(sectionsHeight[where]));
+    btn.addEventListener("click", () => {
+      console.log(sectionsHeight, querySelector, where);
+      scrollTo(sectionsHeight[where]);
+    });
   });
 
   const sectionsToScroll = document.querySelectorAll(
@@ -405,6 +449,22 @@ window.addEventListener("load", () => {
   phoneIcon.addEventListener("click", () =>
     scrollTo(sectionsHeight["form__wrap"])
   );
+
+  //toggling big phone icon
+  window.onscroll = () => {
+    const phoneIcon = getByClass("phone-big");
+    const phoneHeader = getByClass("offer__header");
+    const phoneFooter = getByClass("form__title");
+    const isPhoneHeaderVisible = window.pageYOffset < phoneHeader.clientHeight;
+    const isPhoneFooterVisible =
+      phoneFooter.getBoundingClientRect().top < window.innerHeight;
+
+    if (!isPhoneHeaderVisible && !isPhoneFooterVisible) {
+      phoneIcon.classList.add("visible");
+    } else {
+      phoneIcon.classList.remove("visible");
+    }
+  };
   //scrollTo end
 
   //form start
@@ -509,8 +569,8 @@ window.addEventListener("load", () => {
 
   //recalculate left for adaptive width from 1140 to 1920
 
+  const allSections = [getByClass("offer"), ...sectionsToScroll];
   if (isDesktop && currentWidth < 1920) {
-    const allSections = [getByClass("offer"), ...sectionsToScroll];
     const MIN_WIDTH = 1140;
     const MAX_WIDTH = 1920;
     const DIFF = MAX_WIDTH - MIN_WIDTH;
@@ -554,5 +614,13 @@ window.addEventListener("load", () => {
     });
 
     skrollr.get().refresh();
+  }
+
+  //remove bg
+  const sectionsWoBg = document.querySelectorAll(
+    ".how, .functions, .pros, .scheme, .faq"
+  );
+  if (!isMobile) {
+    sectionsWoBg.forEach((section) => (section.style.background = "#fff"));
   }
 });
