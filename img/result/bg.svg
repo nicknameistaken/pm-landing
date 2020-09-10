@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 674" width="1140" height="674">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="1" y1="45" x2="87" y2="45">
+			<stop offset="0" stop-color="#000f28"  />
+			<stop offset="1" stop-color="#003b69"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="1140" y1="566" x2="1054" y2="566">
+			<stop offset="0" stop-color="#000f28"  />
+			<stop offset="1" stop-color="#003b69"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #005c8b } 
+		.shp1 { fill: url(#grd1) } 
+		.shp2 { fill: url(#grd2) } 
+	</style>
+	<g id="Диаграмма">
+		<path id="Фигура 29" class="shp0" d="M77 43L120 43L383 335.73L428 335.72" />
+		<path id="Фигура 29 копия" class="shp0" d="M710 336L753 336L1016 566L1061 566" />
+		<path id="Прямоугольник 13 копия 9" class="shp1" d="M1 0L77 0C82.52 0 87 4.48 87 10L87 80C87 85.52 82.52 90 77 90L1 90L1 0Z" />
+		<path id="Прямоугольник 13 копия 10" class="shp2" d="M1064 458L1140 458L1140 674L1054 674L1054 468C1054 462.48 1058.48 458 1064 458Z" />
+	</g>
+</svg>

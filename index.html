@@ -25,12 +25,14 @@
       rel="apple-touch-icon"
       href="http://pm-assistant.ru/wp-content/uploads/2020/04/cropped-Logo_main-180x180.png"
     />
-    <link rel="stylesheet" href="css/scss/tiny-slider.css" />
-    <link rel="stylesheet" href="css/scss/style.css" />
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="global-bg"></div>
-    <div class="phone-big"></div>
+    <a href="tel:+74957754144">
+        <div class="phone-big"></div>
+    </a>
     <section
       class="offer"
       data-0="top: 0%; left: 20%"
@@ -208,11 +210,10 @@
     <section
       class="functions"
       data-1600="top: 78.2%; left: 109.7%"
-      data-2000="top: 36.2%; left: 79.7%"
+      data-2000="top: 36%; left: 79.7%"
       data-2400="left: 20%"
-      data-3000="top:-23.8%"
-      data-3600="top: -83.8%"
-      data-4000="top: -84.8%"
+      data-3000="top:-24%"
+      data-3700="top: -94%"
     >
       <div class="functions__problems">
         <h2 class="text-white text-uppercase">функции</h2>
@@ -480,7 +481,6 @@
           <p class="tab flex-center" data-category="introduction">Внедрение</p>
           <p class="tab flex-center" data-category="about">О проекте</p>
         </div>
-        <!-- <div class="vr flex-center">Виртуальный тур</div> -->
       </div>
       <div class="js-Accordion" id="accordion">
         <button>
@@ -545,48 +545,47 @@
         <div class="form__point">
           <img src="./img/form/point-line.png" alt="" />
         </div>
-        <div class="form__modal__overlay"></div>
-        <div class="form__modal">
-          <div class="form__modal__title">
-            <h4 class="form__modal__info text-uppercase">
-              сообщите ваши данные
-              <span>чтобы мы смогли сделать</span>
-              <span> индивидуальное предложение</span>
-            </h4>
-            <p>
-              Если срочно, позвоните
-              <a href="tel:+74957754144">+7 495 775 41 44</a>
-            </p>
-          </div>
-          <input name="name" type="text" placeholder="Имя" class="form__name" />
-          <input
-            name="email"
-            type="email"
-            placeholder="Электронная почта"
-            class="form__email"
-          />
-          <input
-            name="tel"
-            type="tel"
-            placeholder="Телефон"
-            class="form__phone"
-          />
-          <label class="checkbox">
-            Ответить в Whatsapp или Telegram
-            <input type="checkbox" name="messenger" />
-            <span class="checkmark"></span>
-          </label>
-          <button
-            class="text-uppercase text-white form__submit__btn"
-            type="button"
-            disabled
-          >
-            отправить
-          </button>
-          <i class="form__modal__close"></i>
-        </div>
       </div>
     </section>
+    <div class="form__modal__overlay"></div>
+    <div class="form__modal">
+      <div class="form__modal__title">
+        <h4 class="form__modal__info text-uppercase">
+          Обратная связь
+        </h4>
+        <p>
+          Если срочно, позвоните
+          <a href="tel:+74957754144">+7 495 775 41 44</a>
+        </p>
+      </div>
+      <input name="name" type="text" placeholder="Имя" class="form__name" />
+      <input
+        name="email"
+        type="email"
+        placeholder="Электронная почта"
+        class="form__email"
+      />
+      <input
+        name="tel"
+        type="tel"
+        placeholder="Телефон"
+        class="form__phone"
+      />
+      <label class="checkbox">
+        Ответить в Whatsapp или Telegram
+        <input type="checkbox" name="messenger" />
+        <span class="checkmark"></span>
+      </label>
+      <textarea name="message"  class="form__message" rows="5" placeholder="Сообщение"></textarea>
+      <button
+        class="text-uppercase text-white form__submit__btn"
+        type="button"
+        disabled
+      >
+        отправить
+      </button>
+      <i class="form__modal__close"></i>
+    </div>
     <script type="module">
       import { tns } from "./scripts/tiny-slider.js";
       if (window.outerWidth <= 640) {

@@ -234,7 +234,6 @@ window.addEventListener("load", () => {
     const chosen = chosenCategories[0];
     const newRole = e.target.dataset.role;
     const newChosen = document.querySelector(`[data-role=${newRole}]`);
-    console.log(chosen, newChosen);
     if (!newRole || newRole === chosen.dataset.role) {
       return;
     }
@@ -381,33 +380,44 @@ window.addEventListener("load", () => {
   menuClose.addEventListener("click", toggleMenu);
   //menu end
 
-  //scrollTo start
-  const interactiveButtons = [
+  //formOpen start
+  const scrollToFaqButton = getByClass(
+    "functions__solutions__text--more > button"
+  );
+  scrollToFaqButton.addEventListener("click", () => {
+    scrollTo(sectionsHeight["faq"]);
+  });
+  const formOpenButtons = [
     {
       querySelector: "order",
-      where: "form__wrap",
+      text: "Нам нужна демонстрация.",
     },
     {
       querySelector: "how__arrow-block__analyse__content > button",
-      where: "form__wrap",
-    },
-    {
-      querySelector: "functions__solutions__text--more > button",
-      where: "faq",
+      text: "Мы готовы к переговорам о сотрудничестве.",
     },
     {
       querySelector: "scheme__start__presentation > button",
-      where: "form__wrap",
+      text: "Нам нужна презентация возможностей Проектного Ассистента.",
+    },
+
+    {
+      querySelector: "form__btn",
+      text: "",
     },
   ];
-  interactiveButtons.forEach(({ querySelector, where }) => {
+
+  formOpenButtons.forEach(({ querySelector, text }) => {
     const btn = getByClass(querySelector);
+    const messageField = getByClass("form__message");
     btn.addEventListener("click", () => {
-      console.log(sectionsHeight, querySelector, where);
-      scrollTo(sectionsHeight[where]);
+      messageField.value = text;
+      toggleForm();
     });
   });
+  //formOpen end
 
+  //scrollTo start
   const sectionsToScroll = document.querySelectorAll(
     ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
   );
@@ -430,10 +440,10 @@ window.addEventListener("load", () => {
         }),
         {}
       );
-  const scrollTo = (top) => {
+  const scrollTo = (top, behavior) => {
     window.scrollTo({
       top,
-      behavior: "smooth",
+      behavior: behavior || "smooth",
     });
   };
 
@@ -444,11 +454,6 @@ window.addEventListener("load", () => {
     scrollTo(sectionsHeight[chosenSection]);
     toggleMenu();
   });
-
-  const phoneIcon = getByClass("phone-big");
-  phoneIcon.addEventListener("click", () =>
-    scrollTo(sectionsHeight["form__wrap"])
-  );
 
   //toggling big phone icon
   window.onscroll = () => {
@@ -470,12 +475,31 @@ window.addEventListener("load", () => {
   //form start
   const formOverlay = getByClass("form__modal__overlay");
   const formModal = getByClass("form__modal");
-  const formButtons = document.querySelectorAll(
-    ".form__btn, .form__modal__close"
-  );
+  const formButtons = document.querySelectorAll(".form__modal__close");
   const toggleForm = () => {
+    const howSection = getByClass("how");
+    const resultSection = getByClass("result");
+    const schemeSection = getByClass("scheme");
+
     formOverlay.classList.toggle("active");
     formModal.classList.toggle("active");
+
+    if (isDesktop) {
+      if (document.body.classList.contains("no-scroll")) {
+        howSection.style.left = parseFloat(howSection.style.left) + 0.7 + "%";
+        resultSection.style.left =
+          parseFloat(resultSection.style.left) + 1.5 + "%";
+        schemeSection.style.left =
+          parseFloat(schemeSection.style.left) + 0.6 + "%";
+      } else {
+        howSection.style.left = parseFloat(howSection.style.left) - 0.7 + "%";
+        resultSection.style.left =
+          parseFloat(resultSection.style.left) - 1.5 + "%";
+        schemeSection.style.left =
+          parseFloat(schemeSection.style.left) - 0.6 + "%";
+      }
+    }
+    document.body.classList.toggle("no-scroll");
   };
   [...formButtons, formOverlay].forEach((el) =>
     el.addEventListener("click", toggleForm)
@@ -540,7 +564,9 @@ window.addEventListener("load", () => {
   });
 
   formSubmitBtn.addEventListener("click", (e) => {
-    const allInputs = document.querySelectorAll(".form__modal  input");
+    const allInputs = document.querySelectorAll(
+      ".form__modal input, .form__modal textarea"
+    );
     const body = [...allInputs].reduce(
       (res, inp) => ({
         ...res,
