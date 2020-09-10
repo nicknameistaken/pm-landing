@@ -539,7 +539,7 @@ button {
   position: fixed;
   top: 89.4%;
   left: 139.9%;
-  background: url("../../img/result/bg.svg") no-repeat center/cover;
+  background: url("../img/result/bg.svg") no-repeat center/cover;
   background-position: top; }
   /* line 534, scss/style.scss */
   .result span {
