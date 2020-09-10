@@ -1,8 +1,8 @@
-@import "../../fonts/stylesheet.css";
+@import "../fonts/stylesheet.css";
 @import "./accodion.scss";
 
 @function img-url($folder, $imgName) {
-  @return url("../../img/" + $folder + "/" + $imgName + ".png") no-repeat center /
+  @return url("../img/" + $folder + "/" + $imgName + ".png") no-repeat center /
     cover;
 }
 @mixin section-size {
@@ -528,7 +528,7 @@ button {
 .result {
   @include section-size;
   @include section-pos(89.4%, 139.9%);
-  background: url("../../img/result/bg.svg") no-repeat center / cover;
+  background: url("../img/result/bg.svg") no-repeat center / cover;
   background-position: top;
 
   span {
