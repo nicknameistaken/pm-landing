@@ -641,12 +641,4 @@ window.addEventListener("load", () => {
 
     skrollr.get().refresh();
   }
-
-  //remove bg
-  const sectionsWoBg = document.querySelectorAll(
-    ".offer, .how, .functions, .pros, .scheme, .faq"
-  );
-  if (!isMobile) {
-    sectionsWoBg.forEach((section) => (section.style.background = "#fff"));
-  }
 });
