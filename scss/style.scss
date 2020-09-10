@@ -1,8 +1,8 @@
-@import "../../fonts/stylesheet.css";
+@import "../fonts/stylesheet.css";
 @import "./accodion.scss";
 
 @function img-url($folder, $imgName) {
-  @return url("../../img/" + $folder + "/" + $imgName + ".png") no-repeat center /
+  @return url("../img/" + $folder + "/" + $imgName + ".png") no-repeat center /
     cover;
 }
 @mixin section-size {

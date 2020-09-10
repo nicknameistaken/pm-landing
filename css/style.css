@@ -1,4 +1,4 @@
-@import url(../../fonts/stylesheet.css);
+@import url(../fonts/stylesheet.css);
 /* line 1, scss/accodion.scss */
 .js-Accordion {
   margin: 0 auto;
@@ -186,7 +186,7 @@ button {
   max-width: 1920px;
   min-height: 1080px;
   max-height: 1080px;
-  background: url("../../img/common/bg.png") no-repeat center/cover; }
+  background: url("../img/common/bg.png") no-repeat center/cover; }
 
 /* line 151, scss/style.scss */
 .phone-big {
@@ -195,7 +195,7 @@ button {
   max-width: 144px;
   min-height: 143px;
   max-height: 143px;
-  background: url("../../img/common/phone-big.png") no-repeat center/cover;
+  background: url("../img/common/phone-big.png") no-repeat center/cover;
   right: 50px;
   bottom: 50px;
   opacity: 0;
@@ -255,7 +255,7 @@ button {
       max-height: 26px;
       position: absolute;
       display: block;
-      background: url("../../img/common/close-icon.png") no-repeat center/cover;
+      background: url("../img/common/close-icon.png") no-repeat center/cover;
       top: 26px;
       right: 26px;
       cursor: pointer; }
@@ -386,7 +386,7 @@ button {
     max-width: 321px;
     min-height: 91px;
     max-height: 91px;
-    background: url("../../img/first-screen/order-bg.png") no-repeat center/cover;
+    background: url("../img/first-screen/order-bg.png") no-repeat center/cover;
     padding: 22px 30px;
     margin: -13px 0 0 -10px; }
     /* line 361, scss/style.scss */
@@ -472,7 +472,7 @@ button {
       .how__arrow-block__analyse button {
         width: 283px;
         height: 84px;
-        background: url("../../img/how/analyse-button.png") no-repeat center/cover;
+        background: url("../img/how/analyse-button.png") no-repeat center/cover;
         font-size: 18px;
         font-weight: bold;
         color: white; }
@@ -554,7 +554,7 @@ button {
     max-width: 108px;
     min-height: 46px;
     max-height: 46px;
-    background: url("../../img/result/stage.png") no-repeat center/cover;
+    background: url("../img/result/stage.png") no-repeat center/cover;
     background-position: top left;
     background-size: auto;
     position: absolute;
@@ -583,14 +583,14 @@ button {
       .result__content__triangles__rus {
         width: 266px;
         height: 96px;
-        background: url("../../img/result/rus.png") no-repeat center/cover;
+        background: url("../img/result/rus.png") no-repeat center/cover;
         margin-bottom: 33px;
         padding: 34px 0 0 54px; }
       /* line 581, scss/style.scss */
       .result__content__triangles__ekg {
         width: 190px;
         height: 83px;
-        background: url("../../img/result/ekg.png") no-repeat center/cover;
+        background: url("../img/result/ekg.png") no-repeat center/cover;
         margin-left: 10px;
         padding: 23px 0 0 45px; }
     /* line 590, scss/style.scss */
@@ -599,7 +599,7 @@ button {
       height: 471px;
       margin-left: -30px;
       margin-right: -33px;
-      background: url("../../img/result/rhombus.png") no-repeat center/cover;
+      background: url("../img/result/rhombus.png") no-repeat center/cover;
       margin-top: 30px;
       display: flex;
       flex-direction: column;
@@ -612,7 +612,7 @@ button {
         max-width: 188px;
         min-height: 46px;
         max-height: 46px;
-        background: url("../../img/result/reject.png") no-repeat center/cover;
+        background: url("../img/result/reject.png") no-repeat center/cover;
         background-position: bottom right;
         padding-left: 13px;
         top: 18px;
@@ -624,7 +624,7 @@ button {
         max-width: 108px;
         min-height: 46px;
         max-height: 46px;
-        background: url("../../img/result/graphic.png") no-repeat center/cover;
+        background: url("../img/result/graphic.png") no-repeat center/cover;
         background-position: top left;
         padding-left: 34px;
         bottom: 58px;
@@ -757,7 +757,7 @@ button {
     .functions__choose--chosen {
       color: #000;
       font-weight: bold;
-      background: url("../../img/functions/category.png") no-repeat center/cover; }
+      background: url("../img/functions/category.png") no-repeat center/cover; }
     /* line 770, scss/style.scss */
     .functions__choose > div {
       display: flex; }
@@ -772,7 +772,7 @@ button {
       max-width: 171px;
       min-height: 413px;
       max-height: 413px;
-      background: url("../../img/functions/solutions-figure.png") no-repeat center/cover;
+      background: url("../img/functions/solutions-figure.png") no-repeat center/cover;
       left: 452px;
       top: 200px;
       position: absolute;
@@ -812,12 +812,12 @@ button {
       .functions__solutions__text--more {
         width: 503px;
         height: 115px;
-        background: url("../../img/functions/more-bg.png") no-repeat center/cover; }
+        background: url("../img/functions/more-bg.png") no-repeat center/cover; }
         /* line 828, scss/style.scss */
         .functions__solutions__text--more button {
           width: 403px;
           height: 84px;
-          background: url("../../img/functions/more.png") no-repeat center/cover;
+          background: url("../img/functions/more.png") no-repeat center/cover;
           font-size: 14px; }
           /* line 834, scss/style.scss */
           .functions__solutions__text--more button span {
@@ -886,7 +886,7 @@ button {
     justify-content: space-between; }
   /* line 918, scss/style.scss */
   .pros__analysis {
-    background: url("../../img/pros/analysis.png") no-repeat center/cover; }
+    background: url("../img/pros/analysis.png") no-repeat center/cover; }
     /* line 921, scss/style.scss */
     .pros__analysis__content {
       padding: 60px 0 48px 0; }
@@ -896,7 +896,7 @@ button {
         margin-right: 90px; }
   /* line 930, scss/style.scss */
   .pros__system {
-    background: url("../../img/pros/system.png") no-repeat center/cover; }
+    background: url("../img/pros/system.png") no-repeat center/cover; }
     /* line 933, scss/style.scss */
     .pros__system h4 {
       padding-top: 32px; }
@@ -909,7 +909,7 @@ button {
         margin-right: 90px; }
   /* line 947, scss/style.scss */
   .pros__program {
-    background: url("../../img/pros/program.png") no-repeat center/cover; }
+    background: url("../img/pros/program.png") no-repeat center/cover; }
     /* line 950, scss/style.scss */
     .pros__program .content {
       justify-content: space-around; }
@@ -921,7 +921,7 @@ button {
         margin-right: 100px; }
   /* line 963, scss/style.scss */
   .pros__reports {
-    background: url("../../img/pros/reports.png") no-repeat center/cover; }
+    background: url("../img/pros/reports.png") no-repeat center/cover; }
     /* line 966, scss/style.scss */
     .pros__reports .content {
       justify-content: space-around; }
@@ -1227,7 +1227,7 @@ button {
       max-width: 34px;
       min-height: 34px;
       max-height: 34px;
-      background: url("../../img/faq/show-more-icon.png") no-repeat center/cover;
+      background: url("../img/faq/show-more-icon.png") no-repeat center/cover;
       margin: 0 20px 0 6px; }
 
 /* line 1276, scss/style.scss */
@@ -1239,7 +1239,7 @@ button {
   display: flex;
   padding-top: 103px;
   padding-left: 146px;
-  background: url("../../img/form/bg.png") no-repeat center/cover;
+  background: url("../img/form/bg.png") no-repeat center/cover;
   font-size: 18px;
   letter-spacing: 0.1px;
   color: #000000;
@@ -1465,7 +1465,7 @@ button {
     max-height: 16px;
     position: absolute;
     display: block;
-    background: url("../../img/common/close-icon.png") no-repeat center/cover;
+    background: url("../img/common/close-icon.png") no-repeat center/cover;
     top: 16px;
     right: 16px;
     cursor: pointer; }
@@ -1595,7 +1595,7 @@ button {
           display: none; }
     /* line 1670, scss/style.scss */
     .offer .order {
-      background: url("../../img/first-screen/order-bg-mobile.png") no-repeat center/cover;
+      background: url("../img/first-screen/order-bg-mobile.png") no-repeat center/cover;
       font-size: 16px;
       padding: 0;
       margin: -13px 0 0 -1.6vw;
@@ -1762,7 +1762,7 @@ button {
   /* line 1852, scss/style.scss */
   .result {
     height: auto;
-    background: url("../../img/result/bg-mobile.png") no-repeat center/cover; }
+    background: url("../img/result/bg-mobile.png") no-repeat center/cover; }
     /* line 1856, scss/style.scss */
     .result .stage-text {
       display: none; }
@@ -1850,7 +1850,7 @@ button {
         max-width: 413px;
         min-height: 165px;
         max-height: 165px;
-        background: url("../../img/functions/solutions-figure-mobile.png") no-repeat center/cover;
+        background: url("../img/functions/solutions-figure-mobile.png") no-repeat center/cover;
         left: 50%;
         transform: translateX(-50%) scale(0.8);
         top: -60px;
@@ -1925,7 +1925,7 @@ button {
       .pros .tns-controls button {
         width: 26px;
         height: 49px;
-        background: url("../../img/pros/slider-nav.png") no-repeat center/cover; }
+        background: url("../img/pros/slider-nav.png") no-repeat center/cover; }
         /* line 2048, scss/style.scss */
         .pros .tns-controls button:first-child {
           transform: rotate(180deg); }
@@ -1965,7 +1965,7 @@ button {
           position: absolute;
           top: 25%;
           right: 3vw;
-          background: url("../../img/pros/analysis-mobile.png") no-repeat center/cover; }
+          background: url("../img/pros/analysis-mobile.png") no-repeat center/cover; }
       /* line 2103, scss/style.scss */
       .pros__analysis__content, .pros__system__content, .pros__program__content, .pros__reports__content {
         padding: 4% 7.5% 0 7.5%; }
@@ -1980,12 +1980,12 @@ button {
       .pros__system h4:after {
         width: 37vw;
         height: 37vw;
-        background: url("../../img/pros/system-mobile.png") no-repeat center/cover; }
+        background: url("../img/pros/system-mobile.png") no-repeat center/cover; }
     /* line 2127, scss/style.scss */
     .pros__program h4:after {
       width: 47vw;
       height: 47vw;
-      background: url("../../img/pros/program-mobile.png") no-repeat center/cover; }
+      background: url("../img/pros/program-mobile.png") no-repeat center/cover; }
     /* line 2135, scss/style.scss */
     .pros__reports {
       height: 37vw; }
@@ -1994,7 +1994,7 @@ button {
         background-image: linear-gradient(270deg, #0d162c 0%, #233d67 100%); }
         /* line 2141, scss/style.scss */
         .pros__reports h4:after {
-          background: url("../../img/pros/reports-mobile.png") no-repeat center/cover; }
+          background: url("../img/pros/reports-mobile.png") no-repeat center/cover; }
   /* line 2148, scss/style.scss */
   .scheme {
     height: auto;
@@ -2040,7 +2040,7 @@ button {
       .scheme .tns-controls button {
         width: 86px;
         height: 85px;
-        background: url("../../img/scheme/scheme-slider-nav.png") no-repeat center/cover; }
+        background: url("../img/scheme/scheme-slider-nav.png") no-repeat center/cover; }
         /* line 2198, scss/style.scss */
         .scheme .tns-controls button:first-child {
           display: none; }
@@ -2155,7 +2155,7 @@ button {
     max-height: 958px;
     min-height: 958px;
     align-items: center;
-    background: url("../../img/form/bgmobile.png") no-repeat center/cover; }
+    background: url("../img/form/bgmobile.png") no-repeat center/cover; }
     /* line 2343, scss/style.scss */
     .form__wrap__title {
       display: block;
