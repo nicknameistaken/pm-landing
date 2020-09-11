@@ -547,8 +547,9 @@ button {
   /* line 538, scss/style.scss */
   .result h2 {
     padding-top: 36px;
-    text-align: center; }
-  /* line 543, scss/style.scss */
+    text-align: center;
+    color: black; }
+  /* line 544, scss/style.scss */
   .result .stage-text {
     min-width: 108px;
     max-width: 108px;
@@ -562,15 +563,15 @@ button {
     top: 108px;
     left: 50px;
     font-size: 12px;
-    color: #999999; }
-  /* line 556, scss/style.scss */
+    color: #000; }
+  /* line 557, scss/style.scss */
   .result__content {
     display: flex;
     justify-content: flex-end; }
-    /* line 560, scss/style.scss */
+    /* line 561, scss/style.scss */
     .result__content p {
       font-size: 18px; }
-    /* line 564, scss/style.scss */
+    /* line 565, scss/style.scss */
     .result__content__triangles {
       display: flex;
       flex-direction: column;
@@ -579,21 +580,21 @@ button {
       justify-content: flex-end;
       font-size: 12px;
       font-weight: bold; }
-      /* line 573, scss/style.scss */
+      /* line 574, scss/style.scss */
       .result__content__triangles__rus {
         width: 266px;
         height: 96px;
         background: url("../img/result/rus.png") no-repeat center/cover;
         margin-bottom: 33px;
         padding: 34px 0 0 54px; }
-      /* line 581, scss/style.scss */
+      /* line 582, scss/style.scss */
       .result__content__triangles__ekg {
         width: 190px;
         height: 83px;
         background: url("../img/result/ekg.png") no-repeat center/cover;
         margin-left: 10px;
         padding: 23px 0 0 45px; }
-    /* line 590, scss/style.scss */
+    /* line 591, scss/style.scss */
     .result__content__rhombus {
       width: 407px;
       height: 471px;
@@ -606,7 +607,7 @@ button {
       align-items: center;
       font-weight: bold;
       position: relative; }
-      /* line 603, scss/style.scss */
+      /* line 604, scss/style.scss */
       .result__content__rhombus .reject {
         min-width: 188px;
         max-width: 188px;
@@ -616,15 +617,14 @@ button {
         background-position: bottom right;
         padding-left: 13px;
         top: 18px;
-        left: -40px;
-        color: #999999; }
+        left: -40px; }
       /* line 613, scss/style.scss */
       .result__content__rhombus .graphic {
         min-width: 108px;
         max-width: 108px;
         min-height: 46px;
         max-height: 46px;
-        background: url("../img/result/graphic.png") no-repeat center/cover;
+        background: url("../img/result/stage.png") no-repeat center/cover;
         background-position: top left;
         padding-left: 34px;
         bottom: 58px;
@@ -634,7 +634,7 @@ button {
       .result__content__rhombus .graphic {
         font-size: 12px;
         font-weight: normal;
-        color: #999999;
+        color: #000;
         background-size: auto;
         position: absolute; }
       /* line 631, scss/style.scss */
@@ -779,12 +779,11 @@ button {
       z-index: -1; }
     /* line 789, scss/style.scss */
     .functions__solutions h5 {
-      color: #666;
-      font-size: 18px;
-      font-weight: normal;
+      color: #000;
+      font-size: 20px;
       margin-bottom: 138px;
       padding-left: 130px; }
-    /* line 797, scss/style.scss */
+    /* line 796, scss/style.scss */
     .functions__solutions__title {
       width: 539px;
       height: 79px;
@@ -792,7 +791,7 @@ button {
       background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
       font-size: 20px;
       margin-bottom: 24px; }
-    /* line 806, scss/style.scss */
+    /* line 805, scss/style.scss */
     .functions__solutions__text {
       width: 539px;
       height: 615px;
@@ -804,31 +803,31 @@ button {
       flex-direction: column;
       position: relative;
       margin-left: 122px; }
-      /* line 818, scss/style.scss */
+      /* line 817, scss/style.scss */
       .functions__solutions__text p {
         width: 100%;
         padding: 0 40px 24px; }
-      /* line 823, scss/style.scss */
+      /* line 822, scss/style.scss */
       .functions__solutions__text--more {
         width: 503px;
         height: 115px;
         background: url("../img/functions/more-bg.png") no-repeat center/cover; }
-        /* line 828, scss/style.scss */
+        /* line 827, scss/style.scss */
         .functions__solutions__text--more button {
           width: 403px;
           height: 84px;
           background: url("../img/functions/more.png") no-repeat center/cover;
           font-size: 14px; }
-          /* line 834, scss/style.scss */
+          /* line 833, scss/style.scss */
           .functions__solutions__text--more button span {
             display: block;
             font-weight: bold;
             font-size: 18px; }
-    /* line 843, scss/style.scss */
+    /* line 842, scss/style.scss */
     .functions__solutions__list {
       min-height: 364px; }
 
-/* line 849, scss/style.scss */
+/* line 848, scss/style.scss */
 .pros {
   width: 1140px;
   height: 700px;
@@ -837,103 +836,103 @@ button {
   left: 20%;
   height: 1492px;
   overflow: hidden; }
-  /* line 856, scss/style.scss */
+  /* line 855, scss/style.scss */
   .pros h2 {
     width: 540px;
     height: 112px;
     border-radius: 0 0 10px 10px;
     background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
     margin: 0 32px 48px auto; }
-  /* line 864, scss/style.scss */
+  /* line 863, scss/style.scss */
   .pros h4 {
     font-size: 24px;
     width: 160px;
     padding: 40px 0 0 40px;
     flex-basis: 360px; }
-    /* line 870, scss/style.scss */
+    /* line 869, scss/style.scss */
     .pros h4 span {
       display: block; }
-  /* line 875, scss/style.scss */
+  /* line 874, scss/style.scss */
   .pros .row {
     width: 1091px;
     height: 296px;
     display: flex;
     margin-bottom: 32px; }
-    /* line 881, scss/style.scss */
+    /* line 880, scss/style.scss */
     .pros .row__left {
       margin-left: -8px; }
-    /* line 885, scss/style.scss */
+    /* line 884, scss/style.scss */
     .pros .row__right {
       margin-right: -8px;
       margin-left: auto; }
-  /* line 891, scss/style.scss */
+  /* line 890, scss/style.scss */
   .pros .content {
     display: flex;
     justify-content: space-between;
     flex-flow: column wrap;
     flex-basis: 60%; }
-    /* line 897, scss/style.scss */
+    /* line 896, scss/style.scss */
     .pros .content span {
       display: block; }
-    /* line 901, scss/style.scss */
+    /* line 900, scss/style.scss */
     .pros .content p {
       width: 244px;
       font-size: 18px; }
-  /* line 908, scss/style.scss */
+  /* line 907, scss/style.scss */
   .pros__slider__analysis, .pros__slider__system, .pros__slider__program, .pros__slider__reports {
     width: 100%;
     display: flex;
     justify-content: space-between; }
-  /* line 918, scss/style.scss */
+  /* line 917, scss/style.scss */
   .pros__analysis {
     background: url("../img/pros/analysis.png") no-repeat center/cover; }
-    /* line 921, scss/style.scss */
+    /* line 920, scss/style.scss */
     .pros__analysis__content {
       padding: 60px 0 48px 0; }
-      /* line 924, scss/style.scss */
+      /* line 923, scss/style.scss */
       .pros__analysis__content p:nth-child(-n + 2) {
         flex-basis: 85px;
         margin-right: 90px; }
-  /* line 930, scss/style.scss */
+  /* line 929, scss/style.scss */
   .pros__system {
     background: url("../img/pros/system.png") no-repeat center/cover; }
-    /* line 933, scss/style.scss */
+    /* line 932, scss/style.scss */
     .pros__system h4 {
       padding-top: 32px; }
-    /* line 937, scss/style.scss */
+    /* line 936, scss/style.scss */
     .pros__system__content {
       padding: 80px 0 68px 0; }
-      /* line 940, scss/style.scss */
+      /* line 939, scss/style.scss */
       .pros__system__content p:nth-child(odd) {
         flex-basis: 85px;
         margin-right: 90px; }
-  /* line 947, scss/style.scss */
+  /* line 946, scss/style.scss */
   .pros__program {
     background: url("../img/pros/program.png") no-repeat center/cover; }
-    /* line 950, scss/style.scss */
+    /* line 949, scss/style.scss */
     .pros__program .content {
       justify-content: space-around; }
-    /* line 954, scss/style.scss */
+    /* line 953, scss/style.scss */
     .pros__program__content {
       padding: 42px 0 52px 0; }
-      /* line 957, scss/style.scss */
+      /* line 956, scss/style.scss */
       .pros__program__content p:first-child {
         margin-right: 100px; }
-  /* line 963, scss/style.scss */
+  /* line 962, scss/style.scss */
   .pros__reports {
     background: url("../img/pros/reports.png") no-repeat center/cover; }
-    /* line 966, scss/style.scss */
+    /* line 965, scss/style.scss */
     .pros__reports .content {
       justify-content: space-around; }
-    /* line 970, scss/style.scss */
+    /* line 969, scss/style.scss */
     .pros__reports__content {
       padding: 80px 0 65px 0; }
-    /* line 974, scss/style.scss */
+    /* line 973, scss/style.scss */
     .pros__reports p:nth-child(even) {
       margin-right: 90px;
       flex-basis: 85px; }
 
-/* line 981, scss/style.scss */
+/* line 980, scss/style.scss */
 .scheme {
   position: fixed;
   top: 350%;
@@ -943,13 +942,13 @@ button {
   display: flex;
   font-weight: bold;
   font-size: 18px; }
-  /* line 990, scss/style.scss */
+  /* line 989, scss/style.scss */
   .scheme__slider__wrapper {
     display: flex; }
-  /* line 994, scss/style.scss */
+  /* line 993, scss/style.scss */
   .scheme span {
     display: block; }
-  /* line 998, scss/style.scss */
+  /* line 997, scss/style.scss */
   .scheme h2 {
     font-size: 30px;
     width: 168px;
@@ -958,30 +957,30 @@ button {
     border-radius: 0 0 10px 0;
     padding: 42px 0 0 30px;
     color: white; }
-  /* line 1008, scss/style.scss */
+  /* line 1007, scss/style.scss */
   .scheme .text {
     border-radius: 5px;
     filter: drop-shadow(0 0 12px rgba(102, 102, 102, 0.35));
     background-color: #ffffff; }
-  /* line 1014, scss/style.scss */
+  /* line 1013, scss/style.scss */
   .scheme .short-arrow {
     width: 47px;
     height: 62px;
     margin-left: -1px;
     margin-right: -14px; }
-    /* line 1021, scss/style.scss */
+    /* line 1020, scss/style.scss */
     .scheme .short-arrow__first {
       margin-top: 88px; }
-    /* line 1025, scss/style.scss */
+    /* line 1024, scss/style.scss */
     .scheme .short-arrow__second {
       margin-top: 177px; }
-  /* line 1030, scss/style.scss */
+  /* line 1029, scss/style.scss */
   .scheme .long-arrow {
     width: 119px;
     height: 62px;
     margin-left: -25px;
     margin-top: 264px; }
-  /* line 1037, scss/style.scss */
+  /* line 1036, scss/style.scss */
   .scheme__start {
     min-width: 728px;
     max-width: 728px;
@@ -992,10 +991,10 @@ button {
     display: flex;
     flex-direction: column;
     z-index: 2; }
-    /* line 1045, scss/style.scss */
+    /* line 1044, scss/style.scss */
     .scheme__start__wrapper {
       display: flex; }
-    /* line 1049, scss/style.scss */
+    /* line 1048, scss/style.scss */
     .scheme__start__request {
       min-width: 175px;
       max-width: 175px;
@@ -1003,7 +1002,7 @@ button {
       max-height: 60px;
       position: relative;
       margin: 60px 0 0 32px; }
-      /* line 1054, scss/style.scss */
+      /* line 1053, scss/style.scss */
       .scheme__start__request::after {
         content: "";
         width: 64px;
@@ -1012,14 +1011,14 @@ button {
         position: absolute;
         top: 50%;
         left: -64px; }
-    /* line 1065, scss/style.scss */
+    /* line 1064, scss/style.scss */
     .scheme__start__analysis {
       min-width: 226px;
       max-width: 226px;
       min-height: 60px;
       max-height: 60px;
       margin-top: 148px; }
-    /* line 1070, scss/style.scss */
+    /* line 1069, scss/style.scss */
     .scheme__start__demonstration {
       min-width: 208px;
       max-width: 208px;
@@ -1027,7 +1026,7 @@ button {
       max-height: 60px;
       margin-top: 235px;
       padding: 7px 0 0 20px; }
-    /* line 1076, scss/style.scss */
+    /* line 1075, scss/style.scss */
     .scheme__start__presentation {
       min-width: 434px;
       max-width: 434px;
@@ -1044,12 +1043,12 @@ button {
       justify-content: center;
       align-self: center;
       margin-top: 80px; }
-      /* line 1089, scss/style.scss */
+      /* line 1088, scss/style.scss */
       .scheme__start__presentation p {
         width: 345px;
         margin-bottom: 44px;
         color: white; }
-      /* line 1095, scss/style.scss */
+      /* line 1094, scss/style.scss */
       .scheme__start__presentation button {
         min-width: 294px;
         max-width: 294px;
@@ -1061,7 +1060,7 @@ button {
         font-size: 18px;
         font-weight: bold;
         color: white; }
-  /* line 1107, scss/style.scss */
+  /* line 1106, scss/style.scss */
   .scheme__registration {
     min-width: 579px;
     max-width: 579px;
@@ -1073,7 +1072,7 @@ button {
     flex-direction: column;
     align-items: center;
     z-index: 1; }
-    /* line 1116, scss/style.scss */
+    /* line 1115, scss/style.scss */
     .scheme__registration__header {
       min-width: 433px;
       max-width: 433px;
@@ -1084,22 +1083,22 @@ button {
       color: white;
       flex-direction: column;
       margin-top: 72px; }
-    /* line 1125, scss/style.scss */
+    /* line 1124, scss/style.scss */
     .scheme__registration__arrow-block {
       display: flex;
       margin-left: 84px; }
-      /* line 1129, scss/style.scss */
+      /* line 1128, scss/style.scss */
       .scheme__registration__arrow-block .short-arrow {
         margin: 150px -13px 0 -1px; }
-      /* line 1133, scss/style.scss */
+      /* line 1132, scss/style.scss */
       .scheme__registration__arrow-block .long-arrow {
         margin: 242px 0 0 -5px; }
-      /* line 1137, scss/style.scss */
+      /* line 1136, scss/style.scss */
       .scheme__registration__arrow-block .text {
         border-radius: 5px;
         background-color: #ffffff;
         filter: none; }
-      /* line 1143, scss/style.scss */
+      /* line 1142, scss/style.scss */
       .scheme__registration__arrow-block .business-offer {
         min-width: 207px;
         max-width: 207px;
@@ -1107,14 +1106,14 @@ button {
         max-height: 60px;
         padding: 7px 0 0 24px;
         margin: 122px 0 0 28px; }
-      /* line 1149, scss/style.scss */
+      /* line 1148, scss/style.scss */
       .scheme__registration__arrow-block .contract {
         min-width: 285px;
         max-width: 285px;
         min-height: 60px;
         max-height: 60px;
         margin-top: 208px; }
-  /* line 1156, scss/style.scss */
+  /* line 1155, scss/style.scss */
   .scheme__cooperation {
     min-width: 466px;
     max-width: 466px;
@@ -1126,7 +1125,7 @@ button {
     align-items: center;
     margin-left: 32px;
     overflow: hidden; }
-    /* line 1169, scss/style.scss */
+    /* line 1168, scss/style.scss */
     .scheme__cooperation__header {
       min-width: 406px;
       max-width: 406px;
@@ -1137,20 +1136,20 @@ button {
       color: white;
       flex-direction: column;
       margin-top: 72px; }
-    /* line 1178, scss/style.scss */
+    /* line 1177, scss/style.scss */
     .scheme__cooperation__arrow-block {
       display: flex; }
-      /* line 1181, scss/style.scss */
+      /* line 1180, scss/style.scss */
       .scheme__cooperation__arrow-block .short-arrow {
         margin: 330px -14px 0 -27px; }
-      /* line 1185, scss/style.scss */
+      /* line 1184, scss/style.scss */
       .scheme__cooperation__arrow-block .introduction {
         min-width: 161px;
         max-width: 161px;
         min-height: 60px;
         max-height: 60px;
         margin: 300px 0 0 62px; }
-      /* line 1190, scss/style.scss */
+      /* line 1189, scss/style.scss */
       .scheme__cooperation__arrow-block .support {
         min-width: 276px;
         max-width: 276px;
@@ -1160,19 +1159,19 @@ button {
         margin-top: 390px;
         border-radius: 5px 0 0 5px; }
 
-/* line 1200, scss/style.scss */
+/* line 1199, scss/style.scss */
 .faq {
   width: 1140px;
   position: fixed;
   top: 407.5%;
   left: 369.2%; }
-  /* line 1205, scss/style.scss */
+  /* line 1204, scss/style.scss */
   .faq__header {
     display: flex;
     justify-content: space-between;
     margin-top: 42px;
     font-size: 18px; }
-    /* line 1211, scss/style.scss */
+    /* line 1210, scss/style.scss */
     .faq__header h3 {
       width: 150px;
       height: 60px;
@@ -1180,23 +1179,23 @@ button {
       background-image: linear-gradient(-90deg, #000f28 0%, #002142 100%);
       color: white;
       font-size: 30px; }
-    /* line 1219, scss/style.scss */
+    /* line 1218, scss/style.scss */
     .faq__header__tabs {
       display: flex;
       justify-content: space-evenly;
       flex-basis: 600px;
       height: 50px; }
-      /* line 1225, scss/style.scss */
+      /* line 1224, scss/style.scss */
       .faq__header__tabs .tab {
         cursor: pointer; }
-        /* line 1228, scss/style.scss */
+        /* line 1227, scss/style.scss */
         .faq__header__tabs .tab--chosen {
           width: 182px;
           height: 50px;
           border-radius: 25px;
           background-image: linear-gradient(90deg, #836733 0%, #c29b5d 100%);
           color: white; }
-    /* line 1238, scss/style.scss */
+    /* line 1237, scss/style.scss */
     .faq__header .vr {
       width: 226px;
       height: 50px;
@@ -1206,7 +1205,7 @@ button {
       color: white;
       order: 3;
       visibility: hidden; }
-  /* line 1250, scss/style.scss */
+  /* line 1249, scss/style.scss */
   .faq__show-more {
     display: flex;
     align-items: center;
@@ -1218,10 +1217,10 @@ button {
     margin: 30px auto;
     font-size: 18px;
     visibility: hidden; }
-    /* line 1263, scss/style.scss */
+    /* line 1262, scss/style.scss */
     .faq__show-more.visible {
       visibility: visible; }
-    /* line 1267, scss/style.scss */
+    /* line 1266, scss/style.scss */
     .faq__show-more__icon {
       min-width: 34px;
       max-width: 34px;
@@ -1230,7 +1229,7 @@ button {
       background: url("../img/faq/show-more-icon.png") no-repeat center/cover;
       margin: 0 20px 0 6px; }
 
-/* line 1276, scss/style.scss */
+/* line 1275, scss/style.scss */
 .form__wrap {
   min-width: 1140px;
   max-width: 1140px;
@@ -1244,15 +1243,15 @@ button {
   letter-spacing: 0.1px;
   color: #000000;
   position: relative; }
-  /* line 1287, scss/style.scss */
+  /* line 1286, scss/style.scss */
   .form__wrap a {
     color: #000000;
     line-height: 36px; }
-  /* line 1292, scss/style.scss */
+  /* line 1291, scss/style.scss */
   .form__wrap__title {
     display: none; }
 
-/* line 1297, scss/style.scss */
+/* line 1296, scss/style.scss */
 .form__content {
   width: 402px;
   height: 486px;
@@ -1265,34 +1264,34 @@ button {
   align-items: center;
   filter: drop-shadow(0 0 12px rgba(102, 102, 102, 0.35)); }
 
-/* line 1310, scss/style.scss */
+/* line 1309, scss/style.scss */
 .form__point {
   padding-top: 54px; }
-  /* line 1313, scss/style.scss */
+  /* line 1312, scss/style.scss */
   .form__point_mobile {
     display: none; }
 
-/* line 1318, scss/style.scss */
+/* line 1317, scss/style.scss */
 .form__title {
   margin-top: 28px;
   font-size: 24px; }
 
-/* line 1323, scss/style.scss */
+/* line 1322, scss/style.scss */
 .form__mail {
   margin-top: 28px;
   border-bottom: 1px dashed #666666;
   line-height: 18px; }
 
-/* line 1329, scss/style.scss */
+/* line 1328, scss/style.scss */
 .form__text {
   line-height: 24px;
   margin-top: 28px;
   margin-bottom: 33px; }
-  /* line 1334, scss/style.scss */
+  /* line 1333, scss/style.scss */
   .form__text span {
     display: block; }
 
-/* line 1339, scss/style.scss */
+/* line 1338, scss/style.scss */
 .form__btn {
   padding: 16px 74px;
   font-size: 18px;
@@ -1302,7 +1301,7 @@ button {
   border-radius: 50px;
   box-shadow: 0px 0px 10px 7px rgba(218, 218, 218, 0.32); }
 
-/* line 1353, scss/style.scss */
+/* line 1352, scss/style.scss */
 .form__modal {
   width: 513px;
   height: 660px;
@@ -1325,7 +1324,7 @@ button {
   /* Create the checkmark/indicator (hidden when not checked) */
   /* Show the checkmark when checked */
   /* Style the checkmark/indicator */ }
-  /* line 1369, scss/style.scss */
+  /* line 1368, scss/style.scss */
   .form__modal__overlay {
     position: fixed;
     width: 100%;
@@ -1336,11 +1335,11 @@ button {
     z-index: -1;
     opacity: 0;
     transition: all 0.1s ease-in-out; }
-  /* line 1381, scss/style.scss */
+  /* line 1380, scss/style.scss */
   .form__modal.active, .form__modal__overlay.active {
     z-index: 1;
     opacity: 1; }
-  /* line 1387, scss/style.scss */
+  /* line 1386, scss/style.scss */
   .form__modal__title {
     display: flex;
     justify-content: space-between;
@@ -1348,28 +1347,28 @@ button {
     width: 100%;
     padding-top: 40px;
     margin-bottom: 7%; }
-    /* line 1395, scss/style.scss */
+    /* line 1394, scss/style.scss */
     .form__modal__title h4 {
       padding-left: 5%; }
-      /* line 1398, scss/style.scss */
+      /* line 1397, scss/style.scss */
       .form__modal__title h4 span {
         text-transform: initial;
         font-weight: normal;
         font-size: 12px;
         display: block; }
-    /* line 1406, scss/style.scss */
+    /* line 1405, scss/style.scss */
     .form__modal__title p {
       font-size: 12px;
       padding: 16px 44px 16px 28px;
       background-color: #f0ece7;
       border-radius: 5px 0 0 5px; }
-      /* line 1412, scss/style.scss */
+      /* line 1411, scss/style.scss */
       .form__modal__title p a {
         display: block;
         font-weight: bold;
         line-height: normal;
         color: black; }
-  /* line 1420, scss/style.scss */
+  /* line 1419, scss/style.scss */
   .form__modal input[type="text"],
   .form__modal input[type="tel"],
   .form__modal input[type="email"],
@@ -1382,13 +1381,13 @@ button {
     margin-bottom: 5%;
     padding-left: 6%;
     font-size: 14px; }
-  /* line 1434, scss/style.scss */
+  /* line 1433, scss/style.scss */
   .form__modal textarea {
     font-family: "Noto Sans", sans-serif;
     resize: none;
     height: 90px;
     padding-top: 2%; }
-  /* line 1441, scss/style.scss */
+  /* line 1440, scss/style.scss */
   .form__modal .checkbox {
     display: block;
     width: 100%;
@@ -1404,14 +1403,14 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-  /* line 1459, scss/style.scss */
+  /* line 1458, scss/style.scss */
   .form__modal .checkbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0; }
-  /* line 1468, scss/style.scss */
+  /* line 1467, scss/style.scss */
   .form__modal .checkmark {
     position: absolute;
     top: 0;
@@ -1421,21 +1420,21 @@ button {
     border-radius: 5px;
     filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.32));
     background-color: #fff; }
-  /* line 1480, scss/style.scss */
+  /* line 1479, scss/style.scss */
   .form__modal .checkbox:hover input ~ .checkmark {
     background-color: #f2ede7; }
-  /* line 1485, scss/style.scss */
+  /* line 1484, scss/style.scss */
   .form__modal .checkbox input:checked ~ .checkmark {
     background-image: linear-gradient(-90deg, #000f28 0%, #003b69 100%); }
-  /* line 1490, scss/style.scss */
+  /* line 1489, scss/style.scss */
   .form__modal .checkmark:after {
     content: "";
     position: absolute;
     display: none; }
-  /* line 1497, scss/style.scss */
+  /* line 1496, scss/style.scss */
   .form__modal .checkbox input:checked ~ .checkmark:after {
     display: block; }
-  /* line 1502, scss/style.scss */
+  /* line 1501, scss/style.scss */
   .form__modal .checkbox .checkmark:after {
     left: 11px;
     top: 7px;
@@ -1446,7 +1445,7 @@ button {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
-  /* line 1514, scss/style.scss */
+  /* line 1513, scss/style.scss */
   .form__modal button {
     width: 66%;
     height: 60px;
@@ -1454,10 +1453,10 @@ button {
     font-weight: bold;
     border-radius: 10px;
     background-image: linear-gradient(-90deg, #000f28 0%, #003b69 100%); }
-    /* line 1521, scss/style.scss */
+    /* line 1520, scss/style.scss */
     .form__modal button:disabled {
       opacity: 0.6; }
-  /* line 1526, scss/style.scss */
+  /* line 1525, scss/style.scss */
   .form__modal__close {
     min-width: 16px;
     max-width: 16px;
@@ -1471,7 +1470,7 @@ button {
     cursor: pointer; }
 
 @media (max-width: 640px) {
-  /* line 1539, scss/style.scss */
+  /* line 1538, scss/style.scss */
   .phone-big {
     min-width: 10vw;
     max-width: 10vw;
@@ -1479,7 +1478,7 @@ button {
     max-height: 10vw;
     right: 5vw;
     bottom: 5vw; }
-  /* line 1548, scss/style.scss */
+  /* line 1547, scss/style.scss */
   .tns-nav {
     position: absolute;
     left: 50%;
@@ -1489,16 +1488,16 @@ button {
     z-index: 1;
     display: flex;
     justify-content: space-between; }
-    /* line 1558, scss/style.scss */
+    /* line 1557, scss/style.scss */
     .tns-nav button {
       width: 18px;
       height: 18px;
       border-radius: 9px;
       background: #fff; }
-      /* line 1564, scss/style.scss */
+      /* line 1563, scss/style.scss */
       .tns-nav button.tns-nav-active {
         background-image: linear-gradient(-90deg, #7b6739 0%, #b69a61 100%); }
-  /* line 1570, scss/style.scss */
+  /* line 1569, scss/style.scss */
   .offer,
   .how,
   .result,
@@ -1509,9 +1508,10 @@ button {
     position: relative;
     left: 0;
     width: 100%; }
-  /* line 1582, scss/style.scss */
+  /* line 1581, scss/style.scss */
   .offer {
-    height: auto; }
+    height: auto;
+    background: url("../img/first-screen/bg.png") no-repeat center/cover; }
     /* line 1585, scss/style.scss */
     .offer .menu {
       font-size: 14px;
@@ -1613,23 +1613,24 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto; }
-    /* line 1693, scss/style.scss */
+    height: auto;
+    background: url("../img/how/bg.png") no-repeat center/cover; }
+    /* line 1694, scss/style.scss */
     .how h2 {
       position: relative;
       right: auto;
       top: 54px; }
-    /* line 1699, scss/style.scss */
+    /* line 1700, scss/style.scss */
     .how__arrow-block {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      /* line 1706, scss/style.scss */
+      /* line 1707, scss/style.scss */
       .how__arrow-block .arrow {
         display: none; }
-      /* line 1710, scss/style.scss */
+      /* line 1711, scss/style.scss */
       .how__arrow-block__analyse {
         min-width: 100%;
         max-width: 100%;
@@ -1639,7 +1640,7 @@ button {
         display: flex;
         align-items: flex-end;
         position: relative; }
-        /* line 1717, scss/style.scss */
+        /* line 1718, scss/style.scss */
         .how__arrow-block__analyse h4 {
           position: absolute;
           min-width: 100%;
@@ -1650,26 +1651,26 @@ button {
           top: 50%;
           transform: translateY(-50%);
           justify-content: flex-start; }
-          /* line 1725, scss/style.scss */
+          /* line 1726, scss/style.scss */
           .how__arrow-block__analyse h4 span {
             width: 22%;
             margin-left: 11%;
             line-height: 140%; }
-        /* line 1732, scss/style.scss */
+        /* line 1733, scss/style.scss */
         .how__arrow-block__analyse__content {
           z-index: 1;
           margin-right: 5%;
           height: 100%;
           border-radius: 10px; }
-          /* line 1738, scss/style.scss */
+          /* line 1739, scss/style.scss */
           .how__arrow-block__analyse__content p {
             text-align: center;
             margin-top: 0;
             padding: 0 48px; }
-        /* line 1745, scss/style.scss */
+        /* line 1746, scss/style.scss */
         .how__arrow-block__analyse button {
           margin-bottom: 19px; }
-      /* line 1750, scss/style.scss */
+      /* line 1751, scss/style.scss */
       .how__arrow-block__decide {
         min-width: 100%;
         max-width: 100%;
@@ -1681,7 +1682,7 @@ button {
         justify-content: center;
         position: relative;
         margin-top: 6.5%; }
-        /* line 1759, scss/style.scss */
+        /* line 1760, scss/style.scss */
         .how__arrow-block__decide h4 {
           position: absolute;
           min-width: 100%;
@@ -1692,13 +1693,13 @@ button {
           top: 50%;
           transform: translateY(-50%);
           justify-content: flex-start; }
-          /* line 1767, scss/style.scss */
+          /* line 1768, scss/style.scss */
           .how__arrow-block__decide h4 span {
             width: 22%;
             margin-right: 11%;
             margin-left: auto;
             line-height: 140%; }
-        /* line 1775, scss/style.scss */
+        /* line 1776, scss/style.scss */
         .how__arrow-block__decide__content {
           z-index: 1;
           height: 100%;
@@ -1706,21 +1707,21 @@ button {
           padding: 20px 0 0 0;
           margin: 0;
           margin-left: 5%; }
-          /* line 1783, scss/style.scss */
+          /* line 1784, scss/style.scss */
           .how__arrow-block__decide__content p {
             text-align: center;
             margin-top: 0;
             padding: 0 32px;
             margin-bottom: 20px; }
-          /* line 1790, scss/style.scss */
+          /* line 1791, scss/style.scss */
           .how__arrow-block__decide__content .warn {
             margin-left: 32px; }
-            /* line 1793, scss/style.scss */
+            /* line 1794, scss/style.scss */
             .how__arrow-block__decide__content .warn p {
               text-align: left;
               padding-left: 8px;
               margin-bottom: 24px; }
-      /* line 1802, scss/style.scss */
+      /* line 1803, scss/style.scss */
       .how__arrow-block__introduction {
         min-width: 100%;
         max-width: 100%;
@@ -1732,7 +1733,7 @@ button {
         justify-content: center;
         position: relative;
         margin-top: 3%; }
-        /* line 1811, scss/style.scss */
+        /* line 1812, scss/style.scss */
         .how__arrow-block__introduction h4 {
           position: absolute;
           min-width: 100%;
@@ -1743,12 +1744,12 @@ button {
           top: 50%;
           transform: translateY(-50%);
           justify-content: flex-start; }
-          /* line 1819, scss/style.scss */
+          /* line 1820, scss/style.scss */
           .how__arrow-block__introduction h4 span {
             width: 22%;
             margin-left: 11%;
             line-height: 140%; }
-        /* line 1826, scss/style.scss */
+        /* line 1827, scss/style.scss */
         .how__arrow-block__introduction p {
           z-index: 1;
           margin-right: 5%;
@@ -1756,10 +1757,10 @@ button {
           border-radius: 10px;
           padding: 6% 3.75%;
           display: block; }
-          /* line 1834, scss/style.scss */
+          /* line 1835, scss/style.scss */
           .how__arrow-block__introduction p span {
             font-weight: bold; }
-  /* line 1852, scss/style.scss */
+  /* line 1853, scss/style.scss */
   .result {
     height: auto;
     background: url("../img/result/bg-mobile.png") no-repeat center/cover; }
@@ -1767,83 +1768,100 @@ button {
     .result .stage-text {
       display: none; }
     /* line 1860, scss/style.scss */
+    .result h2,
+    .result .graphic,
+    .result .reject {
+      color: white; }
+    /* line 1866, scss/style.scss */
+    .result .graphic,
+    .result .reject {
+      background-size: auto;
+      background-repeat: no-repeat; }
+    /* line 1872, scss/style.scss */
+    .result .graphic {
+      background-image: url("../img/result/stage-mobile.png"); }
+    /* line 1876, scss/style.scss */
+    .result .reject {
+      background-image: url("../img/result/reject-mobile.png"); }
+    /* line 1880, scss/style.scss */
     .result__content {
       justify-content: center;
       flex-direction: column;
       align-items: center; }
-      /* line 1865, scss/style.scss */
+      /* line 1885, scss/style.scss */
       .result__content__triangles {
         display: none; }
-      /* line 1869, scss/style.scss */
+      /* line 1889, scss/style.scss */
       .result__content__description {
         display: flex;
         width: 100%;
         padding: 4% 1% 0 5%;
         background: rgba(52, 92, 136, 0.52); }
-        /* line 1875, scss/style.scss */
+        /* line 1895, scss/style.scss */
         .result__content__description p {
           color: #fff;
           font-size: 18px; }
-        /* line 1880, scss/style.scss */
+        /* line 1900, scss/style.scss */
         .result__content__description > p {
           flex-basis: 55%;
           padding-right: 0; }
-        /* line 1885, scss/style.scss */
+        /* line 1905, scss/style.scss */
         .result__content__description .marked-wrapper {
           margin-left: 80px; }
-        /* line 1889, scss/style.scss */
+        /* line 1909, scss/style.scss */
         .result__content__description .marked {
           width: auto;
           padding-right: 0;
           margin-left: -20px; }
-        /* line 1895, scss/style.scss */
+        /* line 1915, scss/style.scss */
         .result__content__description span {
           display: inline-block;
           font-weight: bold; }
-  /* line 1903, scss/style.scss */
+  /* line 1923, scss/style.scss */
   .functions {
-    flex-direction: column; }
-    /* line 1906, scss/style.scss */
+    flex-direction: column;
+    background: #fff; }
+    /* line 1926, scss/style.scss */
     .functions__problems {
       margin-right: 0; }
-      /* line 1909, scss/style.scss */
+      /* line 1929, scss/style.scss */
       .functions__problems h2 {
         width: 100%;
         padding-left: 10.7%; }
-      /* line 1914, scss/style.scss */
+      /* line 1934, scss/style.scss */
       .functions__problems__description {
         width: 100%;
         margin: 0; }
-      /* line 1919, scss/style.scss */
+      /* line 1939, scss/style.scss */
       .functions__problems__list {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between; }
-        /* line 1924, scss/style.scss */
+        /* line 1944, scss/style.scss */
         .functions__problems__list__common {
           flex-basis: 50%; }
-        /* line 1928, scss/style.scss */
+        /* line 1948, scss/style.scss */
         .functions__problems__list > p {
           font-size: 18px;
           flex-basis: 45%; }
-    /* line 1935, scss/style.scss */
+    /* line 1955, scss/style.scss */
     .functions__choose {
       background: none; }
-      /* line 1938, scss/style.scss */
+      /* line 1958, scss/style.scss */
       .functions__choose > div {
         display: block; }
-      /* line 1942, scss/style.scss */
+      /* line 1962, scss/style.scss */
       .functions__choose p {
         padding-left: 20px; }
-        /* line 1945, scss/style.scss */
+        /* line 1965, scss/style.scss */
         .functions__choose p:first-child {
           margin-right: 0; }
-    /* line 1951, scss/style.scss */
+    /* line 1971, scss/style.scss */
     .functions__solutions {
       min-height: auto;
       font-size: 18px;
       position: relative; }
-      /* line 1955, scss/style.scss */
+      /* line 1975, scss/style.scss */
       .functions__solutions:before {
         content: "";
         min-width: 413px;
@@ -1856,31 +1874,32 @@ button {
         top: -60px;
         position: absolute;
         z-index: -1; }
-      /* line 1965, scss/style.scss */
+      /* line 1985, scss/style.scss */
       .functions__solutions h5 {
         display: none; }
-      /* line 1969, scss/style.scss */
+      /* line 1989, scss/style.scss */
       .functions__solutions__title {
         width: 95%;
         font-size: 24px;
         justify-content: flex-start;
         padding-left: 5%; }
-      /* line 1976, scss/style.scss */
+      /* line 1996, scss/style.scss */
       .functions__solutions__text {
         width: 100%;
         margin-left: 0; }
-        /* line 1980, scss/style.scss */
+        /* line 2000, scss/style.scss */
         .functions__solutions__text--more {
           width: 78vw;
           height: 18vw; }
-          /* line 1984, scss/style.scss */
+          /* line 2004, scss/style.scss */
           .functions__solutions__text--more button {
             width: 80%;
             height: 13vw; }
-  /* line 1993, scss/style.scss */
+  /* line 2013, scss/style.scss */
   .pros {
-    height: auto; }
-    /* line 1996, scss/style.scss */
+    height: auto;
+    background-color: #f2ede7; }
+    /* line 2017, scss/style.scss */
     .pros h2 {
       width: 90%;
       margin-left: 5%;
@@ -1888,22 +1907,22 @@ button {
       border-radius: 0 0 10px 10px;
       filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
       background-image: linear-gradient(270deg, #0d162c 0%, #233d67 100%); }
-    /* line 2005, scss/style.scss */
+    /* line 2026, scss/style.scss */
     .pros .content p {
       width: auto;
       margin-bottom: 20px;
       font-size: 24px; }
-    /* line 2010, scss/style.scss */
+    /* line 2031, scss/style.scss */
     .pros .content span {
       display: inline-block; }
-    /* line 2015, scss/style.scss */
+    /* line 2036, scss/style.scss */
     .pros .row__left {
       margin-left: 0; }
-    /* line 2019, scss/style.scss */
+    /* line 2040, scss/style.scss */
     .pros .row__right {
       margin-right: 0;
       margin-left: auto; }
-    /* line 2025, scss/style.scss */
+    /* line 2046, scss/style.scss */
     .pros .tns-controls {
       display: flex;
       align-items: center;
@@ -1918,21 +1937,21 @@ button {
       filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
       z-index: 1;
       padding: 0 30px; }
-      /* line 2039, scss/style.scss */
+      /* line 2060, scss/style.scss */
       .pros .tns-controls:focus {
         outline: none; }
-      /* line 2043, scss/style.scss */
+      /* line 2064, scss/style.scss */
       .pros .tns-controls button {
         width: 26px;
         height: 49px;
         background: url("../img/pros/slider-nav.png") no-repeat center/cover; }
-        /* line 2048, scss/style.scss */
+        /* line 2069, scss/style.scss */
         .pros .tns-controls button:first-child {
           transform: rotate(180deg); }
-    /* line 2054, scss/style.scss */
+    /* line 2075, scss/style.scss */
     .pros .tns-ovh {
       overflow: visible; }
-    /* line 2059, scss/style.scss */
+    /* line 2080, scss/style.scss */
     .pros__slider__analysis, .pros__slider__system, .pros__slider__program, .pros__slider__reports {
       width: 90%;
       height: 100%;
@@ -1942,12 +1961,12 @@ button {
       padding: 0;
       border-radius: 10px;
       display: block; }
-    /* line 2074, scss/style.scss */
+    /* line 2095, scss/style.scss */
     .pros__analysis, .pros__system, .pros__program, .pros__reports {
       min-height: 784px;
       margin-left: 10px;
       background: none; }
-      /* line 2082, scss/style.scss */
+      /* line 2103, scss/style.scss */
       .pros__analysis h4, .pros__system h4, .pros__program h4, .pros__reports h4 {
         width: calc(100% - 39px);
         height: 240px;
@@ -1956,7 +1975,7 @@ button {
         position: relative;
         background-image: linear-gradient(90deg, #7b6739 0%, #b69a61 100%);
         overflow: hidden; }
-        /* line 2091, scss/style.scss */
+        /* line 2112, scss/style.scss */
         .pros__analysis h4:after, .pros__system h4:after, .pros__program h4:after, .pros__reports h4:after {
           width: 44vw;
           height: 44vw;
@@ -1966,43 +1985,44 @@ button {
           top: 25%;
           right: 3vw;
           background: url("../img/pros/analysis-mobile.png") no-repeat center/cover; }
-      /* line 2103, scss/style.scss */
+      /* line 2124, scss/style.scss */
       .pros__analysis__content, .pros__system__content, .pros__program__content, .pros__reports__content {
         padding: 4% 7.5% 0 7.5%; }
-        /* line 2106, scss/style.scss */
+        /* line 2127, scss/style.scss */
         .pros__analysis__content p:nth-child(-n + 2), .pros__system__content p:nth-child(-n + 2), .pros__program__content p:nth-child(-n + 2), .pros__reports__content p:nth-child(-n + 2) {
           flex-basis: auto;
           margin-right: 0; }
-    /* line 2114, scss/style.scss */
+    /* line 2135, scss/style.scss */
     .pros__system h4 {
       background-image: linear-gradient(270deg, #0d162c 0%, #233d67 100%); }
-      /* line 2117, scss/style.scss */
+      /* line 2138, scss/style.scss */
       .pros__system h4:after {
         width: 37vw;
         height: 37vw;
         background: url("../img/pros/system-mobile.png") no-repeat center/cover; }
-    /* line 2127, scss/style.scss */
+    /* line 2148, scss/style.scss */
     .pros__program h4:after {
       width: 47vw;
       height: 47vw;
       background: url("../img/pros/program-mobile.png") no-repeat center/cover; }
-    /* line 2135, scss/style.scss */
+    /* line 2156, scss/style.scss */
     .pros__reports {
       height: 37vw; }
-      /* line 2138, scss/style.scss */
+      /* line 2159, scss/style.scss */
       .pros__reports h4 {
         background-image: linear-gradient(270deg, #0d162c 0%, #233d67 100%); }
-        /* line 2141, scss/style.scss */
+        /* line 2162, scss/style.scss */
         .pros__reports h4:after {
           background: url("../img/pros/reports-mobile.png") no-repeat center/cover; }
-  /* line 2148, scss/style.scss */
+  /* line 2169, scss/style.scss */
   .scheme {
     height: auto;
-    display: block; }
-    /* line 2152, scss/style.scss */
+    display: block;
+    background: url("../img/scheme/bg.png") no-repeat center/cover; }
+    /* line 2174, scss/style.scss */
     .scheme #tns2-ow {
       margin-top: -10px; }
-    /* line 2156, scss/style.scss */
+    /* line 2178, scss/style.scss */
     .scheme h2 {
       width: 100%;
       padding: 0;
@@ -2012,79 +2032,82 @@ button {
       border-radius: 0 0 10px 10px;
       position: relative;
       z-index: 1; }
-      /* line 2166, scss/style.scss */
+      /* line 2188, scss/style.scss */
       .scheme h2 span {
         display: inline-block;
         padding-top: 43px; }
-    /* line 2172, scss/style.scss */
+    /* line 2194, scss/style.scss */
     .scheme__slider__wrapper {
       display: block; }
-    /* line 2175, scss/style.scss */
+    /* line 2197, scss/style.scss */
     .scheme__start, .scheme__registration, .scheme__cooperation, .scheme__registration__header {
       margin: 0;
       min-width: auto;
       max-width: none;
       min-height: auto;
       max-height: none; }
-    /* line 2183, scss/style.scss */
+    /* line 2205, scss/style.scss */
     .scheme .short-arrow {
       margin-right: -65px; }
-    /* line 2187, scss/style.scss */
+    /* line 2209, scss/style.scss */
     .scheme .tns-controls {
       width: 86px;
       height: 85px;
       position: absolute;
       bottom: 194px;
       right: 2vw; }
-      /* line 2194, scss/style.scss */
+      /* line 2216, scss/style.scss */
       .scheme .tns-controls button {
         width: 86px;
         height: 85px;
         background: url("../img/scheme/scheme-slider-nav.png") no-repeat center/cover; }
-        /* line 2198, scss/style.scss */
+        /* line 2220, scss/style.scss */
         .scheme .tns-controls button:first-child {
           display: none; }
-        /* line 2202, scss/style.scss */
+        /* line 2224, scss/style.scss */
         .scheme .tns-controls button:disabled {
           display: none; }
-    /* line 2207, scss/style.scss */
+    /* line 2229, scss/style.scss */
     .scheme .tns-nav {
       top: auto;
       bottom: 40px; }
-    /* line 2213, scss/style.scss */
-    .scheme__start__wrapper {
-      overflow: hidden; }
-    /* line 2217, scss/style.scss */
-    .scheme__start__request {
-      margin-left: 5vw; }
-      /* line 2220, scss/style.scss */
-      .scheme__start__request::after {
-        display: none; }
-    /* line 2224, scss/style.scss */
-    .scheme__start__presentation {
-      margin-bottom: 108px;
-      border-radius: 0 10px 10px 0; }
-    /* line 2230, scss/style.scss */
+    /* line 2234, scss/style.scss */
+    .scheme__start {
+      height: 773px; }
+      /* line 2237, scss/style.scss */
+      .scheme__start__wrapper {
+        overflow: hidden; }
+      /* line 2241, scss/style.scss */
+      .scheme__start__request {
+        margin-left: 5vw; }
+        /* line 2244, scss/style.scss */
+        .scheme__start__request::after {
+          display: none; }
+      /* line 2248, scss/style.scss */
+      .scheme__start__presentation {
+        margin-bottom: 108px;
+        border-radius: 0 10px 10px 0; }
+    /* line 2254, scss/style.scss */
     .scheme__registration {
       height: 773px; }
-      /* line 2233, scss/style.scss */
+      /* line 2257, scss/style.scss */
       .scheme__registration__header {
         width: 379px;
         height: 129px;
         border-radius: 0 10px 10px 0;
         position: absolute;
         bottom: 168px; }
-      /* line 2241, scss/style.scss */
+      /* line 2265, scss/style.scss */
       .scheme__registration__arrow-block {
         margin-left: 0;
         overflow: hidden; }
-        /* line 2245, scss/style.scss */
+        /* line 2269, scss/style.scss */
         .scheme__registration__arrow-block .short-arrow {
           margin-right: -13px; }
-        /* line 2249, scss/style.scss */
+        /* line 2273, scss/style.scss */
         .scheme__registration__arrow-block .business-offer {
           position: relative; }
-          /* line 2252, scss/style.scss */
+          /* line 2276, scss/style.scss */
           .scheme__registration__arrow-block .business-offer::after {
             content: "";
             width: 64px;
@@ -2093,12 +2116,12 @@ button {
             position: absolute;
             top: 50%;
             left: -64px; }
-    /* line 2265, scss/style.scss */
+    /* line 2289, scss/style.scss */
     .scheme__cooperation {
       height: 773px;
       background: rgba(35, 61, 103, 0.88);
       position: relative; }
-      /* line 2270, scss/style.scss */
+      /* line 2294, scss/style.scss */
       .scheme__cooperation__header {
         width: 406px;
         height: 129px;
@@ -2108,11 +2131,11 @@ button {
         bottom: 168px;
         left: 50%;
         transform: translateX(-50%); }
-      /* line 2282, scss/style.scss */
+      /* line 2306, scss/style.scss */
       .scheme__cooperation__arrow-block .introduction {
         margin-top: 144px;
         position: relative; }
-        /* line 2286, scss/style.scss */
+        /* line 2310, scss/style.scss */
         .scheme__cooperation__arrow-block .introduction::after {
           content: "";
           width: 64px;
@@ -2121,32 +2144,33 @@ button {
           position: absolute;
           top: 50%;
           left: -64px; }
-      /* line 2297, scss/style.scss */
+      /* line 2321, scss/style.scss */
       .scheme__cooperation__arrow-block .short-arrow {
         margin: 174px -16px 0 -3px; }
-      /* line 2301, scss/style.scss */
+      /* line 2325, scss/style.scss */
       .scheme__cooperation__arrow-block .support {
         margin-top: 234px;
         border-radius: 10px; }
-  /* line 2309, scss/style.scss */
+  /* line 2333, scss/style.scss */
   .faq {
-    padding-top: 40px; }
-    /* line 2312, scss/style.scss */
+    padding-top: 40px;
+    background-color: #f0ece7; }
+    /* line 2337, scss/style.scss */
     .faq__header {
       margin-top: 0;
       flex-wrap: wrap; }
-      /* line 2316, scss/style.scss */
+      /* line 2341, scss/style.scss */
       .faq__header .vr {
         margin-right: 30px;
         order: unset; }
-      /* line 2321, scss/style.scss */
+      /* line 2346, scss/style.scss */
       .faq__header__tabs {
         flex-basis: 100%;
         margin-top: 40px; }
-    /* line 2327, scss/style.scss */
+    /* line 2352, scss/style.scss */
     .faq__show-more {
       margin: 48px auto; }
-  /* line 2333, scss/style.scss */
+  /* line 2358, scss/style.scss */
   .form__wrap {
     padding: 54px 0 0 0;
     flex-direction: column;
@@ -2156,7 +2180,7 @@ button {
     min-height: 958px;
     align-items: center;
     background: url("../img/form/bgmobile.png") no-repeat center/cover; }
-    /* line 2343, scss/style.scss */
+    /* line 2368, scss/style.scss */
     .form__wrap__title {
       display: block;
       font-size: 30px;
@@ -2165,37 +2189,37 @@ button {
       letter-spacing: 0.25px;
       margin: 0 auto;
       margin-bottom: 84px; }
-  /* line 2354, scss/style.scss */
+  /* line 2379, scss/style.scss */
   .form__point {
     display: none; }
-    /* line 2357, scss/style.scss */
+    /* line 2382, scss/style.scss */
     .form__point_mobile {
       display: block;
       margin-right: 83px;
       margin-bottom: -36px; }
-  /* line 2364, scss/style.scss */
+  /* line 2389, scss/style.scss */
   .form__modal {
     width: 90%;
     min-height: 70%;
     height: auto; }
-    /* line 2369, scss/style.scss */
+    /* line 2394, scss/style.scss */
     .form__modal button {
       margin-bottom: 20px; } }
 
 @media (max-width: 600px) {
-  /* line 2378, scss/style.scss */
+  /* line 2403, scss/style.scss */
   .how__arrow-block {
     justify-content: center;
     margin-top: 10vw;
     margin-bottom: 10vw; }
-    /* line 2383, scss/style.scss */
+    /* line 2408, scss/style.scss */
     .how__arrow-block__analyse, .how__arrow-block__decide, .how__arrow-block__introduction {
       min-height: auto;
       max-height: none;
       position: relative;
       justify-content: center;
       align-items: center; }
-      /* line 2392, scss/style.scss */
+      /* line 2417, scss/style.scss */
       .how__arrow-block__analyse h4, .how__arrow-block__decide h4, .how__arrow-block__introduction h4 {
         position: relative;
         top: 0;
@@ -2203,12 +2227,12 @@ button {
         justify-content: center;
         min-width: auto;
         transform: none; }
-        /* line 2400, scss/style.scss */
+        /* line 2425, scss/style.scss */
         .how__arrow-block__analyse h4 span, .how__arrow-block__decide h4 span, .how__arrow-block__introduction h4 span {
           margin-left: 0;
           margin-right: 0;
           width: auto; }
-      /* line 2407, scss/style.scss */
+      /* line 2432, scss/style.scss */
       .how__arrow-block__analyse__content, .how__arrow-block__decide__content, .how__arrow-block__introduction__content {
         margin-right: 0;
         margin-left: 0;
@@ -2216,113 +2240,113 @@ button {
         border-radius: 0 0 10px 10px;
         min-width: 260px;
         width: 50%; }
-        /* line 2415, scss/style.scss */
+        /* line 2440, scss/style.scss */
         .how__arrow-block__analyse__content p, .how__arrow-block__decide__content p, .how__arrow-block__introduction__content p {
           font-size: 14px;
           flex-basis: 92px;
           margin: 0; }
-    /* line 2424, scss/style.scss */
+    /* line 2449, scss/style.scss */
     .how__arrow-block__analyse h4 {
       width: 63%;
       min-width: 300px; }
-    /* line 2429, scss/style.scss */
+    /* line 2454, scss/style.scss */
     .how__arrow-block__analyse__content p {
       padding: 0;
       font-size: 14px; }
-    /* line 2435, scss/style.scss */
+    /* line 2460, scss/style.scss */
     .how__arrow-block__analyse button {
       width: 90%;
       height: 14vw; }
-    /* line 2440, scss/style.scss */
+    /* line 2465, scss/style.scss */
     .how__arrow-block__decide, .how__arrow-block__introduction {
       margin-top: 6.5%; }
-      /* line 2444, scss/style.scss */
+      /* line 2469, scss/style.scss */
       .how__arrow-block__decide h4, .how__arrow-block__introduction h4 {
         width: 56%;
         min-width: 280px; }
-      /* line 2449, scss/style.scss */
+      /* line 2474, scss/style.scss */
       .how__arrow-block__decide p, .how__arrow-block__introduction p {
         margin-right: 0;
         padding: 0 5vw; }
-    /* line 2454, scss/style.scss */
+    /* line 2479, scss/style.scss */
     .how__arrow-block__decide__content,
     .how__arrow-block__introduction p {
       width: 50%;
       margin-top: -10px;
       font-size: 14px;
       min-width: 260px; }
-    /* line 2462, scss/style.scss */
+    /* line 2487, scss/style.scss */
     .how__arrow-block .warn {
       margin-left: 16px;
       margin-bottom: 24px; }
-      /* line 2465, scss/style.scss */
+      /* line 2490, scss/style.scss */
       .how__arrow-block .warn p {
         padding: 0;
         padding-right: 16px;
         margin-bottom: 0;
         flex-basis: auto; }
-    /* line 2474, scss/style.scss */
+    /* line 2499, scss/style.scss */
     .how__arrow-block__introduction p {
       padding: 14px 5vw; }
-  /* line 2482, scss/style.scss */
+  /* line 2507, scss/style.scss */
   .functions h2 {
     text-align: center;
     padding: 44px 0 0 0;
     height: 250px;
     font-size: 28px; }
-  /* line 2488, scss/style.scss */
+  /* line 2513, scss/style.scss */
   .functions__choose {
     width: 100%;
     height: auto;
     flex-direction: column;
     justify-content: center;
     padding-left: 0; }
-  /* line 2496, scss/style.scss */
+  /* line 2521, scss/style.scss */
   .functions__problems__description {
     width: 100%;
     padding: 0 4%; }
-  /* line 2501, scss/style.scss */
+  /* line 2526, scss/style.scss */
   .functions__problems__list {
     flex-direction: column;
     font-size: 14px; }
-    /* line 2505, scss/style.scss */
+    /* line 2530, scss/style.scss */
     .functions__problems__list > p {
       font-size: 16px; }
-  /* line 2512, scss/style.scss */
+  /* line 2537, scss/style.scss */
   .functions__solutions__list {
     font-size: 14px; }
-  /* line 2517, scss/style.scss */
+  /* line 2542, scss/style.scss */
   .functions__solutions__text--more button {
     width: 94%;
     height: 15vw; }
-    /* line 2521, scss/style.scss */
+    /* line 2546, scss/style.scss */
     .functions__solutions__text--more button span {
       font-size: 16px; }
-  /* line 2529, scss/style.scss */
+  /* line 2554, scss/style.scss */
   .pros .tns-controls {
     top: 733px; }
-  /* line 2532, scss/style.scss */
+  /* line 2557, scss/style.scss */
   .pros .tns-nav {
     top: 771px; }
-  /* line 2536, scss/style.scss */
-  .pros__slider__analysis, .pros__slider__system, .pros__slider__program, .pros__slider__reports {
-    height: 85%; }
-  /* line 2547, scss/style.scss */
-  .pros__analysis h4, .pros__system h4, .pros__program h4, .pros__reports h4 {
-    height: 200px; }
-    /* line 2550, scss/style.scss */
-    .pros__analysis h4:after, .pros__system h4:after, .pros__program h4:after, .pros__reports h4:after {
-      top: 20%; }
-  /* line 2557, scss/style.scss */
+  /* line 2561, scss/style.scss */
+  .pros__analysis, .pros__system, .pros__program, .pros__reports {
+    min-height: 667px; }
+    /* line 2567, scss/style.scss */
+    .pros__analysis h4, .pros__system h4, .pros__program h4, .pros__reports h4 {
+      height: 200px; }
+      /* line 2570, scss/style.scss */
+      .pros__analysis h4:after, .pros__system h4:after, .pros__program h4:after, .pros__reports h4:after {
+        top: 20%; }
+  /* line 2577, scss/style.scss */
   .pros .content p {
     font-size: 18px; }
-  /* line 2563, scss/style.scss */
+  /* line 2583, scss/style.scss */
   .scheme .short-arrow {
     margin-right: -130px; }
-  /* line 2566, scss/style.scss */
+  /* line 2586, scss/style.scss */
   .scheme .long-arrow {
     display: none; }
-  /* line 2571, scss/style.scss */
+  /* line 2591, scss/style.scss */
   .scheme__start__demonstration:after {
     content: "";
     position: absolute;
@@ -2332,14 +2356,14 @@ button {
     left: 100%;
     top: 50%;
     transform: translateY(-50%); }
-  /* line 2583, scss/style.scss */
+  /* line 2603, scss/style.scss */
   .scheme__start__presentation {
     min-width: auto;
     max-width: none;
     min-height: auto;
     max-height: none;
     width: 80vw; }
-  /* line 2591, scss/style.scss */
+  /* line 2611, scss/style.scss */
   .scheme__registration__header, .scheme__cooperation__header {
     min-width: auto;
     max-width: none;
@@ -2348,85 +2372,85 @@ button {
     width: 80vw; } }
 
 @media (max-width: 500px) {
-  /* line 2601, scss/style.scss */
+  /* line 2621, scss/style.scss */
   .offer .menu {
     width: 90%;
     left: 5%; }
-    /* line 2605, scss/style.scss */
+    /* line 2625, scss/style.scss */
     .offer .menu__info {
       min-height: 138px; }
-      /* line 2608, scss/style.scss */
+      /* line 2628, scss/style.scss */
       .offer .menu__info a {
         margin-bottom: 10px; }
-  /* line 2616, scss/style.scss */
+  /* line 2636, scss/style.scss */
   .offer .arrow__block .make span {
     width: auto; }
-  /* line 2624, scss/style.scss */
+  /* line 2644, scss/style.scss */
   .pros h4 {
     background-position: top;
     height: 35vw; }
-  /* line 2630, scss/style.scss */
+  /* line 2650, scss/style.scss */
   .pros .content p {
     font-size: 18px; }
-  /* line 2637, scss/style.scss */
+  /* line 2657, scss/style.scss */
   .scheme h2 {
     height: 80px;
     font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center; }
-    /* line 2644, scss/style.scss */
+    /* line 2664, scss/style.scss */
     .scheme h2 span {
       padding: 0 8px 0 0; }
-  /* line 2648, scss/style.scss */
+  /* line 2668, scss/style.scss */
   .scheme .tns-controls {
     right: 5vw;
     width: 13vw;
     height: 13vw; }
-    /* line 2653, scss/style.scss */
+    /* line 2673, scss/style.scss */
     .scheme .tns-controls button {
       width: 13vw;
       height: 13vw; }
-  /* line 2659, scss/style.scss */
+  /* line 2679, scss/style.scss */
   .scheme .short-arrow,
   .scheme .long-arrow {
     margin: -2px 0 0 -28px; }
-  /* line 2664, scss/style.scss */
+  /* line 2684, scss/style.scss */
   .scheme__start, .scheme__registration, .scheme__cooperation {
     height: 718px; }
-  /* line 2670, scss/style.scss */
+  /* line 2690, scss/style.scss */
   .scheme__start__wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 30px; }
-  /* line 2677, scss/style.scss */
+  /* line 2697, scss/style.scss */
   .scheme__start__request, .scheme__start__analysis, .scheme__start__demonstration {
     margin: 0; }
-  /* line 2683, scss/style.scss */
+  /* line 2703, scss/style.scss */
   .scheme__start__presentation {
     font-size: 16px;
     height: 200px; }
-    /* line 2687, scss/style.scss */
+    /* line 2707, scss/style.scss */
     .scheme__start__presentation p {
       margin-bottom: 24px; }
-  /* line 2694, scss/style.scss */
+  /* line 2714, scss/style.scss */
   .scheme__registration__arrow-block {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 80px; }
-    /* line 2700, scss/style.scss */
+    /* line 2720, scss/style.scss */
     .scheme__registration__arrow-block .text {
       margin: 0; }
-    /* line 2705, scss/style.scss */
+    /* line 2725, scss/style.scss */
     .scheme__registration__arrow-block .business-offer::after {
       width: 150px;
       left: -150px; }
-    /* line 2711, scss/style.scss */
+    /* line 2731, scss/style.scss */
     .scheme__registration__arrow-block .contract {
       position: relative; }
-      /* line 2714, scss/style.scss */
+      /* line 2734, scss/style.scss */
       .scheme__registration__arrow-block .contract::after {
         content: "";
         width: 144px;
@@ -2435,109 +2459,112 @@ button {
         position: absolute;
         top: 50%;
         right: -144px; }
-  /* line 2728, scss/style.scss */
+  /* line 2748, scss/style.scss */
   .scheme__cooperation__arrow-block {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 200px; }
-  /* line 2735, scss/style.scss */
+  /* line 2755, scss/style.scss */
   .scheme__cooperation .text {
     margin: 0; }
-  /* line 2740, scss/style.scss */
+  /* line 2760, scss/style.scss */
   .scheme__cooperation .introduction::after {
     width: 164px;
     left: -164px; }
-  /* line 2750, scss/style.scss */
+  /* line 2770, scss/style.scss */
   .faq__header h3 {
     margin-bottom: 40px; }
-  /* line 2753, scss/style.scss */
+  /* line 2773, scss/style.scss */
   .faq__header__tabs {
     flex-wrap: wrap;
     flex-basis: 100%;
     margin-bottom: 40px;
     height: auto; }
-    /* line 2760, scss/style.scss */
+    /* line 2780, scss/style.scss */
     .faq__header__tabs .tab {
       margin-top: 10px;
       flex-basis: 50%;
       height: 50px;
       font-size: 14px; }
-    /* line 2767, scss/style.scss */
+    /* line 2787, scss/style.scss */
     .faq__header__tabs .tab--chosen {
       width: 150px; }
-  /* line 2772, scss/style.scss */
+  /* line 2792, scss/style.scss */
   .faq__header .vr {
     font-size: 16px;
     margin-right: 0;
     margin-left: 5px; }
-  /* line 2779, scss/style.scss */
+  /* line 2799, scss/style.scss */
   .faq__show-more {
     font-size: 16px;
     width: 230px; } }
 
 @media (max-width: 460px) {
-  /* line 2787, scss/style.scss */
+  /* line 2807, scss/style.scss */
   .phone-big {
     min-width: 15vw;
     max-width: 15vw;
     min-height: 15vw;
     max-height: 15vw; }
-  /* line 2796, scss/style.scss */
+  /* line 2816, scss/style.scss */
   .how__arrow-block__decide__content {
     padding-top: 12px; }
-    /* line 2799, scss/style.scss */
+    /* line 2819, scss/style.scss */
     .how__arrow-block__decide__content p {
       flex-basis: 70px; }
-  /* line 2804, scss/style.scss */
+  /* line 2824, scss/style.scss */
   .how__arrow-block__introduction p {
     padding: 24px 5vw; }
-  /* line 2812, scss/style.scss */
+  /* line 2832, scss/style.scss */
   .result__content__rhombus {
     width: 100%; }
-  /* line 2816, scss/style.scss */
+  /* line 2836, scss/style.scss */
   .result__content .reject {
     left: 16px;
     padding-bottom: 60px;
     background-position-x: 80px; }
-  /* line 2821, scss/style.scss */
+  /* line 2841, scss/style.scss */
   .result__content .graphic {
     right: 13%; }
-  /* line 2826, scss/style.scss */
+  /* line 2846, scss/style.scss */
   .result__content__description p {
     flex-basis: auto;
     font-size: 14px; }
-  /* line 2830, scss/style.scss */
+  /* line 2850, scss/style.scss */
   .result__content__description .marked-wrapper {
     margin-left: 20px; }
-  /* line 2838, scss/style.scss */
+  /* line 2858, scss/style.scss */
   .functions__solutions__text--more {
     font-size: 12px; }
-    /* line 2841, scss/style.scss */
+    /* line 2861, scss/style.scss */
     .functions__solutions__text--more button span {
       font-size: 14px; }
-  /* line 2849, scss/style.scss */
+  /* line 2869, scss/style.scss */
   .pros__slider__analysis, .pros__slider__system, .pros__slider__program, .pros__slider__reports {
-    height: 73%; }
-  /* line 2856, scss/style.scss */
+    height: 100%; }
+  /* line 2876, scss/style.scss */
   .pros__slider__analysis h4 {
     margin-bottom: 0; }
-  /* line 2862, scss/style.scss */
+  /* line 2882, scss/style.scss */
+  .pros__analysis, .pros__system, .pros__program, .pros__reports {
+    min-height: 570px; }
+  /* line 2890, scss/style.scss */
   .pros .content p {
     font-size: 14px;
     flex-basis: auto; }
-  /* line 2867, scss/style.scss */
+  /* line 2895, scss/style.scss */
   .pros .tns-controls {
     top: 638px; }
-  /* line 2870, scss/style.scss */
+  /* line 2898, scss/style.scss */
   .pros .tns-nav {
     top: 677px; }
-  /* line 2877, scss/style.scss */
+  /* line 2905, scss/style.scss */
   .scheme__start__presentation p {
     width: auto;
     padding: 0 4%;
     font-size: 14px; }
-  /* line 2883, scss/style.scss */
+  /* line 2911, scss/style.scss */
   .scheme__start__presentation button {
     min-width: auto;
     max-width: none;
@@ -2545,27 +2572,27 @@ button {
     max-height: none;
     height: 57px;
     width: 85%; }
-  /* line 2894, scss/style.scss */
+  /* line 2922, scss/style.scss */
   .form__modal__title {
     flex-direction: column; }
-    /* line 2897, scss/style.scss */
+    /* line 2925, scss/style.scss */
     .form__modal__title p {
       width: 100%;
       margin-top: 16px;
       text-align: center; }
-  /* line 2904, scss/style.scss */
+  /* line 2932, scss/style.scss */
   .form__modal .checkbox {
     font-size: 12px; } }
 
 @media (max-width: 400px) {
-  /* line 2918, scss/style.scss */
+  /* line 2946, scss/style.scss */
   .pros__slider__analysis h4, .pros__slider__system h4, .pros__slider__program h4, .pros__slider__reports h4 {
     font-size: 22px;
     padding: 5vw 0 0 5vw;
     width: calc(100% - 4.9vw); } }
 
 @media (max-width: 320px) {
-  /* line 2928, scss/style.scss */
+  /* line 2956, scss/style.scss */
   .offer,
   .how,
   .result,
@@ -2576,49 +2603,49 @@ button {
     position: relative;
     left: 0;
     width: 100%; }
-  /* line 2940, scss/style.scss */
+  /* line 2968, scss/style.scss */
   .offer {
     height: auto; }
-    /* line 2944, scss/style.scss */
+    /* line 2972, scss/style.scss */
     .offer .menu__icon {
       height: 16px; }
-    /* line 2949, scss/style.scss */
+    /* line 2977, scss/style.scss */
     .offer__header {
       align-items: center;
       padding: 3% 4% 0 4%; }
-    /* line 2954, scss/style.scss */
+    /* line 2982, scss/style.scss */
     .offer__title,
     .offer__title span {
       font-size: 18px; }
-    /* line 2960, scss/style.scss */
+    /* line 2988, scss/style.scss */
     .offer__head img {
       min-width: 60%;
       max-width: 60%;
       min-height: 40px;
       max-height: 40px; }
-    /* line 2964, scss/style.scss */
+    /* line 2992, scss/style.scss */
     .offer .arrow__block {
       font-size: 12px;
       flex-direction: column;
       justify-content: space-around;
       height: 290px; }
-      /* line 2970, scss/style.scss */
+      /* line 2998, scss/style.scss */
       .offer .arrow__block .arrow {
         display: none; }
-      /* line 2974, scss/style.scss */
+      /* line 3002, scss/style.scss */
       .offer .arrow__block .analyse,
       .offer .arrow__block .based,
       .offer .arrow__block .make {
         padding: 8px;
         margin-top: 0; }
-      /* line 2981, scss/style.scss */
+      /* line 3009, scss/style.scss */
       .offer .arrow__block .analyse {
         min-width: 75%;
         max-width: 75%;
         min-height: 70px;
         max-height: 70px;
         border-radius: 0 10px 10px 0; }
-      /* line 2986, scss/style.scss */
+      /* line 3014, scss/style.scss */
       .offer .arrow__block .based {
         min-width: 57%;
         max-width: 57%;
@@ -2626,17 +2653,17 @@ button {
         max-height: 70px;
         margin-left: auto;
         border-radius: 10px 0 0 10px; }
-      /* line 2992, scss/style.scss */
+      /* line 3020, scss/style.scss */
       .offer .arrow__block .make {
         min-width: 59%;
         max-width: 59%;
         min-height: 70px;
         max-height: 70px;
         border-radius: 0 10px 10px 0; }
-        /* line 2996, scss/style.scss */
+        /* line 3024, scss/style.scss */
         .offer .arrow__block .make span {
           width: auto; }
-    /* line 3002, scss/style.scss */
+    /* line 3030, scss/style.scss */
     .offer .order {
       font-size: 16px;
       padding: 0;
@@ -2648,60 +2675,67 @@ button {
       max-width: none;
       min-height: auto;
       max-height: none; }
-  /* line 3017, scss/style.scss */
+  /* line 3045, scss/style.scss */
   .how__arrow-block__analyse__content button {
     height: 17vw; }
-  /* line 3026, scss/style.scss */
+  /* line 3055, scss/style.scss */
+  .functions__solutions__title {
+    font-size: 22px; }
+  /* line 3059, scss/style.scss */
+  .functions__solutions:before {
+    min-width: 373px;
+    max-width: 373px; }
+  /* line 3064, scss/style.scss */
   .functions__solutions__text--more {
     font-size: 11px; }
-    /* line 3029, scss/style.scss */
+    /* line 3067, scss/style.scss */
     .functions__solutions__text--more button span {
       font-size: 12px; }
-  /* line 3035, scss/style.scss */
+  /* line 3074, scss/style.scss */
   .pros {
-    height: 729px; }
-    /* line 3038, scss/style.scss */
+    height: 750px; }
+    /* line 3077, scss/style.scss */
     .pros h2 {
       font-size: 24px; }
-    /* line 3042, scss/style.scss */
+    /* line 3081, scss/style.scss */
     .pros h4 {
       width: calc(100% - 15px);
       height: 144px;
       padding: 15px 0 0 15px;
       font-size: 20px; }
-    /* line 3049, scss/style.scss */
+    /* line 3088, scss/style.scss */
     .pros .tns-nav {
-      top: 673px; }
-    /* line 3053, scss/style.scss */
+      top: 674px; }
+    /* line 3092, scss/style.scss */
     .pros .tns-controls {
-      top: 635px; }
-    /* line 3057, scss/style.scss */
+      top: 636px; }
+    /* line 3096, scss/style.scss */
     .pros__analysis, .pros__system, .pros__program, .pros__reports {
       min-height: auto; }
-    /* line 3065, scss/style.scss */
+    /* line 3104, scss/style.scss */
     .pros__slider__analysis, .pros__slider__system, .pros__slider__program, .pros__slider__reports {
       height: 570px; }
-    /* line 3073, scss/style.scss */
+    /* line 3112, scss/style.scss */
     .pros__slider__program h4, .pros__slider__reports h4 {
       background-size: cover; }
-    /* line 3079, scss/style.scss */
+    /* line 3118, scss/style.scss */
     .pros .content p {
       font-size: 14px; }
-  /* line 3086, scss/style.scss */
+  /* line 3125, scss/style.scss */
   .form__content {
     padding: 20px 5px;
     font-size: 16px;
     width: 96%;
     height: auto; }
-  /* line 3093, scss/style.scss */
+  /* line 3132, scss/style.scss */
   .form__title {
     font-size: 18px; }
-  /* line 3097, scss/style.scss */
+  /* line 3136, scss/style.scss */
   .form__mail {
     margin-top: 18px; }
-  /* line 3101, scss/style.scss */
+  /* line 3140, scss/style.scss */
   .form__text {
     margin: 18px 0; }
-  /* line 3105, scss/style.scss */
+  /* line 3144, scss/style.scss */
   .form__btn {
     font-size: 16px; } }

@@ -3,7 +3,6 @@ window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
   const currentWidth = window.innerWidth;
   const isDesktop = currentWidth >= 1140;
-  const isMobile = currentWidth <= 640;
   const initFaqSection = getByClass("faq");
   let initLatest = 0;
   for (let point in initFaqSection.dataset) {
@@ -639,6 +638,70 @@ window.addEventListener("load", () => {
       });
     });
 
+    skrollr.get().refresh();
+  }
+
+  //recalculate top for fullcsreen
+  const initHeight = 969;
+  const currentHeight = window.innerHeight;
+  const defaultFullScreenHeight = 1080;
+  if (currentHeight > initHeight) {
+    //5 is diff between top for initHeight and defaultFullScreenHeight
+
+    const RATIOS = [
+      {
+        section: "how",
+        ratio: 5,
+      },
+      {
+        section: "result",
+        ratio: 5 + 4,
+      },
+      {
+        section: "functions",
+        ratio: 5 + 4 + 5,
+      },
+      {
+        section: "pros",
+        ratio: 5 + 4 + 5 - 12,
+      },
+      {
+        section: "faq",
+        ratio: 5 + 4 + 5 - 12 + 4,
+      },
+    ];
+    RATIOS.forEach((block) => {
+      const section = getByClass(block.section);
+      const breakpoints = [].filter
+        .call(section.attributes, function (at) {
+          return /^data-/.test(at.name);
+        })
+        .map((at) => ({ name: at.name.split("-")[1], value: at.value }));
+
+      breakpoints.forEach((bp) => {
+        if (bp.value.includes("top:")) {
+          const values = bp.value
+            .replace(/(top:|\;| )|(\d+\.\d+\%)|(left: \d+\.\d+\%)/g, "$2|$3")
+            .split("|")
+            .filter(Boolean);
+          console.log(values, block.section);
+          const top = parseFloat(values[0]);
+          const topDiff =
+            (currentHeight / defaultFullScreenHeight) * block.ratio;
+          console.log(top, topDiff);
+          const newBpValue = `top: ${top - topDiff}%; ${
+            values[1] ? values[1] : ""
+          }${values[2] ? values[2] : ""} `;
+          console.log(block.section, bp.value);
+          section.dataset[bp.name] = newBpValue;
+          if (bp.name === "4600" && block.section === "pros") {
+            section.dataset[bp.name] = `top: ${-88.5}%; ${
+              values[1] ? values[1] : ""
+            } ${values[2] ? values[2] : ""}`;
+          }
+        }
+      });
+    });
     skrollr.get().refresh();
   }
 });

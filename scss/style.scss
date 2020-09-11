@@ -538,6 +538,7 @@ button {
   h2 {
     padding-top: 36px;
     text-align: center;
+    color: black;
   }
 
   .stage-text {
@@ -550,7 +551,7 @@ button {
     top: 108px;
     left: 50px;
     font-size: 12px;
-    color: #999999;
+    color: #000;
   }
 
   &__content {
@@ -607,12 +608,11 @@ button {
         padding-left: 13px;
         top: 18px;
         left: -40px;
-        color: #999999;
       }
 
       .graphic {
         @include img-size(108, 46);
-        background: img-url("result", "graphic");
+        background: img-url("result", "stage");
         background-position: top left;
         padding-left: 34px;
         bottom: 58px;
@@ -623,7 +623,7 @@ button {
       .graphic {
         font-size: 12px;
         font-weight: normal;
-        color: #999999;
+        color: #000;
         background-size: auto;
         position: absolute;
       }
@@ -787,9 +787,8 @@ button {
     }
 
     h5 {
-      color: #666;
-      font-size: 18px;
-      font-weight: normal;
+      color: #000;
+      font-size: 20px;
       margin-bottom: 138px;
       padding-left: 130px;
     }
@@ -1581,6 +1580,7 @@ button {
 
   .offer {
     height: auto;
+    background: img-url("first-screen", "bg");
 
     .menu {
       font-size: 14px;
@@ -1689,6 +1689,7 @@ button {
     justify-content: center;
     align-items: center;
     height: auto;
+    background: img-url("how", "bg");
 
     h2 {
       position: relative;
@@ -1852,9 +1853,28 @@ button {
   .result {
     height: auto;
     background: img-url("result", "bg-mobile");
-
     .stage-text {
       display: none;
+    }
+
+    h2,
+    .graphic,
+    .reject {
+      color: white;
+    }
+
+    .graphic,
+    .reject {
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+
+    .graphic {
+      background-image: url("../img/result/stage-mobile.png");
+    }
+
+    .reject {
+      background-image: url("../img/result/reject-mobile.png");
     }
 
     &__content {
@@ -1902,7 +1922,7 @@ button {
 
   .functions {
     flex-direction: column;
-
+    background: #fff;
     &__problems {
       margin-right: 0;
 
@@ -1992,6 +2012,7 @@ button {
 
   .pros {
     height: auto;
+    background-color: #f2ede7;
 
     h2 {
       width: 90%;
@@ -2148,6 +2169,7 @@ button {
   .scheme {
     height: auto;
     display: block;
+    background: img-url("scheme", "bg");
 
     #tns2-ow {
       margin-top: -10px;
@@ -2210,6 +2232,8 @@ button {
     }
 
     &__start {
+      height: 773px;
+
       &__wrapper {
         overflow: hidden;
       }
@@ -2308,6 +2332,7 @@ button {
 
   .faq {
     padding-top: 40px;
+    background-color: #f0ece7;
 
     &__header {
       margin-top: 0;
@@ -2532,18 +2557,13 @@ button {
     .tns-nav {
       top: 771px;
     }
-    &__slider {
-      &__analysis,
-      &__system,
-      &__program,
-      &__reports {
-        height: 85%;
-      }
-    }
+
     &__analysis,
     &__system,
     &__program,
     &__reports {
+      min-height: 667px;
+
       h4 {
         height: 200px;
 
@@ -2850,7 +2870,7 @@ button {
       &__system,
       &__program,
       &__reports {
-        height: 73%;
+        height: 100%;
       }
       &__analysis {
         h4 {
@@ -2858,6 +2878,14 @@ button {
         }
       }
     }
+
+    &__analysis,
+    &__system,
+    &__program,
+    &__reports {
+      min-height: 570px;
+    }
+
     .content {
       p {
         font-size: 14px;
@@ -3023,17 +3051,28 @@ button {
   }
 
   .functions {
-    &__solutions__text--more {
-      font-size: 11px;
-      button {
-        span {
-          font-size: 12px;
+    &__solutions {
+      &__title {
+        font-size: 22px;
+      }
+
+      &:before {
+        min-width: 373px;
+        max-width: 373px;
+      }
+
+      &__text--more {
+        font-size: 11px;
+        button {
+          span {
+            font-size: 12px;
+          }
         }
       }
     }
   }
   .pros {
-    height: 729px;
+    height: 750px;
 
     h2 {
       font-size: 24px;
@@ -3047,11 +3086,11 @@ button {
     }
 
     .tns-nav {
-      top: 673px;
+      top: 674px;
     }
 
     .tns-controls {
-      top: 635px;
+      top: 636px;
     }
 
     &__analysis,
