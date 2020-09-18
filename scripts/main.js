@@ -3,6 +3,9 @@ window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
   const currentWidth = window.innerWidth;
   const isDesktop = currentWidth >= 1140;
+  const allInputs = document.querySelectorAll(
+    ".form__modal input, .form__modal textarea"
+  );
   const initFaqSection = getByClass("faq");
   let initLatest = 0;
   for (let point in initFaqSection.dataset) {
@@ -355,11 +358,11 @@ window.addEventListener("load", () => {
     content.forEach(
       (qa) =>
         (wrapper.innerHTML += `
-      <button class="js-Accordion-title">${qa.question}
-        <img src="./img/faq/arrow-down.png" alt="arrow-down">
-      </button>
-      <div class="js-Accordion-content">${qa.answer}</div>
-      `)
+        <button class="js-Accordion-title">${qa.question}
+          <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down">
+        </button>
+        <div class="js-Accordion-content">${qa.answer}</div>
+        `)
     );
   };
 
@@ -411,7 +414,7 @@ window.addEventListener("load", () => {
     const messageField = getByClass("form__message");
     btn.addEventListener("click", () => {
       messageField.value = text;
-      toggleForm();
+      toggleForm("open");
     });
   });
   //formOpen end
@@ -472,16 +475,34 @@ window.addEventListener("load", () => {
   //scrollTo end
 
   //form start
+  const formToInitState = () => {
+    const successScreen = getByClass("success-screen");
+    const error = getByClass("error");
+    const btn = document.querySelector(".form__modal button");
+    const checkbox = getByClass("checkbox");
+    [...allInputs, btn, checkbox].forEach((inp) =>
+      inp.classList.remove("success")
+    );
+    allInputs.forEach((inp) => (inp.value = ""));
+    successScreen.classList.remove("active");
+    error.classList.remove("active");
+  };
+
   const formOverlay = getByClass("form__modal__overlay");
   const formModal = getByClass("form__modal");
   const formButtons = document.querySelectorAll(".form__modal__close");
-  const toggleForm = () => {
+  const toggleForm = (action) => {
     const howSection = getByClass("how");
     const resultSection = getByClass("result");
     const schemeSection = getByClass("scheme");
 
-    formOverlay.classList.toggle("active");
-    formModal.classList.toggle("active");
+    if (action === "open") {
+      formOverlay.classList.add("active");
+      formModal.classList.add("active");
+    } else {
+      formOverlay.classList.remove("active");
+      formModal.classList.remove("active");
+    }
 
     if (isDesktop) {
       if (document.body.classList.contains("no-scroll")) {
@@ -501,7 +522,10 @@ window.addEventListener("load", () => {
     document.body.classList.toggle("no-scroll");
   };
   [...formButtons, formOverlay].forEach((el) =>
-    el.addEventListener("click", toggleForm)
+    el.addEventListener("click", () => {
+      toggleForm("close");
+      formToInitState();
+    })
   );
 
   var phoneMask = [
@@ -563,9 +587,6 @@ window.addEventListener("load", () => {
   });
 
   formSubmitBtn.addEventListener("click", (e) => {
-    const allInputs = document.querySelectorAll(
-      ".form__modal input, .form__modal textarea"
-    );
     const body = [...allInputs].reduce(
       (res, inp) => ({
         ...res,
@@ -582,15 +603,34 @@ window.addEventListener("load", () => {
     for (const val in body) {
       fd.append(val, body[val]);
     }
-
-    //fetch for sending mail
-    // fetch("scripts/mail.php", {
-    //   method: "POST",
-    //   body: JSON.stringify(body),
-    // })
-    //   .then((res) => console.log(JSON.stringify(res)))
-    //   .catch((err) => console.error(err));
+    fd.append("sendto", "Office@pm-assistant.ru");
+    // fetch for sending mail
+    fetch("./wp-content/themes/new-pm/scripts/mail.php", {
+      method: "POST",
+      body: fd,
+    })
+      .then((res) => (res.status === 400 ? showError() : showSuccess()))
+      .catch((err) => console.error(err));
   });
+  const showError = () => {
+    const error = getByClass("error");
+    error.classList.add("active");
+  };
+  const showSuccess = () => {
+    const checkbox = getByClass("checkbox");
+    const btn = document.querySelector(".form__modal button");
+    [...allInputs, checkbox, btn].forEach((inp) =>
+      inp.classList.add("success")
+    );
+    const successScreen = getByClass("success-screen");
+    successScreen.classList.add("active");
+    const error = getByClass("error");
+    error.classList.remove("active");
+    setTimeout(() => {
+      toggleForm("close");
+      formToInitState();
+    }, 3000);
+  };
 
   //recalculate left for adaptive width from 1140 to 1920
 
@@ -642,7 +682,7 @@ window.addEventListener("load", () => {
   }
 
   //recalculate top for fullcsreen
-  const initHeight = 969;
+  const initHeight = 1000;
   const currentHeight = window.innerHeight;
   const defaultFullScreenHeight = 1080;
   if (currentHeight > initHeight) {
@@ -684,15 +724,12 @@ window.addEventListener("load", () => {
             .replace(/(top:|\;| )|(\d+\.\d+\%)|(left: \d+\.\d+\%)/g, "$2|$3")
             .split("|")
             .filter(Boolean);
-          console.log(values, block.section);
           const top = parseFloat(values[0]);
           const topDiff =
             (currentHeight / defaultFullScreenHeight) * block.ratio;
-          console.log(top, topDiff);
           const newBpValue = `top: ${top - topDiff}%; ${
             values[1] ? values[1] : ""
           }${values[2] ? values[2] : ""} `;
-          console.log(block.section, bp.value);
           section.dataset[bp.name] = newBpValue;
           if (bp.name === "4600" && block.section === "pros") {
             section.dataset[bp.name] = `top: ${-88.5}%; ${
@@ -702,6 +739,8 @@ window.addEventListener("load", () => {
         }
       });
     });
-    skrollr.get().refresh();
+    if (isDesktop) {
+      skrollr.get().refresh();
+    }
   }
 });

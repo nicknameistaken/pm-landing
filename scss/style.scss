@@ -332,7 +332,8 @@ button {
       margin-top: 244px;
 
       img {
-        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
         height: 102px;
       }
     }
@@ -1428,6 +1429,32 @@ button {
       margin-bottom: 5%;
       padding-left: 6%;
       font-size: 14px;
+
+      &.success {
+        display: none;
+      }
+    }
+
+    .error {
+      display: none;
+      color: red;
+      width: 75%;
+      margin-bottom: 2%;
+      margin-top: -3%;
+      &.active {
+        display: block;
+      }
+    }
+
+    .success-screen {
+      display: none;
+      height: 30%;
+      margin: 0 auto;
+      align-items: center;
+      font-size: 24px;
+      &.active {
+        display: flex;
+      }
     }
 
     textarea {
@@ -1452,6 +1479,10 @@ button {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+
+      &.success {
+        display: none;
+      }
     }
 
     /* Hide the browser's default checkbox */
@@ -1519,6 +1550,9 @@ button {
       background-image: linear-gradient(-90deg, #000f28 0%, #003b69 100%);
       &:disabled {
         opacity: 0.6;
+      }
+      &.success {
+        display: none;
       }
     }
 
@@ -2393,6 +2427,11 @@ button {
 
       button {
         margin-bottom: 20px;
+      }
+
+      .success-screen {
+        width: 75%;
+        font-size: 18px;
       }
     }
   }
