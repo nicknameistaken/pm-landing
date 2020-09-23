@@ -1,3 +1,4 @@
+const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: "./scripts/main.js",
   mode: "development",
@@ -13,6 +14,19 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+    ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
     ],
   },
 };
