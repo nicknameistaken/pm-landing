@@ -219,16 +219,16 @@
         <h2 class="text-white text-uppercase">функции</h2>
         <div class="functions__choose text-uppercase">
           <p data-role="portfolioManager" class="functions__choose--chosen">
-            директор</br> и руководитель
+            директор<br> и руководитель
             портфеля
           </p>
           <div>
             <p data-role="projectOffice">
-              руководитель и планировщик</br>
+              руководитель и планировщик<br>
               программ, проектный офис
             </p>
             <p data-role="projectEngineer">
-              Руководитель, планировщик</br>
+              Руководитель, планировщик<br>
               и инженер проекта
             </p>
           </div>
@@ -487,7 +487,7 @@
           Чем проектный ассистент может помочь моей&nbsp;компании?
           <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down" />
         </button>
-        <div>testAnswer</div>
+        <div>123</div>
 
         <button>
           В чем преимущества системы?
@@ -613,6 +613,8 @@
     </script>
     <script src="./wp-content/themes/new-pm/scripts/skrollr.min.js" type="text/javascript"></script>
     <script src="./wp-content/themes/new-pm/scripts/text-mask.min.js" type="text/javascript"></script>
+    <script src="./wp-content/themes/new-pm/scripts/fetch.js" type="text/javascript"></script>
+    <script src="./wp-content/themes/new-pm/scripts/smoothscroll.min.js" type="text/javascript"></script>
     <script src="./wp-content/themes/new-pm/scripts/main.js" type="text/javascript"></script>
   </body>
 </html>

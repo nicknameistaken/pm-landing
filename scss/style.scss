@@ -83,6 +83,7 @@ button {
 
 p {
   margin: 0;
+  width: 100%;
 }
 
 h1,
@@ -483,6 +484,10 @@ button {
         justify-content: space-around;
         padding: 16px 32px 0 32px;
         margin-top: -12px;
+
+        .warn {
+          width: 100%;
+        }
       }
 
       p {
@@ -842,6 +847,7 @@ button {
 
     &__list {
       min-height: 364px;
+      width: 100%;
     }
   }
 }
@@ -1012,9 +1018,7 @@ button {
   }
 
   .short-arrow {
-    width: 47px;
-    height: 62px;
-    // margin: 0 -42px 0 -26px;
+    @include img-size(47, 62);
     margin-left: -1px;
     margin-right: -14px;
 
@@ -1028,8 +1032,7 @@ button {
   }
 
   .long-arrow {
-    width: 119px;
-    height: 62px;
+    @include img-size(119, 62);
     margin-left: -25px;
     margin-top: 264px;
   }
@@ -1115,6 +1118,7 @@ button {
 
     &__header {
       @include img-size(433, 129);
+      height: 129px;
       border-radius: 10px;
       background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       color: white;
@@ -1168,6 +1172,7 @@ button {
 
     &__header {
       @include img-size(406, 129);
+      height: 129px;
       border-radius: 10px;
       background-image: linear-gradient(0deg, #000f28 0%, #003b69 100%);
       color: white;
@@ -1218,12 +1223,13 @@ button {
     }
     &__tabs {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       flex-basis: 600px;
       height: 50px;
 
       .tab {
         cursor: pointer;
+        width: auto;
 
         &--chosen {
           width: 182px;
@@ -1380,7 +1386,7 @@ button {
 
     &.active,
     &__overlay.active {
-      z-index: 1;
+      z-index: 3;
       opacity: 1;
     }
 
@@ -1429,6 +1435,8 @@ button {
       margin-bottom: 5%;
       padding-left: 6%;
       font-size: 14px;
+      border: 1px solid lightgray;
+      overflow: auto;
 
       &.success {
         display: none;
@@ -1754,6 +1762,7 @@ button {
           @include mobile-img(100, 116);
           border-radius: 0;
           top: 50%;
+          left: 0px;
           transform: translateY(-50%);
           justify-content: flex-start;
 

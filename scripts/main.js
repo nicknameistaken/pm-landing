@@ -1,5 +1,16 @@
-// window.onload = function () {
-window.addEventListener("load", () => {
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+window.onload = function () {
+  if (navigator.userAgent.match(/Trident\/7\./)) {
+    document.body.onmousewheel = function (event) {
+      event.preventDefault();
+      var wd = event.wheelDelta;
+      var csp = window.pageYOffset;
+      window.scrollTo(0, csp - wd);
+    };
+  }
+
+  // window.addEventListener("load", () => {
   const getByClass = (className) => document.querySelector(`.${className}`);
   const currentWidth = window.innerWidth;
   const isDesktop = currentWidth >= 1140;
@@ -443,10 +454,14 @@ window.addEventListener("load", () => {
         {}
       );
   const scrollTo = (top, behavior) => {
-    window.scrollTo({
-      top,
-      behavior: behavior || "smooth",
-    });
+    if (navigator.userAgent.match(/Trident\/7\./)) {
+      window.scrollTo(0, top);
+    } else {
+      window.scrollTo({
+        top,
+        behavior: behavior || "smooth",
+      });
+    }
   };
 
   const menuSections = document.querySelector(".menu__sections");
@@ -603,7 +618,7 @@ window.addEventListener("load", () => {
     for (const val in body) {
       fd.append(val, body[val]);
     }
-    fd.append("sendto", "Office@pm-assistant.ru");
+    fd.append("sendto", "aacheblukov@gmail.com");
     // fetch for sending mail
     fetch("./wp-content/themes/new-pm/scripts/mail.php", {
       method: "POST",
@@ -743,4 +758,4 @@ window.addEventListener("load", () => {
       skrollr.get().refresh();
     }
   }
-});
+};
