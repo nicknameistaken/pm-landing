@@ -240,6 +240,9 @@ window.onload = function () {
         : appendToWrapper(text);
     });
   };
+  
+  updateContent("portfolioManager", "problems");
+  updateContent("portfolioManager", "solutions");
 
   const chooseBlock = getByClass("functions__choose");
   chooseBlock.addEventListener("click", (e) => {
