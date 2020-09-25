@@ -1,6 +1,24 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+
 window.onload = function () {
+  const getByClass = (className) => document.querySelector(`.${className}`);
+  const currentWidth = window.innerWidth;
+  const isDesktop = currentWidth >= 1140;
+  const sectionsToScroll = document.querySelectorAll(
+    ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
+  );
+  const allSections = [getByClass("offer"), ...sectionsToScroll];
+  const isIE = false || !!document.documentMode;
+  const isSafari =
+    /constructor/i.test(window.HTMLElement) ||
+    (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]";
+    })(
+      !window["safari"] ||
+        (typeof safari !== "undefined" && safari.pushNotification)
+    );
+  const isSkrollrEnabled = isDesktop && !isIE && !isSafari;
   if (navigator.userAgent.match(/Trident\/7\./)) {
     document.body.onmousewheel = function (event) {
       event.preventDefault();
@@ -8,12 +26,13 @@ window.onload = function () {
       var csp = window.pageYOffset;
       window.scrollTo(0, csp - wd);
     };
+    allSections.forEach((sec) => {
+      sec.classList.add("for-ie");
+    });
   }
 
   // window.addEventListener("load", () => {
-  const getByClass = (className) => document.querySelector(`.${className}`);
-  const currentWidth = window.innerWidth;
-  const isDesktop = currentWidth >= 1140;
+
   const allInputs = document.querySelectorAll(
     ".form__modal input, .form__modal textarea"
   );
@@ -29,7 +48,7 @@ window.onload = function () {
         faqSection.removeAttribute(`data-${point}`);
       }
     }
-    if (isDesktop) {
+    if (isSkrollrEnabled) {
       skrollr.get().refresh();
     }
   };
@@ -49,7 +68,7 @@ window.onload = function () {
     } else {
       faqSection.removeAttribute(`data-${newHeight}`);
     }
-    if (isDesktop) {
+    if (isSkrollrEnabled) {
       skrollr.get().refresh();
     }
   }
@@ -161,7 +180,7 @@ window.onload = function () {
     oneOpen: false,
   });
 
-  if (isDesktop) {
+  if (isSkrollrEnabled) {
     skrollr.init({
       forceHeight: true,
     });
@@ -240,7 +259,7 @@ window.onload = function () {
         : appendToWrapper(text);
     });
   };
-  
+
   updateContent("portfolioManager", "problems");
   updateContent("portfolioManager", "solutions");
 
@@ -434,9 +453,7 @@ window.onload = function () {
   //formOpen end
 
   //scrollTo start
-  const sectionsToScroll = document.querySelectorAll(
-    ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
-  );
+
   const sectionsHeight = isDesktop
     ? {
         how: 990,
@@ -652,8 +669,7 @@ window.onload = function () {
 
   //recalculate left for adaptive width from 1140 to 1920
 
-  const allSections = [getByClass("offer"), ...sectionsToScroll];
-  if (isDesktop && currentWidth < 1920) {
+  if (isSkrollrEnabled && currentWidth < 1920) {
     const MIN_WIDTH = 1140;
     const MAX_WIDTH = 1920;
     const DIFF = MAX_WIDTH - MIN_WIDTH;
@@ -757,7 +773,7 @@ window.onload = function () {
         }
       });
     });
-    if (isDesktop) {
+    if (isSkrollrEnabled) {
       skrollr.get().refresh();
     }
   }

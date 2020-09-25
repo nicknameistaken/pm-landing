@@ -168,6 +168,12 @@ button {
     z-index: 10;
   }
 }
+.for-ie {
+  position: static;
+  top: auto;
+  left: auto;
+  margin: 0 auto;
+}
 /* First Screen */
 
 .offer {
