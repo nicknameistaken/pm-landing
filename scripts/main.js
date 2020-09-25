@@ -9,6 +9,9 @@ window.onload = function () {
     ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
   );
   const allSections = [getByClass("offer"), ...sectionsToScroll];
+  allSections.forEach((sec) => {
+    sec.style.visibility = "visible";
+  });
   const isIE = false || !!document.documentMode;
   const isSafari =
     /constructor/i.test(window.HTMLElement) ||
@@ -20,13 +23,16 @@ window.onload = function () {
     );
   const isSkrollrEnabled = isDesktop && !isIE && !isSafari;
   if (navigator.userAgent.match(/Trident\/7\./)) {
+    const elemsToAddIEClass = document.querySelectorAll(
+      ".functions__solutions, .scheme h2, .scheme__start__wrapper, .scheme__registration__arrow-block"
+    );
     document.body.onmousewheel = function (event) {
       event.preventDefault();
       var wd = event.wheelDelta;
       var csp = window.pageYOffset;
       window.scrollTo(0, csp - wd);
     };
-    allSections.forEach((sec) => {
+    [...allSections, ...Array.from(elemsToAddIEClass)].forEach((sec) => {
       sec.classList.add("for-ie");
     });
   }
@@ -473,12 +479,12 @@ window.onload = function () {
         }),
         {}
       );
-  const scrollTo = (top, behavior) => {
-    if (navigator.userAgent.match(/Trident\/7\./)) {
-      window.scrollTo(0, top);
+  const scrollTo = (topOrSection, behavior) => {
+    if (isIE) {
+      window.scrollTo(0, getByClass(topOrSection).offsetTop);
     } else {
       window.scrollTo({
-        top,
+        topOrSection,
         behavior: behavior || "smooth",
       });
     }
@@ -488,7 +494,7 @@ window.onload = function () {
   menuSections.addEventListener("click", (e) => {
     const chosenSection = e.target.dataset.section;
     if (!chosenSection) return;
-    scrollTo(sectionsHeight[chosenSection]);
+    scrollTo(isIE || isSafari ? chosenSection : sectionsHeight[chosenSection]);
     toggleMenu();
   });
 

@@ -10,12 +10,6 @@
   height: 700px;
 }
 
-@mixin section-pos($top, $left) {
-  position: fixed;
-  top: $top;
-  left: $left;
-}
-
 @mixin img-size($width, $height) {
   min-width: $width + px;
   max-width: $width + px;
@@ -148,6 +142,9 @@ button {
   position: fixed;
   @include img-size(1920, 1080);
   background: img-url("common", "bg");
+  &.for-ie {
+    z-index: -1;
+  }
 }
 .phone-big {
   position: fixed;
@@ -169,16 +166,19 @@ button {
   }
 }
 .for-ie {
-  position: static;
+  position: relative !important;
   top: auto;
   left: auto;
   margin: 0 auto;
+}
+section {
+  visibility: hidden;
 }
 /* First Screen */
 
 .offer {
   @include section-size;
-  @include section-pos(0%, 20%);
+  position: fixed;
   //   background: #fff;
   font-size: 14px;
   background-position: top;
@@ -375,7 +375,7 @@ button {
 
 .how {
   @include section-size;
-  @include section-pos(48.7%, 79.9%);
+  position: fixed;
   //   background: #fff;
   background-position: top;
   overflow: hidden;
@@ -539,7 +539,7 @@ button {
 
 .result {
   @include section-size;
-  @include section-pos(89.4%, 139.9%);
+  position: fixed;
   background: url("../img/result/bg.svg") no-repeat center / cover;
   background-position: top;
 
@@ -694,7 +694,7 @@ button {
 
 .functions {
   @include section-size;
-  @include section-pos(141%, 199.5%);
+  position: fixed;
   height: auto;
   display: flex;
   background-position: top;
@@ -790,7 +790,7 @@ button {
 
     &:before {
       content: "";
-      @include img-size(171, 413);
+      @include img-size(171, 390);
       background: img-url("functions", "solutions-figure");
       left: 452px;
       top: 200px;
@@ -860,7 +860,7 @@ button {
 
 .pros {
   @include section-size;
-  @include section-pos(100%, 20%);
+  position: fixed;
   height: 1492px;
   //   background: #fff;
   overflow: hidden;
@@ -991,13 +991,18 @@ button {
 }
 
 .scheme {
-  @include section-pos(350%, 259.5%);
+  position: fixed;
   width: 2088px;
   height: 708px;
   //   background: #fff;
   display: flex;
   font-weight: bold;
   font-size: 18px;
+  &.for-ie {
+    max-width: 1140px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 
   &__slider__wrapper {
     display: flex;
@@ -1015,6 +1020,9 @@ button {
     border-radius: 0 0 10px 0;
     padding: 42px 0 0 30px;
     color: white;
+    &.for-ie {
+      min-width: 168px;
+    }
   }
 
   .text {
@@ -1053,6 +1061,10 @@ button {
 
     &__wrapper {
       display: flex;
+      &.for-ie {
+        align-items: flex-start;
+        width: 110%;
+      }
     }
 
     &__request {
@@ -1135,6 +1147,9 @@ button {
     &__arrow-block {
       display: flex;
       margin-left: 84px;
+      &.for-ie {
+        align-items: flex-start;
+      }
 
       .short-arrow {
         margin: 150px -13px 0 -1px;
@@ -1210,8 +1225,7 @@ button {
 
 .faq {
   width: 1140px;
-  @include section-pos(407.5%, 369.2%);
-  //   background-color: #fff;
+  position: fixed;
 
   &__header {
     display: flex;
@@ -2030,6 +2044,11 @@ button {
         top: -60px;
         position: absolute;
         z-index: -1;
+      }
+      &.for-ie {
+        &:before {
+          z-index: auto;
+        }
       }
       h5 {
         display: none;
