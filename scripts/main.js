@@ -484,7 +484,7 @@ window.onload = function () {
       window.scrollTo(0, getByClass(topOrSection).offsetTop);
     } else {
       window.scrollTo({
-        topOrSection,
+        top: topOrSection,
         behavior: behavior || "smooth",
       });
     }
@@ -644,7 +644,7 @@ window.onload = function () {
     for (const val in body) {
       fd.append(val, body[val]);
     }
-    fd.append("sendto", "aacheblukov@gmail.com");
+    fd.append("sendto", "Office@pm-assistant.ru");
     // fetch for sending mail
     fetch("./wp-content/themes/new-pm/scripts/mail.php", {
       method: "POST",
