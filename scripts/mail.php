@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
       http_response_code(400);
       $res = array('message' => 'Некорректный email');
@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $messenger = trim($_POST['messenger']);
     $tel = trim($_POST['tel']);
     $headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
+$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+
 // Create email headers
 $headers .= 'X-Mailer: PHP/' . phpversion();
 
@@ -58,10 +58,10 @@ $headers .= 'X-Mailer: PHP/' . phpversion();
 	// }
 
 	// $messenger = trim($_POST['messenger']);
-		
+
 
 	// if(!isset($hasError)) {
-		
+
 	//    if (isset($_POST['sendto']) && preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim(base64_decode($_POST['sendto'])))) {
 	//    		$emailTo = base64_decode($_POST['sendto']);
 	//    }
@@ -69,11 +69,11 @@ $headers .= 'X-Mailer: PHP/' . phpversion();
 	// 		 $emailTo = get_option('admin_email');
 	// 	}
 	//    if($emailTo !=""){
-			
+
 	// 		$emailSent = true;
 	// 	}
 	// 	echo json_encode(array("msg"=>__("Your message has been successfully sent!","onetone"),"error"=>0));
-		
+
 	// }
 	// else
 	// {
