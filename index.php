@@ -25,13 +25,19 @@
       rel="apple-touch-icon"
       href="http://pm-assistant.ru/wp-content/uploads/2020/04/cropped-Logo_main-180x180.png"
     />
-    <link rel="stylesheet" href="./wp-content/themes/new-pm/css/tiny-slider.min.css" />
-    <link rel="stylesheet" href="./wp-content/themes/new-pm/css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="./wp-content/themes/new-pm/css/tiny-slider.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./wp-content/themes/new-pm/css/style.min.css"
+    />
   </head>
   <body>
     <div class="global-bg"></div>
     <a href="tel:+74957754144">
-        <div class="phone-big"></div>
+      <div class="phone-big"></div>
     </a>
     <section
       class="offer"
@@ -64,16 +70,26 @@
         <i class="menu__close"></i>
       </div>
       <header class="offer__header">
-        <img src="./wp-content/themes/new-pm/img/common/burger.png" alt="menu-icon" class="menu__icon" />
+        <img
+          src="./wp-content/themes/new-pm/img/common/burger.png"
+          alt="menu-icon"
+          class="menu__icon"
+        />
         <div class="offer__link">
           <a href="tel:+74957754144"> +7 495 775 41 44 </a>
           <a href="tel:+74957754144" class="offer__phone">
-            <img src="./wp-content/themes/new-pm/img/first-screen/phone-icon.png" alt="" />
+            <img
+              src="./wp-content/themes/new-pm/img/first-screen/phone-icon.png"
+              alt=""
+            />
           </a>
         </div>
       </header>
       <div class="offer__head">
-        <img src="./wp-content/themes/new-pm/img/first-screen/logo.png" alt="" />
+        <img
+          src="./wp-content/themes/new-pm/img/first-screen/logo.png"
+          alt=""
+        />
         <h1 class="offer__title">
           Система управления проектами
           <span> для промышленных предприятий</span>
@@ -98,7 +114,10 @@
         />
         <div class="make text-white bold text-uppercase">
           <span>Заставим управление проектами работать</span>
-          <img src="./wp-content/themes/new-pm/img/first-screen/make-icon.png" alt="make-icon" />
+          <img
+            src="./wp-content/themes/new-pm/img/first-screen/make-icon.png"
+            alt="make-icon"
+          />
         </div>
       </div>
       <button class="order text-white flex-center text-uppercase">
@@ -130,7 +149,11 @@
             <button class="text-uppercase">начать работу</button>
           </div>
         </div>
-        <img src="./wp-content/themes/new-pm/img/how/arrow.png" alt="" class="arrow arrow__first" />
+        <img
+          src="./wp-content/themes/new-pm/img/how/arrow.png"
+          alt=""
+          class="arrow arrow__first"
+        />
         <div class="how__arrow-block__decide">
           <h4 class="text-white text-uppercase flex-center">
             <span>решения</span>
@@ -138,7 +161,10 @@
           <div class="how__arrow-block__decide__content flex-center">
             <p>Проанализируем проблемы и спроектируем рабочие решения</p>
             <div class="flex-center warn">
-              <img src="./wp-content/themes/new-pm/img/how/warn-icon.png" alt="warn-icon" />
+              <img
+                src="./wp-content/themes/new-pm/img/how/warn-icon.png"
+                alt="warn-icon"
+              />
               <p>
                 Объем услуг по проектированию решений определяется по
                 результатам 1 этапа
@@ -146,7 +172,11 @@
             </div>
           </div>
         </div>
-        <img src="./wp-content/themes/new-pm/img/how/arrow.png" alt="" class="arrow arrow__second" />
+        <img
+          src="./wp-content/themes/new-pm/img/how/arrow.png"
+          alt=""
+          class="arrow arrow__second"
+        />
         <div class="how__arrow-block__introduction">
           <h4 class="text-white text-uppercase flex-center">
             <span>внедрение</span>
@@ -219,24 +249,23 @@
         <h2 class="text-white text-uppercase">функции</h2>
         <div class="functions__choose text-uppercase">
           <p data-role="portfolioManager" class="functions__choose--chosen">
-            директор<br> и руководитель
-            портфеля
+            директор<br />
+            и руководитель портфеля
           </p>
           <div>
             <p data-role="projectOffice">
-              руководитель и планировщик<br>
+              руководитель и планировщик<br />
               программ, проектный офис
             </p>
             <p data-role="projectEngineer">
-              Руководитель, планировщик<br>
+              Руководитель, планировщик<br />
               и инженер проекта
             </p>
           </div>
         </div>
         <div class="functions__problems__description">
           <h4 class="title text-uppercase">проблемы</h4>
-          <div class="functions__problems__list">
-          </div>
+          <div class="functions__problems__list"></div>
         </div>
       </div>
       <div class="functions__solutions">
@@ -247,8 +276,7 @@
           >
             решения проектного ассистента
           </h4>
-          <div class="functions__solutions__list">
-          </div>
+          <div class="functions__solutions__list"></div>
 
           <div class="functions__solutions__text--more flex-center">
             <button>
@@ -455,13 +483,19 @@
       <div class="js-Accordion" id="accordion">
         <button>
           Чем проектный ассистент может помочь моей&nbsp;компании?
-          <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down" />
+          <img
+            src="./wp-content/themes/new-pm/img/faq/arrow-down.png"
+            alt="arrow-down"
+          />
         </button>
         <div>123</div>
 
         <button>
           В чем преимущества системы?
-          <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down" />
+          <img
+            src="./wp-content/themes/new-pm/img/faq/arrow-down.png"
+            alt="arrow-down"
+          />
         </button>
         <div>
           <p>
@@ -480,12 +514,18 @@
 
         <button>
           Как система поможет обычному&nbsp;проектировщику?
-          <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down" />
+          <img
+            src="./wp-content/themes/new-pm/img/faq/arrow-down.png"
+            alt="arrow-down"
+          />
         </button>
         <div>testAnswer3</div>
         <button>
           Какая схема работы?
-          <img src="./wp-content/themes/new-pm/img/faq/arrow-down.png" alt="arrow-down" />
+          <img
+            src="./wp-content/themes/new-pm/img/faq/arrow-down.png"
+            alt="arrow-down"
+          />
         </button>
         <div>testAnswer4</div>
       </div>
@@ -498,7 +538,10 @@
           <img src="./wp-content/themes/new-pm/img/form/point2.png" alt="" />
         </div>
         <div class="form__content">
-          <img src="./wp-content/themes/new-pm/img/form/logo.png" alt="пм ассистент" />
+          <img
+            src="./wp-content/themes/new-pm/img/form/logo.png"
+            alt="пм ассистент"
+          />
           <h4 class="form__title">
             <a href="tel:+74957754144"> +7 495 775 41 44 </a>
           </h4>
@@ -513,16 +556,17 @@
           <button class="form__btn text-uppercase bold">Напишите нам</button>
         </div>
         <div class="form__point">
-          <img src="./wp-content/themes/new-pm/img/form/point-line.png" alt="" />
+          <img
+            src="./wp-content/themes/new-pm/img/form/point-line.png"
+            alt=""
+          />
         </div>
       </div>
     </section>
     <div class="form__modal__overlay"></div>
     <div class="form__modal">
       <div class="form__modal__title">
-        <h4 class="form__modal__info text-uppercase">
-          Обратная связь
-        </h4>
+        <h4 class="form__modal__info text-uppercase">Обратная связь</h4>
         <p>
           Если срочно, позвоните
           <a href="tel:+74957754144">+7 495 775 41 44</a>
@@ -536,18 +580,18 @@
         class="form__email"
       />
       <small class="error">Некорректный email</small>
-      <input
-        name="tel"
-        type="tel"
-        placeholder="Телефон"
-        class="form__phone"
-      />
+      <input name="tel" type="tel" placeholder="Телефон" class="form__phone" />
       <label class="checkbox">
         Ответить в Whatsapp или Telegram
         <input type="checkbox" name="messenger" />
         <span class="checkmark"></span>
       </label>
-      <textarea name="message"  class="form__message" rows="5" placeholder="Сообщение"></textarea>
+      <textarea
+        name="message"
+        class="form__message"
+        rows="5"
+        placeholder="Сообщение"
+      ></textarea>
       <div class="success-screen">Ваше сообщение успешно отправлено!</div>
       <button
         class="text-uppercase text-white form__submit__btn"
@@ -558,8 +602,17 @@
       </button>
       <i class="form__modal__close"></i>
     </div>
+    <div class="alert__modal">
+      <div class="alert-text">
+        Для корректного отображения сайта рекомендуем установить масштаб страниц
+        в браузере на 100% (нажать Ctrl+0).
+      </div>
+      <button class="text-uppercase text-white ok-btn" type="button">ок</button>
+      <i class="alert__modal__close"></i>
+    </div>
     <script type="module">
       import { tns } from "./wp-content/themes/new-pm/scripts/tiny-slider.min.js";
+      import { tns } from "./scripts/tiny-slider.min.js";
       if (window.outerWidth <= 640) {
         var prosSlider = tns({
           container: ".pros__slider__wrapper",

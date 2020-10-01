@@ -1,9 +1,9 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-
+const detect = require("detect-zoom");
 window.onload = function () {
   const getByClass = (className) => document.querySelector(`.${className}`);
-  const currentWidth = window.innerWidth;
+  const currentWidth = screen.availWidth;
   const isDesktop = currentWidth >= 1140;
   const sectionsToScroll = document.querySelectorAll(
     ".how, .result, .functions, .pros, .scheme, .faq, .form__wrap"
@@ -22,7 +22,7 @@ window.onload = function () {
         (typeof safari !== "undefined" && safari.pushNotification)
     );
   const isSkrollrEnabled = true;
-  if (navigator.userAgent.match(/Trident\/7\./)) {
+  if (isIE) {
     const elemsToAddIEClass = document.querySelectorAll(
       ".functions__solutions, .scheme h2, .scheme__start__wrapper, .scheme__registration__arrow-block"
     );
@@ -35,6 +35,24 @@ window.onload = function () {
     [...Array.from(elemsToAddIEClass)].forEach((sec) => {
       sec.classList.add("for-ie");
     });
+  }
+
+  const currentZoom = detect.device();
+  const widthOnDefaultZoom = currentZoom * screen.availWidth;
+  if (isIE || currentZoom !== 1 || widthOnDefaultZoom > 1140) {
+    const notDefaultZoom = detect.device() !== 1;
+    if (notDefaultZoom) {
+      const modal = getByClass("alert__modal");
+      const overlay = getByClass("form__modal__overlay");
+      const closeBtn = getByClass("alert__modal__close");
+      const okBtn = getByClass("ok-btn");
+      [modal, overlay].forEach((el) => el.classList.add("active"));
+      [overlay, closeBtn, okBtn].forEach((el) =>
+        el.addEventListener("click", () => {
+          [modal, overlay].forEach((el) => el.classList.remove("active"));
+        })
+      );
+    }
   }
 
   // window.addEventListener("load", () => {
