@@ -21,7 +21,7 @@ window.onload = function () {
       !window["safari"] ||
         (typeof safari !== "undefined" && safari.pushNotification)
     );
-  const isSkrollrEnabled = isDesktop && !isIE && !isSafari;
+  const isSkrollrEnabled = true;
   if (navigator.userAgent.match(/Trident\/7\./)) {
     const elemsToAddIEClass = document.querySelectorAll(
       ".functions__solutions, .scheme h2, .scheme__start__wrapper, .scheme__registration__arrow-block"
@@ -32,7 +32,7 @@ window.onload = function () {
       var csp = window.pageYOffset;
       window.scrollTo(0, csp - wd);
     };
-    [...allSections, ...Array.from(elemsToAddIEClass)].forEach((sec) => {
+    [...Array.from(elemsToAddIEClass)].forEach((sec) => {
       sec.classList.add("for-ie");
     });
   }
