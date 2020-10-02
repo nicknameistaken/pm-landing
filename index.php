@@ -598,7 +598,7 @@
         type="button"
         disabled
       >
-        отправить
+        заполните все поля
       </button>
       <i class="form__modal__close"></i>
     </div>
@@ -612,7 +612,6 @@
     </div>
     <script type="module">
       import { tns } from "./wp-content/themes/new-pm/scripts/tiny-slider.min.js";
-      import { tns } from "./scripts/tiny-slider.min.js";
       if (window.outerWidth <= 640) {
         var prosSlider = tns({
           container: ".pros__slider__wrapper",

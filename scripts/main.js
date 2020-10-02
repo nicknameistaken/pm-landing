@@ -21,7 +21,7 @@ window.onload = function () {
       !window["safari"] ||
         (typeof safari !== "undefined" && safari.pushNotification)
     );
-  const isSkrollrEnabled = true;
+  const isSkrollrEnabled = isDesktop;
   if (isIE) {
     const elemsToAddIEClass = document.querySelectorAll(
       ".functions__solutions, .scheme h2, .scheme__start__wrapper, .scheme__registration__arrow-block"
@@ -39,7 +39,7 @@ window.onload = function () {
 
   const currentZoom = detect.device();
   const widthOnDefaultZoom = currentZoom * screen.availWidth;
-  if (isIE || currentZoom !== 1 || widthOnDefaultZoom > 1140) {
+  if (isIE || (currentZoom !== 1 && widthOnDefaultZoom > 1280)) {
     const notDefaultZoom = detect.device() !== 1;
     if (notDefaultZoom) {
       const modal = getByClass("alert__modal");
@@ -499,7 +499,7 @@ window.onload = function () {
       );
   const scrollTo = (topOrSection, behavior) => {
     if (isIE) {
-      window.scrollTo(0, getByClass(topOrSection).offsetTop);
+      window.scrollTo(0, topOrSection);
     } else {
       window.scrollTo({
         top: topOrSection,
@@ -512,7 +512,7 @@ window.onload = function () {
   menuSections.addEventListener("click", (e) => {
     const chosenSection = e.target.dataset.section;
     if (!chosenSection) return;
-    scrollTo(isIE || isSafari ? chosenSection : sectionsHeight[chosenSection]);
+    scrollTo(sectionsHeight[chosenSection]);
     toggleMenu();
   });
 
@@ -545,6 +545,12 @@ window.onload = function () {
     allInputs.forEach((inp) => (inp.value = ""));
     successScreen.classList.remove("active");
     error.classList.remove("active");
+    isValid = {
+      name: false,
+      tel: false,
+      email: false,
+    };
+    checkSubmitButton();
   };
 
   const formOverlay = getByClass("form__modal__overlay");
@@ -624,8 +630,10 @@ window.onload = function () {
   const checkSubmitButton = () => {
     if (Object.values(isValid).filter(Boolean).length === 3) {
       formSubmitBtn.removeAttribute("disabled");
+      formSubmitBtn.innerHTML = "отправить";
     } else {
       formSubmitBtn.setAttribute("disabled", true);
+      formSubmitBtn.innerHTML = "заполните все поля";
     }
   };
   const checkField = (el) => {
